@@ -275,7 +275,7 @@ var
   SimulatorWindowHandle: HWND;
   SimulatorWindowTitle: String;
 
-function IsSimulatorProcess(ProcessID: DWORD): Boolean;
+function IsSimulatorProcess(ProcessID: DWORD; AllowLaunchers: Boolean): Boolean;
 var
   SnapshotHandle: THandle;
   ProcessEntry: TProcessEntry32;
@@ -286,9 +286,10 @@ begin
   if Process32First(SnapshotHandle, ProcessEntry) then
     repeat
       if ProcessEntry.th32ProcessID = ProcessID then begin
-        Result := SameText(ExtractFileName(ProcessEntry.szExeFile), 'ZDSimulator.exe') or
-          SameText(ExtractFileName(ProcessEntry.szExeFile), 'ZLauncher.exe') or
-          SameText(ExtractFileName(ProcessEntry.szExeFile), 'Launcher.exe');
+        Result := SameText(ExtractFileName(ProcessEntry.szExeFile), 'ZDSimulator.exe');
+        if AllowLaunchers then
+          Result := Result or SameText(ExtractFileName(ProcessEntry.szExeFile), 'ZLauncher.exe') or
+            SameText(ExtractFileName(ProcessEntry.szExeFile), 'Launcher.exe');
         Break;
       end;
     until not Process32Next(SnapshotHandle, ProcessEntry);
@@ -299,13 +300,17 @@ function EnumSimulatorWindowsProc(WindowHandle: HWND; Parameter: LPARAM): BOOL; 
 var
   WindowText: array[0..255] of Char;
   ProcessID: DWORD;
+  IsLegacyTitle: Boolean;
 begin
   Result := True;
   if IsWindowVisible(WindowHandle) and
      (GetWindowText(WindowHandle, WindowText, Length(WindowText)) > 0) and
      (Pos('ZDSIMULATOR', UpperCase(WindowText)) > 0) then begin
+    IsLegacyTitle := (Pos('ZDSIMULATOR55.008', UpperCase(WindowText)) > 0) or
+      (Pos('ZDSIMULATOR54.006', UpperCase(WindowText)) > 0) or
+      (Pos('ZDSIMULATOR55.009', UpperCase(WindowText)) > 0);
     if (GetWindowThreadProcessId(WindowHandle, @ProcessID) <> 0) and
-       IsSimulatorProcess(ProcessID) then begin
+       IsSimulatorProcess(ProcessID, IsLegacyTitle) then begin
       SimulatorWindowHandle := WindowHandle;
       SimulatorWindowTitle := WindowText;
       Result := False;
