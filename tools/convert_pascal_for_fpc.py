@@ -17,8 +17,10 @@ IDENTIFIER_RENAMES = (
     (re.compile(r"\bExtractWord\b"), "ExtractWordList"),
     (re.compile(r"\bUnitMain\.Camera\b"), "UnitMain.CameraMode"),
     (re.compile(r"(:=\s*)(\w+\.OnTimer)(\s*;)"), r"\1@\2\3"),
+)
+CAMERA_MODE_RENAMES = (
     (re.compile(r"\bCamera\s*<>\s*2\b"), "UnitMain.CameraMode<>2"),
-    (re.compile(r"\bCamera\s*=\s*2\b"), "UnitMain.CameraMode=2"),
+    (re.compile(r"\bCamera\s*=\s*([012])\b"), r"UnitMain.CameraMode=\1"),
 )
 
 
@@ -32,7 +34,7 @@ def has_method_after(lines: list[str], index: int) -> bool:
     return False
 
 
-def convert_text(text: str) -> tuple[str, int]:
+def convert_text(text: str, convert_camera: bool) -> tuple[str, int]:
     lines = text.splitlines(keepends=True)
     converted = 0
 
@@ -44,7 +46,10 @@ def convert_text(text: str) -> tuple[str, int]:
             converted += 1
 
     converted_text = "".join(lines)
-    for pattern, replacement in IDENTIFIER_RENAMES:
+    renames = IDENTIFIER_RENAMES
+    if convert_camera:
+        renames += CAMERA_MODE_RENAMES
+    for pattern, replacement in renames:
         converted_text, count = pattern.subn(replacement, converted_text)
         converted += count
 
@@ -76,7 +81,7 @@ def main() -> int:
     converted_sections = 0
     for path in sorted(args.root.rglob("*.pas")):
         original, encoding = read_source(path)
-        converted, count = convert_text(original)
+        converted, count = convert_text(original, path.name != "UnitMain.pas")
         if not count:
             continue
 

@@ -381,7 +381,7 @@ begin
          BASS_ChannelPlay(LocoChannel_FX[ChannelNum], False);
          BASS_ChannelSetAttribute(LocoChannel_FX[ChannelNum], BASS_ATTRIB_VOL, 0);
          if ChannelNum=0 then ChannelNum:=1 else ChannelNum:=0;
-         if (Camera=0) Or (Camera=1) then LocoVolume := FormMain.trcBarLocoPerestukVol.Position;
+         if (UnitMain.CameraMode=0) Or (UnitMain.CameraMode=1) then LocoVolume := FormMain.trcBarLocoPerestukVol.Position;
          if UnitMain.CameraMode=2 then begin
             if Loco<>'ED4M' then LocoVolume:=0 else LocoVolume := FormMain.trcBarLocoPerestukVol.Position;
          end;
@@ -398,8 +398,8 @@ begin
        LDOORChannel:=BASS_StreamCreateFile(FALSE, FileName, 0, 0, 0{$IFDEF UNICODE} or BASS_UNICODE {$ENDIF});
        BASS_ChannelPlay(LDOORChannel, TRUE);
        With FormMain do begin
-          if Camera=0 then BASS_ChannelSetAttribute(LDOORChannel, BASS_ATTRIB_VOL, trcBarVspomMahVol.Position/120);
-          if Camera=1 then BASS_ChannelSetAttribute(LDOORChannel, BASS_ATTRIB_VOL, trcBarVspomMahVol.Position/100);
+          if UnitMain.CameraMode=0 then BASS_ChannelSetAttribute(LDOORChannel, BASS_ATTRIB_VOL, trcBarVspomMahVol.Position/120);
+          if UnitMain.CameraMode=1 then BASS_ChannelSetAttribute(LDOORChannel, BASS_ATTRIB_VOL, trcBarVspomMahVol.Position/100);
           if UnitMain.CameraMode=2 then BASS_ChannelSetAttribute(LDOORChannel, BASS_ATTRIB_VOL, trcBarVspomMahVol.Position/100);
        end;
     except end;
@@ -414,8 +414,8 @@ begin
        RDOORChannel:=BASS_StreamCreateFile(FALSE, FileName, 0, 0, 0{$IFDEF UNICODE} or BASS_UNICODE {$ENDIF});
        BASS_ChannelPlay(RDOORChannel, TRUE);
        With FormMain do begin
-          if Camera=0 then BASS_ChannelSetAttribute(RDOORChannel, BASS_ATTRIB_VOL, trcBarVspomMahVol.Position/120);
-          if Camera=1 then BASS_ChannelSetAttribute(RDOORChannel, BASS_ATTRIB_VOL, trcBarVspomMahVol.Position/100);
+          if UnitMain.CameraMode=0 then BASS_ChannelSetAttribute(RDOORChannel, BASS_ATTRIB_VOL, trcBarVspomMahVol.Position/120);
+          if UnitMain.CameraMode=1 then BASS_ChannelSetAttribute(RDOORChannel, BASS_ATTRIB_VOL, trcBarVspomMahVol.Position/100);
           if UnitMain.CameraMode=2 then BASS_ChannelSetAttribute(RDOORChannel, BASS_ATTRIB_VOL, trcBarVspomMahVol.Position/100);
        end;
     except end;
@@ -459,7 +459,7 @@ procedure VolumeMaster_RefreshVolume;
 begin
    With FormMain do begin
    // -/- ÂÈÄ: ÊÀÁÈÍÀ; ÏÎËÎÆÅÍÈÅÆ ÂÍÓÒÐÈ ÊÀÁÈÍÛ -/- //
-      if Camera=0 then begin
+      if UnitMain.CameraMode=0 then begin
          if isCameraInCabin=True then begin
             BASS_ChannelSetAttribute(LocoChannel_FX[0], BASS_ATTRIB_VOL, trcBarLocoPerestukVol.Position/100);	  // Øóì åçäû (â ñò. âàð. ïåðåñòóê) [1]
             BASS_ChannelSetAttribute(LocoChannel_FX[1], BASS_ATTRIB_VOL, trcBarLocoPerestukVol.Position/100);	  // Øóì åçäû (â ñò. âàð. ïåðåñòóê) [1]
@@ -589,7 +589,7 @@ begin
          end;
       end;
       // -/- ÂÈÄ: ÍÀ ËÎÊÎÌÎÒÈÂ -/- //
-      if (Camera=1) then begin
+      if (UnitMain.CameraMode=1) then begin
          BASS_ChannelSetAttribute(LocoChannel_FX[ChannelNum], BASS_ATTRIB_VOL, trcBarLocoPerestukVol.Position/100);
          //ASS_ChannelSetAttribute(LocoChannel_FX[1], BASS_ATTRIB_VOL, trcBarLocoPerestukVol.Position/100);
          BASS_ChannelSetAttribute(LocoChannelPerestuk[0], BASS_ATTRIB_VOL, trcBarLocoPerestukVol.Position/100);
@@ -731,7 +731,7 @@ begin
           BASS_ChannelPlay(LocoChannelPerestuk[LChannelPerestuk], True); isPlayPerestuk:=True;
 
           if LChannelPerestuk=0 then LChannelPerestuk:=1 else LChannelPerestuk:=0;
-          if (Camera=0) Or (Camera=1) then LocoVolumePerestuk := FormMain.trcBarLocoPerestukVol.Position;
+          if (UnitMain.CameraMode=0) Or (UnitMain.CameraMode=1) then LocoVolumePerestuk := FormMain.trcBarLocoPerestukVol.Position;
           if UnitMain.CameraMode=2 then begin
              if Loco<>'ED4M' then LocoVolumePerestuk:=0 else LocoVolumePerestuk := FormMain.trcBarLocoPerestukVol.Position;
           end;
@@ -862,7 +862,7 @@ begin
           BASS_ChannelStop(CabinClicks); BASS_StreamFree(CabinClicks);
           CabinClicks := BASS_StreamCreateFile(FALSE, CabinClicksF, 0, 0, 0 {$IFDEF UNICODE} or BASS_UNICODE {$ENDIF});
           BASS_ChannelPlay(CabinClicks, True); isPlayCabinClicks:=True;
-          if Camera=0 then
+          if UnitMain.CameraMode=0 then
              BASS_ChannelSetAttribute(CabinClicks, BASS_ATTRIB_VOL, trcBarLocoClicksVol.Position/100)
           else
              BASS_ChannelSetAttribute(CabinClicks, BASS_ATTRIB_VOL, 0);
@@ -931,7 +931,7 @@ begin
           BASS_ChannelSetAttribute(DizChannel, BASS_ATTRIB_VOL, 0);
           BASS_ChannelPlay(DizChannel, True); isPlayDiz:=True; ChannelNumDiz:=1;
           if UnitMain.CameraMode<>2 then begin
-             if (BV <> 0) Or (Camera = 1) then
+             if (BV <> 0) Or (UnitMain.CameraMode=1) then
                 DizVolume := trcBarDieselVol.Position/100
              else
                 DizVolume:=trcBarDieselVol.Position/300;
@@ -949,7 +949,7 @@ begin
           BASS_ChannelSetAttribute(DizChannel2, BASS_ATTRIB_VOL, 0);
           BASS_ChannelPlay(DizChannel2, True); isPlayDiz:=True; ChannelNumDiz:=0;
           if UnitMain.CameraMode<>2 then begin
-             if (BV <> 0) Or (Camera = 1) then
+             if (BV <> 0) Or (UnitMain.CameraMode=1) then
                 DizVolume := trcBarDieselVol.Position/100
              else
                 DizVolume := trcBarDieselVol.Position/300;
@@ -979,7 +979,7 @@ begin
           BASS_ChannelStop(IMRZachelka); BASS_StreamFree(IMRZachelka);
           IMRZachelka := BASS_StreamCreateFile(FALSE, IMRZashelka, 0, 0, 0 {$IFDEF UNICODE} or BASS_UNICODE {$ENDIF});
           BASS_ChannelPlay(IMRZachelka, True); isPlayIMRZachelka:=True;
-          if Camera=0 then
+          if UnitMain.CameraMode=0 then
              BASS_ChannelSetAttribute(IMRZachelka, BASS_ATTRIB_VOL, trcBarLocoClicksVol.Position/100)
           else
              BASS_ChannelSetAttribute(IMRZachelka, BASS_ATTRIB_VOL, 0);
@@ -1023,7 +1023,7 @@ begin
           BASS_ChannelStop(RB_Channel); BASS_StreamFree(RB_Channel);
           RB_Channel := BASS_StreamCreateFile(FALSE, RBF, 0, 0, 0 {$IFDEF UNICODE} or BASS_UNICODE {$ENDIF});
           BASS_ChannelPlay(RB_Channel, True); isPlayRB:=True;
-          if Camera=0 then
+          if UnitMain.CameraMode=0 then
              BASS_ChannelSetAttribute(RB_Channel, BASS_ATTRIB_VOL, trcBarLocoClicksVol.Position/100)
           else
              BASS_ChannelSetAttribute(RB_Channel, BASS_ATTRIB_VOL, 0);
@@ -1354,7 +1354,7 @@ begin
           //if Speed>2 then
           //   ClockChannel:=BASS_StreamCreateFile(FALSE,PChar('TWS/skorostemer.wav'),0,0,BASS_SAMPLE_LOOP {$IFDEF UNICODE} or BASS_UNICODE {$ENDIF});
           BASS_ChannelPlay(ClockChannel, True); isPlayClock:=True;
-          if Camera=0 then
+          if UnitMain.CameraMode=0 then
              BASS_ChannelSetAttribute(ClockChannel, BASS_ATTRIB_VOL, trcBarLocoClicksVol.Position/100)
           else
              BASS_ChannelSetAttribute(ClockChannel, BASS_ATTRIB_VOL, 0);
@@ -1364,7 +1364,7 @@ begin
        BASS_ChannelStop(ClockCycleChannel); BASS_StreamFree(ClockCycleChannel);
        ClockCycleChannel:=BASS_StreamCreateFile(FALSE,ClockCycleF,0,0,BASS_SAMPLE_LOOP {$IFDEF UNICODE} or BASS_UNICODE {$ENDIF});
        BASS_ChannelPlay(ClockCycleChannel, True); isPlayCycleClock:=True;
-       if Camera=0 then
+       if UnitMain.CameraMode=0 then
           BASS_ChannelSetAttribute(ClockCycleChannel, BASS_ATTRIB_VOL, trcBarLocoClicksVol.Position/100)
        else
           BASS_ChannelSetAttribute(ClockCycleChannel, BASS_ATTRIB_VOL, 0);
@@ -1376,7 +1376,7 @@ begin
           BASS_ChannelStop(Stochist_Channel); BASS_StreamFree(Stochist_Channel);
           Stochist_Channel:=BASS_StreamCreateFile(FALSE,StochistF,0,0,BASS_SAMPLE_LOOP {$IFDEF UNICODE} or BASS_UNICODE {$ENDIF});
           BASS_ChannelPlay(Stochist_Channel, True); isPlayStochist:=True;
-          if Camera=0 then
+          if UnitMain.CameraMode=0 then
              BASS_ChannelSetAttribute(Stochist_Channel, BASS_ATTRIB_VOL, trcBarVspomMahVol.Position/100)
           else
              BASS_ChannelSetAttribute(Stochist_Channel, BASS_ATTRIB_VOL, 0);
@@ -1388,7 +1388,7 @@ begin
           BASS_ChannelStop(StochistUdar_Channel); BASS_StreamFree(StochistUdar_Channel);
           StochistUdar_Channel:=BASS_StreamCreateFile(FALSE,PChar('TWS/stochist_udar.wav'),0,0,0 {$IFDEF UNICODE} or BASS_UNICODE {$ENDIF});
           BASS_ChannelPlay(StochistUdar_Channel, True); isPlayStochistUdar:=True;
-          if Camera=0 then
+          if UnitMain.CameraMode=0 then
              BASS_ChannelSetAttribute(StochistUdar_Channel, BASS_ATTRIB_VOL, trcBarVspomMahVol.Position/100)
           else
              BASS_ChannelSetAttribute(StochistUdar_Channel, BASS_ATTRIB_VOL, 0);
@@ -1400,7 +1400,7 @@ begin
           BASS_ChannelStop(PickKLUBChannel); BASS_StreamFree(PickKLUBChannel);
           PickKLUBChannel := BASS_StreamCreateFile(FALSE, PChar('TWS/KLUB_pick.wav'), 0, 0, 0 {$IFDEF UNICODE} or BASS_UNICODE {$ENDIF});
           BASS_ChannelPlay(PickKLUBChannel, True);
-          if Camera=0 then
+          if UnitMain.CameraMode=0 then
              BASS_ChannelSetAttribute(PickKLUBChannel, BASS_ATTRIB_VOL, trcBarLocoClicksVol.Position/100)
           else
              BASS_ChannelSetAttribute(PickKLUBChannel, BASS_ATTRIB_VOL, 0);

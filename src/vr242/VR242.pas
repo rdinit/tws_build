@@ -66,7 +66,7 @@ implementation
                if Pitch < -7 then destVol := 0.0;
             end;
 
-            if Camera = 0 then begin
+            if UnitMain.CameraMode=0 then begin
                if VR242InCabin = True then begin
                   if isCameraInCabin = True then
                      BASS_ChannelSetAttribute(VR242Channel_FX, BASS_ATTRIB_VOL, vol)
@@ -77,7 +77,7 @@ implementation
                BASS_ChannelSetAttribute(XVR242Channel_FX, BASS_ATTRIB_VOL, 0.0);
             end;
 
-            if Camera = 1 then begin
+            if UnitMain.CameraMode=1 then begin
                BASS_ChannelSetAttribute(VR242Channel_FX, BASS_ATTRIB_VOL, 0.0);
                BASS_ChannelSetAttribute(XVR242Channel_FX, BASS_ATTRIB_VOL, vol);
             end;
