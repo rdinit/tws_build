@@ -1,0 +1,43 @@
+name: Build TWS
+
+on:
+  push:
+  pull_request:
+  workflow_dispatch:
+
+jobs:
+  build-win32:
+    runs-on: windows-latest
+
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Install Lazarus
+        shell: pwsh
+        run: choco install lazarus --no-progress --yes
+
+      - name: Validate converted project
+        shell: pwsh
+        run: |
+          if (Test-Path TWS.dpr) { throw 'TWS.dpr must not be present after conversion' }
+          if (-not (Test-Path TWS.lpr)) { throw 'TWS.lpr is missing' }
+          if (-not (Test-Path TWS.lpi)) { throw 'TWS.lpi is missing' }
+
+      - name: Build Win32
+        shell: pwsh
+        run: |
+          $lazbuild = 'C:\lazarus\lazbuild.exe'
+          if (-not (Test-Path $lazbuild)) { throw "lazbuild not found: $lazbuild" }
+          & $lazbuild --build-all --os=win32 --cpu=i386 TWS.lpi
+          if ($LASTEXITCODE -ne 0) { exit $LASTEXITCODE }
+
+      - name: Upload build log
+        if: failure()
+        uses: actions/upload-artifact@v4
+        with:
+          name: lazarus-build-output
+          path: |
+            lib/units/**
+            *.log
+          if-no-files-found: ignore

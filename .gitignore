@@ -1,3 +1,9 @@
+lib/units/
+*.compiled
+*.ppu
+*.o
+*.or
+*.rst
 *.dcu
 *.exe
 
