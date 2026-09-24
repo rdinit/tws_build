@@ -4,11 +4,11 @@ interface
 
 uses
   Windows, Messages, SysUtils, Variants, Classes, Graphics, Controls, Forms,
-  Dialogs, StdCtrls, ComCtrls;
+  Dialogs, StdCtrls;
 
 type
   TFormSOVIHelp = class(TForm)
-    RichEdit1: TRichEdit;
+    RichEdit1: TMemo;
   private
     { Private declarations }
   public

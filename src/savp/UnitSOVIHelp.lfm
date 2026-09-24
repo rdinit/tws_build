@@ -14,7 +14,7 @@ object FormSOVIHelp: TFormSOVIHelp
   OldCreateOrder = False
   PixelsPerInch = 96
   TextHeight = 13
-  object RichEdit1: TRichEdit
+  object RichEdit1: TMemo
     Left = 8
     Top = 8
     Width = 585
