@@ -44,7 +44,7 @@ type chs4kvr_ = class (TObject)
 
       procedure step();
 
-    published
+    public
 
     constructor Create;
 

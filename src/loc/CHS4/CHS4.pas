@@ -39,7 +39,7 @@ type chs4_ = class (TObject)
 
       procedure step();
 
-    published
+    public
 
     constructor Create;
 

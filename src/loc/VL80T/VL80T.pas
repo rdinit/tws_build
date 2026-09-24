@@ -19,7 +19,7 @@ type vl80t_ = class (TObject)
 
       procedure step();
 
-    published
+    public
 
     constructor Create;
 

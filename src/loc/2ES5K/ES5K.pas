@@ -18,7 +18,7 @@ type es5k_ = class (TObject)
 
       procedure step();
 
-    published
+    public
 
     constructor Create;
 

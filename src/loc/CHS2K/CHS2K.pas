@@ -23,7 +23,7 @@ type chs2k_ = class (TObject)
 
       procedure step();
 
-    published
+    public
 
     constructor Create;
 

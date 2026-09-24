@@ -15,7 +15,7 @@ type vl85_ = class (TObject)
 
       procedure step();
 
-    published
+    public
 
     constructor Create;
 

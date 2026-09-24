@@ -18,7 +18,7 @@ type ep1m_ = class (TObject)
 
       procedure step();
 
-    published
+    public
 
     constructor Create;
 

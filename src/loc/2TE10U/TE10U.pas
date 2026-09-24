@@ -18,7 +18,7 @@ type te10u_ = class (TObject)
 
       procedure step();
 
-    published
+    public
 
     constructor Create;
 

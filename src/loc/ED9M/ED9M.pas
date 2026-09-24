@@ -36,7 +36,7 @@ type ed9m_ = class (TObject)
 
       procedure step();
 
-    published
+    public
 
     constructor Create;
 

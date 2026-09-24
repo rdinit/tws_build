@@ -19,7 +19,7 @@ type vl11m_ = class (TObject)
 
       procedure step();
 
-    published
+    public
 
     constructor Create;
 

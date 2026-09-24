@@ -12,7 +12,7 @@ type sl2m_ = class (TObject)
     public
       procedure step();
 
-    published
+    public
 
     constructor Create(soundDir_: String);
 

@@ -29,7 +29,7 @@ type camera_ = class (TObject)
 
       procedure step();
 
-    published
+    public
 
     constructor Create;
    end;

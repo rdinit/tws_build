@@ -15,7 +15,7 @@ type tep70bs_ = class (TObject)
 
       procedure step();
 
-    published
+    public
 
     constructor Create;
 

@@ -16,7 +16,7 @@ type kvt254_ = class (TObject)
 
       procedure step();
 
-    published
+    public
 
     constructor Create;
 

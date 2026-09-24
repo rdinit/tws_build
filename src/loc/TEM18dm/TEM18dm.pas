@@ -15,7 +15,7 @@ type tem18dm_ = class (TObject)
 
       procedure step();
 
-    published
+    public
 
     constructor Create;
 
