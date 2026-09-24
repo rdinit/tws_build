@@ -470,7 +470,7 @@ var
   // ****************************************** //
   GameScreen:                  HWND;    // ���������� ���� ����
   GameWindowName:              String;
-  wHandle:                     Integer;
+   wHandle:                     HWND;
   tHandle, ProcessID, pHandle: Cardinal;
   temp:                        Cardinal;
   KM_Pos_1, Prev_KM:           Integer;
