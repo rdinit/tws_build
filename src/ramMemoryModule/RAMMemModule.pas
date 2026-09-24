@@ -1103,7 +1103,7 @@ begin
            LocoSvistokF        := 'svistok';
            LocoHornF           := 'tifon';
            UnitMain.LocoLength := 17;
-           @ProcReadDataMemoryAddr :=
+           ProcReadDataMemoryAddr :=
               @ReadDataMemoryVL80t;		// Задаем указатель на функцию чтения памяти
         end;
         // -/- ВЛ85 (VL85) -/- //
@@ -1131,7 +1131,7 @@ begin
            LocoSvistokF        := 'svistok';
            LocoHornF           := 'tifon';
            UnitMain.LocoLength := 24;
-           @ProcReadDataMemoryAddr :=
+           ProcReadDataMemoryAddr :=
               @ReadDataMemoryVL85;		// Задаем указатель на функцию чтения памяти
         end;
         // -/- ВЛ82м (VL82m) -/- //
@@ -1162,7 +1162,7 @@ begin
            LocoSvistokF        := 'svistok';
            LocoHornF           := 'tifon';
            UnitMain.LocoLength := 17;
-           @ProcReadDataMemoryAddr :=
+           ProcReadDataMemoryAddr :=
               @ReadDataMemoryVL82m;		// Задаем указатель на функцию чтения памяти
         end;
         // -/- ВЛ11м (VL11m) -/- //
@@ -1196,7 +1196,7 @@ begin
            LocoSvistokF        := 'svistok';
            LocoHornF           := 'tifon';
            UnitMain.LocoLength := 17;
-           @ProcReadDataMemoryAddr :=
+           ProcReadDataMemoryAddr :=
               @ReadDataMemoryVL11m;		// Задаем указатель на функцию чтения памяти
         end;
         // -/- 2ЭС5К (2ES5K) -/- //
@@ -1230,7 +1230,7 @@ begin
            LocoSvistokF        := 'svistok';
            LocoHornF           := 'tifon';
            UnitMain.LocoLength := 17;
-           @ProcReadDataMemoryAddr :=
+           ProcReadDataMemoryAddr :=
               @ReadDataMemory2ES5k;		// Задаем указатель на функцию чтения памяти
         end;
         // -/- ЭП1м (EP1m) -/- //
@@ -1263,7 +1263,7 @@ begin
            LocoDIZNamePrefiks  := '';           // Задаем префикс названия папки с звуками работы дизеля
            LocoSvistokF        := 'svistok';
            LocoHornF           := 'tifon';
-           @ProcReadDataMemoryAddr :=
+           ProcReadDataMemoryAddr :=
               @ReadDataMemoryEP1m;		// Задаем указатель на функцию чтения памяти
         end;
         // -/- ЧС2к (CHS2K) -/- //
@@ -1296,7 +1296,7 @@ begin
            LocoDIZNamePrefiks  := '';           // Задаем префикс названия папки с звуками работы дизеля
            LocoSvistokF        := 'svistok';
            LocoHornF           := 'tifon';
-           @ProcReadDataMemoryAddr :=
+           ProcReadDataMemoryAddr :=
               @ReadDataMemoryCHS2k;		// Задаем указатель на функцию чтения памяти
         end;
         // -/- ЧС4 (CHS4) -/- //
@@ -1329,7 +1329,7 @@ begin
            LocoDIZNamePrefiks  := '';           // Задаем префикс названия папки с звуками работы дизеля
            LocoSvistokF        := 'svistok';
            LocoHornF           := 'tifon';
-           @ProcReadDataMemoryAddr :=
+           ProcReadDataMemoryAddr :=
               @ReadDataMemoryCHS4;		// Задаем указатель на функцию чтения памяти
         end;
         // -/- ЧС4квр (CHS4 KVR) -/- //
@@ -1362,7 +1362,7 @@ begin
            LocoDIZNamePrefiks  := '';           // Задаем префикс названия папки с звуками работы дизеля
            LocoSvistokF        := 'svistok';
            LocoHornF           := 'tifon';
-           @ProcReadDataMemoryAddr :=
+           ProcReadDataMemoryAddr :=
               @ReadDataMemoryCHS4kvr;		// Задаем указатель на функцию чтения памяти
         end;
         // -/- ЧС4т (CHS4t) -/- //
@@ -1389,7 +1389,7 @@ begin
            LocoDIZNamePrefiks  := '';           // Задаем префикс названия папки с звуками работы дизеля
            LocoSvistokF        := 'svistok';
            LocoHornF           := 'tifon';
-           @ProcReadDataMemoryAddr :=
+           ProcReadDataMemoryAddr :=
               @ReadDataMemoryCHS4t;		// Задаем указатель на функцию чтения памяти
         end;
         // -/- ЧС8 (CHS8) -/- //
@@ -1417,7 +1417,7 @@ begin
            LocoSvistokF        := 'svistok';
            LocoHornF           := 'tifon';
            UnitMain.LocoLength := 17;
-           @ProcReadDataMemoryAddr :=
+           ProcReadDataMemoryAddr :=
               @ReadDataMemoryCHS8;		// Задаем указатель на функцию чтения памяти
         end;
         // -/- ЧС7 (CHS7) -/- //
@@ -1451,7 +1451,7 @@ begin
            LocoSvistokF        := 'svistok';
            LocoHornF           := 'tifon';
            UnitMain.LocoLength := 17;
-           @ProcReadDataMemoryAddr :=
+           ProcReadDataMemoryAddr :=
               @ReadDataMemoryCHS7;		// Задаем указатель на функцию чтения памяти
         end;
         // -/- ТЭП70 (TEP70) -/- //
@@ -1478,7 +1478,7 @@ begin
            LocoDIZNamePrefiks  := 'TEP70';      // Задаем префикс названия папки с звуками работы дизеля
            LocoSvistokF        := 'svistok';
            LocoHornF           := 'tifon';
-           @ProcReadDataMemoryAddr :=
+           ProcReadDataMemoryAddr :=
               @ReadDataMemoryTEP70;		// Задаем указатель на функцию чтения памяти
         end;
         // -/- ТЭП70бс (TEP70bs) -/- //
@@ -1505,7 +1505,7 @@ begin
            LocoDIZNamePrefiks  := 'TEP70bs';    // Задаем префикс названия папки с звуками работы дизеля
            LocoSvistokF        := 'svistok';
            LocoHornF           := 'tifon';
-           @ProcReadDataMemoryAddr :=
+           ProcReadDataMemoryAddr :=
               @ReadDataMemoryTEP70BS;		// Задаем указатель на функцию чтения памяти
         end;
         // -/- М62 (M62) -/- //
@@ -1536,7 +1536,7 @@ begin
            LocoSvistokF        := 'svistok';
            LocoHornF           := 'tifon';
            UnitMain.LocoLength := 17;
-           @ProcReadDataMemoryAddr :=
+           ProcReadDataMemoryAddr :=
               @ReadDataMemoryM62;		// Задаем указатель на функцию чтения памяти
         end;
         // -/- ТЭМ18дм (TEM18dm) -/- //
@@ -1562,7 +1562,7 @@ begin
            LocoReductorNamePrefiks := '';       // Задаем префикс названия папки со звуками редуктора
            LocoSvistokF        := 'svistok';
            LocoHornF           := 'tifon';
-           @ProcReadDataMemoryAddr :=
+           ProcReadDataMemoryAddr :=
               @ReadDataMemoryTEM18dm;		// Задаем указатель на функцию чтения памяти
         end;
         // -/- 2ТЭ10у (2TE10U) -/- //
@@ -1590,7 +1590,7 @@ begin
            LocoSvistokF        := 'svistok';
            LocoHornF           := 'tifon';
            UnitMain.LocoLength := 17;
-           @ProcReadDataMemoryAddr :=
+           ProcReadDataMemoryAddr :=
               @ReadDataMemory2TE10U;		// Задаем указатель на функцию чтения памяти
         end;
         // -/- ЭД4м (ED4M) -/- //
@@ -1624,7 +1624,7 @@ begin
            LocoDIZNamePrefiks  := '';           // Задаем префикс названия папки с звуками работы дизеля
            LocoSvistokF        := 'svistok';
            LocoHornF           := 'tifon';
-           @ProcReadDataMemoryAddr :=
+           ProcReadDataMemoryAddr :=
               @ReadDataMemoryED4M;		// Задаем указатель на функцию чтения памяти
         end;
         // -/- ЭД9м (ED9M) -/- //
@@ -1658,7 +1658,7 @@ begin
            LocoDIZNamePrefiks  := '';           // Задаем префикс названия папки с звуками работы дизеля
            LocoSvistokF        := 'svistok';
            LocoHornF           := 'tifon';
-           @ProcReadDataMemoryAddr :=
+           ProcReadDataMemoryAddr :=
               @ReadDataMemoryED9M;		// Задаем указатель на функцию чтения памяти
         end;
 
