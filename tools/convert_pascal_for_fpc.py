@@ -16,6 +16,7 @@ DECLARATION = re.compile(
 IDENTIFIER_RENAMES = (
     (re.compile(r"\bExtractWord\b"), "ExtractWordList"),
     (re.compile(r"\bUnitMain\.Camera\b"), "UnitMain.CameraMode"),
+    (re.compile(r"(:=\s*)(\w+\.OnTimer)(\s*;)"), r"\1@\2\3"),
 )
 
 

@@ -64,7 +64,7 @@ implementation
       // Создаем таймер для проверки разницы показаний давления ГР в промежутке времени
       CompressorDifferenceTimer := TTimer.Create(UnitMain.FormMain);
       CompressorDifferenceTimer.Interval := 600;
-      CompressorDifferenceTimer.OnTimer := CompressorDifferenceTimerEvents.OnTimer;
+      CompressorDifferenceTimer.OnTimer := @CompressorDifferenceTimerEvents.OnTimer;
       CompressorDifferenceTimer.Enabled := True;
 
       kr21__ := kr21_.Create('TWS\Devices\21KR\');

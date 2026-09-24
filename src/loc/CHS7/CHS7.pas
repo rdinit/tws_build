@@ -59,7 +59,7 @@ implementation
       // Создаем таймер для проверки разницы показаний давления ГР в промежутке времени
       VentOffDelayTimer := TTimer.Create(UnitMain.FormMain);
       VentOffDelayTimer.Interval := 1200;
-      VentOffDelayTimer.OnTimer := VentOffDelayTimerEvents.OnTimer;
+      VentOffDelayTimer.OnTimer := @VentOffDelayTimerEvents.OnTimer;
       VentOffDelayTimer.Enabled := False;
 
       vr242__ := vr242_.Create(False);
