@@ -99,7 +99,7 @@ begin
    FileText := GetStringFromFileStream(FS);
    FS.Free();
    FileLinesList := ExtractWordList(FileText, #10);
-   Result := $0;
+   Result := PByte(0);
    for I := FileLinesList.Count-1 downto 0 do begin
       if Pos('Created Model object at address:', FileLinesList[I])>0 then begin
          LineList := ExtractWordList(FileLinesList[I], ' ');
@@ -124,7 +124,7 @@ begin
    FileText := GetStringFromFileStream(FS);
    FS.Free();
    FileLinesList := ExtractWordList(FileText, #13);
-   Result := $0;
+   Result := PByte(0);
    for I := FileLinesList.Count-1 downto 0 do begin
       FileLinesList[I] := StringReplace(StringReplace(FileLinesList[I], #13, '', [rfReplaceAll]), #10, ' ', [rfReplaceAll]);
       if Pos('RenderStage::runCameraSetUp(osg::RenderInfo& renderInfo)', FileLinesList[I])>0 then begin
