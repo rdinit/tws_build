@@ -13,7 +13,10 @@ PUBLISHED_SECTION = re.compile(r"^(?P<indent>\s*)published\s*$", re.IGNORECASE)
 DECLARATION = re.compile(
     r"^(constructor|procedure|function|property)\b", re.IGNORECASE
 )
-IDENTIFIER_RENAMES = ((re.compile(r"\bExtractWord\b"), "ExtractWordList"),)
+IDENTIFIER_RENAMES = (
+    (re.compile(r"\bExtractWord\b"), "ExtractWordList"),
+    (re.compile(r"\bUnitMain\.Camera\b"), "UnitMain.CameraMode"),
+)
 
 
 def has_method_after(lines: list[str], index: int) -> bool:

@@ -198,10 +198,10 @@ implementation
          if (CoupleStat <> 0) then begin
             if (Initialized = False) then begin
                try
-                  if UnitMain.Camera <> 0 then Initialize(); // ≈сли не было инициализации - делаем ее
+                  if UnitMain.CameraMode <> 0 then Initialize(); // ≈сли не было инициализации - делаем ее
                except UnitMain.Log_.DebugWriteErrorToErrorList('Camera.step() Error in Camera.Initialize()'); end;
             end else begin
-               if UnitMain.Camera = 2 then begin
+               if UnitMain.CameraMode = 2 then begin
                   try
                   checkButtons();
                   except UnitMain.Log_.DebugWriteErrorToErrorList('Camera.step() Error in Camera.checkButtons()'); end;
@@ -212,7 +212,7 @@ implementation
                end;
 
                try
-               if (UnitMain.Camera = 0) then begin
+               if (UnitMain.CameraMode = 0) then begin
                   if (WagsNum<>WagonsAmount) And (WagCameraStatus = False) then WagCameraStatus := True; 
                   TurnStatusWagCamera(False);
                end else TurnStatusWagCamera(True);
