@@ -15,7 +15,7 @@ jobs:
 
       - name: Install Lazarus
         shell: pwsh
-        run: choco install lazarus --forcex86 --no-progress --yes
+        run: choco install lazarus --forcex86 --no-progress --yes --retry-count=5 --retry-wait=10
 
       - name: Configure FPC paths
         shell: pwsh
