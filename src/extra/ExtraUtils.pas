@@ -29,7 +29,7 @@ interface
 
 implementation
 
-uses base64, SysUtils, Windows, TlHelp32, Forms, Math;
+uses base64, SysUtils, TlHelp32, Forms, Math;
 
 function OneInstance: boolean;
 var g_hAppCritSecMutex: THandle;
