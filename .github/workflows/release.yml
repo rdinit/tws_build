@@ -1,14 +1,18 @@
-name: Build TWS
+name: Release TWS
 
-on:
-  push:
-  pull_request:
+'on':
+  workflow_dispatch:
+    inputs:
+      release_tag:
+        description: 'Release tag, for example v2.9.0'
+        required: true
+        type: string
 
 permissions:
   contents: write
 
 jobs:
-  build-win32:
+  release-win32:
     runs-on: windows-latest
 
     steps:
@@ -34,10 +38,6 @@ jobs:
           if (-not (Test-Path 'C:\lazarus\fpc\3.2.2\bin\i386-win32\ppc386.exe')) {
             throw '32-bit FPC executable was not installed'
           }
-          Get-Command fpc
-          Get-Command ppc386
-          & fpc.exe -iV
-          & ppc386.exe -iV
 
       - name: Validate converted project
         shell: pwsh
@@ -54,7 +54,7 @@ jobs:
           & $lazbuild --build-all --os=win32 --cpu=i386 TWS.lpi
           if ($LASTEXITCODE -ne 0) { exit $LASTEXITCODE }
 
-      - name: Package Win32 build
+      - name: Package Win32 release
         shell: pwsh
         run: |
           $packageDir = 'TWS-win32'
@@ -63,19 +63,11 @@ jobs:
           Copy-Item 'innosetup/TWS_MainFiles/*' $packageDir -Recurse -Force
           Compress-Archive -Path "$packageDir/*" -DestinationPath 'TWS-win32.zip' -Force
 
-      - name: Upload Win32 artifact
-        uses: actions/upload-artifact@v4
-        with:
-          name: TWS-win32
-          path: TWS-win32/*
-          if-no-files-found: error
-
-      - name: Upload build log
-        if: failure()
-        uses: actions/upload-artifact@v4
-        with:
-          name: lazarus-build-output
-          path: |
-            lib/units/**
-            *.log
-          if-no-files-found: ignore
+      - name: Create GitHub release
+        shell: pwsh
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: |
+          $tag = '${{ inputs.release_tag }}'
+          if (-not $tag.StartsWith('v')) { throw 'release_tag must start with v' }
+          gh release create $tag TWS-win32.zip --target '${{ github.sha }}' --title "TWS $tag" --generate-notes
