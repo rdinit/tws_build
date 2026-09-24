@@ -8,7 +8,7 @@ unit ExtraUtils;
 
 interface
 
-   uses Classes;
+  uses Classes, Windows;
 
    function StrToPChar(string_: String) : PChar;
    function GetStrToSep(St1:string;Sym1,Sym2:char;Var Pos:integer):string;overload;
@@ -22,6 +22,7 @@ interface
    function GetStringFromFileStream(FileStream: TFileStream) : String;
    function BoolToStr(const value : boolean) : string;
    function FindTask(ExeFileName: string): Boolean;
+  function FindSimulatorWindow(var WindowHandle: HWND; var WindowTitle: String): Boolean;
    function OneInstance: boolean;
    function GetFileCount(Dir: string):integer;
    function randomizeFloat(beginValue: Single; endValue: Single) : Single;
@@ -268,6 +269,35 @@ begin
     ContinueLoop := Process32Next(FSnapshotHandle, FProcessEntry32);
   end;
   CloseHandle(FSnapshotHandle);
+end;
+
+var
+  SimulatorWindowHandle: HWND;
+  SimulatorWindowTitle: String;
+
+function EnumSimulatorWindowsProc(WindowHandle: HWND; Parameter: LPARAM): BOOL; stdcall;
+var
+  WindowText: array[0..255] of Char;
+begin
+  Result := True;
+  if IsWindowVisible(WindowHandle) and
+     (GetWindowText(WindowHandle, WindowText, Length(WindowText)) > 0) then begin
+    if Pos('ZDSIMULATOR', UpperCase(WindowText)) > 0 then begin
+      SimulatorWindowHandle := WindowHandle;
+      SimulatorWindowTitle := WindowText;
+      Result := False;
+    end;
+  end;
+end;
+
+function FindSimulatorWindow(var WindowHandle: HWND; var WindowTitle: String): Boolean;
+begin
+  SimulatorWindowHandle := 0;
+  SimulatorWindowTitle := '';
+  EnumWindows(@EnumSimulatorWindowsProc, 0);
+  WindowHandle := SimulatorWindowHandle;
+  WindowTitle := SimulatorWindowTitle;
+  Result := WindowHandle <> 0;
 end;
 
 end.

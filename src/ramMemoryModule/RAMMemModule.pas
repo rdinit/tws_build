@@ -1,6 +1,6 @@
 //------------------------------------------------------------------------------//
 //                                                                              //
-//      Модуль для работы с ОЗУ                                                 //
+//      пїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅ пїЅ пїЅпїЅпїЅ                                                 //
 //      (c) DimaGVRH, Dnepr city, 2019 - 2025                                   //
 //                                                                              //
 //------------------------------------------------------------------------------//
@@ -60,28 +60,28 @@ var
    ADDR_TP_ED4M, ADDR_TP_ED9M:              Pointer;
    ADDR_BV_ED4M, ADDR_BV_ED9M:              Pointer;
    ADDR_KME_ED4M, ADDR_KME_ED9M:            Pointer;
-   ADDR_VIGILANCE_CHECK:                    Pointer; // Адрес состояния проверки бдительности (нужно для КЛУБ-а)
-   ADDR_SPEED_VSTRECHA:                     Pointer; // Адрес скорости встречки в МП
+   ADDR_VIGILANCE_CHECK:                    Pointer; // пїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ (пїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅ пїЅпїЅпїЅпїЅ-пїЅ)
+   ADDR_SPEED_VSTRECHA:                     Pointer; // пїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅ пїЅпїЅ
    ADDR_VSTRECH_STATUS:                     Pointer;
    ADDR_OGRANICH:                           Pointer;
    ADDR_NEXT_OGRANICH:                      Pointer;
    ADDR_CAMERA:                             Pointer;
-   ADDR_CAMERA_X:                           Pointer; // Адрес значения положения головы по оси Х в кабине машиниста
-   ADDR_AMPERAGE1:                          Pointer; // Адрес значения ТЭД ток 1
-   ADDR_AMPERAGE2:                          Pointer; // Адрес значения ТЭД ток 2
-   ADDR_AMPERAGE3:                          Pointer; // Адрес значения ТЭД ток 3
-   ADDR_AMPERAGE4:                          Pointer; // Адрес значения ТЭД ток 4
+   ADDR_CAMERA_X:                           Pointer; // пїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅ пїЅпїЅпїЅ пїЅ пїЅ пїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ
+   ADDR_AMPERAGE1:                          Pointer; // пїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅ пїЅпїЅпїЅ 1
+   ADDR_AMPERAGE2:                          Pointer; // пїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅ пїЅпїЅпїЅ 2
+   ADDR_AMPERAGE3:                          Pointer; // пїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅ пїЅпїЅпїЅ 3
+   ADDR_AMPERAGE4:                          Pointer; // пїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅ пїЅпїЅпїЅ 4
    ADDR_BOKSOVANIE:                         Pointer;
    ADDR_AB_ZB_1:                            Pointer;
    ADDR_AB_ZB_2:                            Pointer;
    ADDR_RAIN:                               Pointer;
-   ADDR_STOCHIST:                           Pointer; // Адрес состояния дворников
-   ADDR_STCHSTDGR:                          Pointer; // Адрес для угла поворота дворников
-   ADDR_CHS7_COMPRESSOR:                    Pointer; // Адрес состояния компрессоров на ЧС7
-   ADDR_CHS7_VENT:                          Pointer; // Адрес состояния вентиляторов на ЧС7 (Тумблер, положение)
-   ADDR_CHS7_VOLTAGE:                       Pointer; // Адрес напряжения на ЧС7
-   ADDR_CHS7_BV:                            Pointer; // Адрес состояния БВ на ЧС7
-   ADDR_CHS7_BV_PAKETNIK:                   Pointer; // Адрес состояния пакетника БВ на ЧС7
+   ADDR_STOCHIST:                           Pointer; // пїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ
+   ADDR_STCHSTDGR:                          Pointer; // пїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅ пїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ
+   ADDR_CHS7_COMPRESSOR:                    Pointer; // пїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅ пїЅпїЅ7
+   ADDR_CHS7_VENT:                          Pointer; // пїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅ пїЅпїЅ7 (пїЅпїЅпїЅпїЅпїЅпїЅпїЅ, пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ)
+   ADDR_CHS7_VOLTAGE:                       Pointer; // пїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅ пїЅпїЅ7
+   ADDR_CHS7_BV:                            Pointer; // пїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅ пїЅпїЅ пїЅпїЅ7
+   ADDR_CHS7_BV_PAKETNIK:                   Pointer; // пїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅ пїЅпїЅ пїЅпїЅ7
    ADDR_CHS7_REVERSOR:                      Pointer;
    ADDR_CHS7_FTP:                           Pointer;
    ADDR_CHS7_BTP:                           Pointer;
@@ -91,17 +91,17 @@ var
    ADDR_CHS8_REOSTAT:                       Pointer;
    ADDR_CHS8_VENT_VOLUME:                   Pointer;
    ADDR_CHS8_VENT_VOLUME_INCREMENTER:       Pointer;
-   ADDR_CHS8_COMPRESSOR:                    Pointer; // Адрес состояния компрессоров на ЧС8
+   ADDR_CHS8_COMPRESSOR:                    Pointer; // пїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅ пїЅпїЅ8
    ADDR_CHS8_GV_1:                          Pointer;
    ADDR_CHS8_GV_2:                          Pointer;
-   ADDR_CHS8_GV_PAKETNIK_OFFSET:            Pointer; // Адрес состояния пакетника БВ на ЧС8 (Указатель!!)
-   ADDR_CHS8_GV_PAKETNIK:                   PByte;   // Адрес состояния пакетника БВ на ЧС8 (Указатель!!)
-   ADDR_CHS4T_VENT:                         Pointer; // Адрес состояния вентиляторов на ЧС4т
+   ADDR_CHS8_GV_PAKETNIK_OFFSET:            Pointer; // пїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅ пїЅпїЅ пїЅпїЅ8 (пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ!!)
+   ADDR_CHS8_GV_PAKETNIK:                   PByte;   // пїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅ пїЅпїЅ пїЅпїЅ8 (пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ!!)
+   ADDR_CHS4T_VENT:                         Pointer; // пїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅ пїЅпїЅ4пїЅ
    ADDR_CHS4T_COMPRESSOR:                   Pointer;
    ADDR_CHS4T_FTP:                          Pointer;
    ADDR_CHS4T_BTP:                          Pointer;
-   ADDR_CHS4T_GV_PAKETNIK_OFFSET:           Pointer; // Адрес состояния пакетника БВ на ЧС4т, ЧС4, ЧС4квр (Указатель!!)
-   ADDR_CHS4T_GV_PAKETNIK:                  PByte;   // Адрес состояния пакетника БВ на ЧС4т, ЧС4, ЧС4квр (Указатель!!)
+   ADDR_CHS4T_GV_PAKETNIK_OFFSET:           Pointer; // пїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅ пїЅпїЅ пїЅпїЅ4пїЅ, пїЅпїЅ4, пїЅпїЅ4пїЅпїЅпїЅ (пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ!!)
+   ADDR_CHS4T_GV_PAKETNIK:                  PByte;   // пїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅ пїЅпїЅ пїЅпїЅ4пїЅ, пїЅпїЅ4, пїЅпїЅ4пїЅпїЅпїЅ (пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ!!)
    ADDR_CHS4KVR_FTP:                        Pointer;
    ADDR_CHS4KVR_BTP:                        Pointer;
    ADDR_CHS4KVR_REVERSOR:                   Pointer;
@@ -119,17 +119,17 @@ var
    ADDR_HIGHLIGHTS:                         Pointer;
    ADDR_ED9M_COMPRESSOR:                    Pointer;
    ADDR_ED9M_REVERS:                        Pointer;
-   ADDR_EDT_AMPERAGE:                       Pointer; // Адрес значения тока ЭДТ (ЧС8)
-   ADDR_NM:                                 Pointer; // Адрес значения показания Напорной Магистрали
-   ADDR_BRAKE_CYLINDERS:                    Pointer; // Адрес значения давления в Тормозных Цилиндрах
-   ADDR_2TE10U_DIESEL1:                     Pointer; // Адрес состояния дизеля на 2ТЭ10У
-   ADDR_2TE10U_DIESEL2:                     Pointer; // Адрес состояния дизеля на 2ТЭ10У
-   ADDR_TEP70_RPM:                          Pointer; // Адрес числа оборотов в минуту дизеля на ТЭП70
-   ADDR_TEP70_TED:                          Pointer; // Адрес тока ТЭД для ТЭП70
+   ADDR_EDT_AMPERAGE:                       Pointer; // пїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅ пїЅпїЅпїЅ (пїЅпїЅ8)
+   ADDR_NM:                                 Pointer; // пїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ
+   ADDR_BRAKE_CYLINDERS:                    Pointer; // пїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ
+   ADDR_2TE10U_DIESEL1:                     Pointer; // пїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅ 2пїЅпїЅ10пїЅ
+   ADDR_2TE10U_DIESEL2:                     Pointer; // пїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅ 2пїЅпїЅ10пїЅ
+   ADDR_TEP70_RPM:                          Pointer; // пїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅ пїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅ пїЅпїЅпїЅ70
+   ADDR_TEP70_TED:                          Pointer; // пїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅ пїЅпїЅпїЅ пїЅпїЅпїЅ пїЅпїЅпїЅ70
    ADDR_TEP70BS_RPM:                        Pointer;
    ADDR_TEP70BS_KMPOS:                      Pointer;
-   ADDR_M62_RPM_1:                          Pointer; // Адрес числа оборотов в минуту для дизеля на М62
-   ADDR_M62_RPM_2:                          Pointer; // Адрес числа оборотов в минуту для дизеля на М62
+   ADDR_M62_RPM_1:                          Pointer; // пїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅ пїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅ пїЅ62
+   ADDR_M62_RPM_2:                          Pointer; // пїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅ пїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅ пїЅ62
    ADDR_M62_KMPOS_1:                        Pointer;
    ADDR_M62_KMPOS_2:                        Pointer;
    ADDR_EPT:                                Pointer;
@@ -177,7 +177,7 @@ var
    CHS8VentTempCounter:                     Byte;
 
 //------------------------------------------------------------------------------//
-//            Подпрограмма для чтения указателя по указанному адресу            //
+//            пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅ            //
 //------------------------------------------------------------------------------//
 function ReadPointer(Addr: Pointer): PByte;
 var
@@ -197,7 +197,7 @@ begin
 end;
 
 //------------------------------------------------------------------------------//
-//          Подпрограмма для чтения из ОЗУ строки фиксированной длинны          //
+//          пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅ пїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅ          //
 //------------------------------------------------------------------------------//
 function ReadStringFromMemory(readAddr: PByte; Len: Byte) : String;
 var
@@ -216,7 +216,7 @@ begin
 end;
 
 //------------------------------------------------------------------------------//
-//          Подпрограмма для чтения из ОЗУ строки фиксированной длинны          //
+//          пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅ пїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅ          //
 //------------------------------------------------------------------------------//
 function ReadStringFromMemoryToZero(readAddr: PByte) : String;
 var
@@ -236,7 +236,7 @@ begin
 end;
 
 //------------------------------------------------------------------------------//
-//          Подпрограмма для чтения из ОЗУ строки до указанного символа         //
+//          пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅ пїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅ         //
 //------------------------------------------------------------------------------//
 function ReadKeyFromMemoryString(readAddr: PByte; Key: String; SearchRadius: Integer) : String;
 var
@@ -285,87 +285,49 @@ begin
 end;
 
 //------------------------------------------------------------------------------//
-//  Подпрограмма для чтения стартовых параметров из виртуального 'settings.ini' //
+//  пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ 'settings.ini' //
 //------------------------------------------------------------------------------//
 procedure ConnectSimulatorRAM();
 var
    I: Integer;
 begin
-   // Проверяем запуска процесса Launcher.exe
-   isConnectedMemory := FindTask('Launcher.exe');
-   if isConnectedMemory = False then begin
-      isConnectedMemory := FindTask('L-54-006.exe');
-      if isConnectedMemory = False then begin
-         isConnectedMemory := FindTask('L-55-008.exe');
-         if isConnectedMemory = False then begin
-            isConnectedMemory := FindTask('L-55-009.exe');
-            if isConnectedMemory = False then begin
-               isConnectedMemory := FindTask('ZLauncher.exe');
-               if isConnectedMemory = False then
-                  isConnectedMemory := FindTask('zdsimulator.exe');
-            end;
-         end;
-      end;
-   end;
-
-   // Если Launcher.exe запущен
+   isConnectedMemory := FindSimulatorWindow(wHandle, GameWindowName);
    if isConnectedMemory = True then begin
-      for I := 0 to 3 do begin
-         if I = 0 then GameWindowName := 'ZDSimulator55.008' else
-            if I = 1 then GameWindowName := 'ZDSimulator54.006' else
-               if I = 2 then GameWindowName := 'ZDSimulator55.009' else
-                  if I = 3 then GameWindowName := 'ZDSimulator v56.2';
-
-         wHandle := FindWindow(nil, PChar(GameWindowName+' [Paused]'));
-
-         if wHandle<>0 then begin
-            isGameOnPause        := True;
-            isConnectedMemory    := True;
-            FormMain.lblSimulatorLaunchStatus.Caption       := GameWindowName;
-            Break;
-         end else begin
-            wHandle := FindWindow(nil, PChar(GameWindowName));
-                 if wHandle=0 then begin
-                    isGameOnPause     := True;
-                    isConnectedMemory := False;
-                    FormMain.lblSimulatorLaunchStatus.Caption := 'Симулятор не запущен';
-                 end else begin
-                    UnitMain.tHandle := GetWindowThreadProcessId(wHandle, @ProcessID);
-                    UnitMain.pHandle := OpenProcess(PROCESS_ALL_ACCESS, FALSE, ProcessID);
-                    //if I = 0 then ADDR_ZDS_EXE_LABEL:=Pointer($00172C28);
-                    //if ReadStringFromMemory(ADDR_ZDS_EXE_LABEL,17)='DGLEngine Launcher' then
-                    isGameOnPause     := False;
-                    CloseHandle(UnitMain.pHandle);
-                    isConnectedMemory := True;
-                    FormMain.lblSimulatorLaunchStatus.Caption    := GameWindowName;
-                    Break;
-                 end;
-              end;
-              CloseHandle(wHandle);
-  	   end;
+      isGameOnPause := Pos('[PAUSED]', UpperCase(GameWindowName)) > 0;
+      FormMain.lblSimulatorLaunchStatus.Caption :=
+         StringReplace(GameWindowName, ' [Paused]', '', [rfIgnoreCase]);
+      if Pos('ZDSIMULATOR V', UpperCase(GameWindowName)) > 0 then
+         I := 3
+      else if Pos('ZDSIMULATOR55.008', UpperCase(GameWindowName)) > 0 then
+         I := 0
+      else if Pos('ZDSIMULATOR54.006', UpperCase(GameWindowName)) > 0 then
+         I := 1
+      else if Pos('ZDSIMULATOR55.009', UpperCase(GameWindowName)) > 0 then
+         I := 2
+      else
+         I := 3;
    end else begin
       isGameOnPause := True;
-      if (isConnectedMemory = False) And (PrevConMem = True) then begin
-         FormMain.lblSimulatorLaunchStatus.Caption:='Симулятор был закрыт';
+      if PrevConMem = True then begin
+         FormMain.lblSimulatorLaunchStatus.Caption:='пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅ';
       end;
+      I := 3;
    end;
-   //if I <> VersionID then begin
-      if I = 3 then begin
+   if I = 3 then begin
          ZDSimSteamVersion := True;
          UnitMain.Log_.DebugWriteErrorToErrorList('STEAM version');
-      end else begin
+   end else begin
          ZDSimSteamVersion := False;
          UnitMain.Log_.DebugWriteErrorToErrorList('NOT STEAM version');
-      end;
+   end;
       InitializeStartParams(I);
-   //end;
 
 	RefreshSnd:=True;
         VersionID := I;
 end;
 
 //------------------------------------------------------------------------------//
-//  Подпрограмма для чтения стартовых параметров из виртуального 'settings.ini' //
+//  пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ 'settings.ini' //
 //------------------------------------------------------------------------------//
 procedure GetStartSettingParamsFromRAM();
 var
@@ -379,7 +341,7 @@ var
 begin
      With FormMain do begin
         if ZDSimSteamVersion = False then begin
-           // Получаем адрес процесса ZDSimulator
+           // пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ ZDSimulator
            UnitMain.tHandle := GetWindowThreadProcessId(wHandle, @ProcessID);
            UnitMain.pHandle := OpenProcess(PROCESS_ALL_ACCESS, FALSE, ProcessID);
 
@@ -389,11 +351,11 @@ begin
            LocoGlobal := ReadKeyFromMemoryString(addr_settings_ini, 'LocomotiveType',6666);
            naprav:= ReadKeyFromMemoryString(addr_settings_ini, 'Route', 6666);
            try Route := ReadKeyFromMemoryString(addr_settings_ini, 'RoutePath', 6666); except Route:='error'; end;
-           // Получение номера локомотива
+           // пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ
            try
               St := ReadKeyFromMemoryString(addr_settings_ini, 'LocNum', 6666);
 
-              // !!! Фикс для номеров типа 33_006 или 1155_0976 !!! //
+              // !!! пїЅпїЅпїЅпїЅ пїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅ 33_006 пїЅпїЅпїЅ 1155_0976 !!! //
               if Pos('_', St)>0 then St := GetStrToSep(St, '_');
 
               LocoNum := StrToInt(St);
@@ -429,7 +391,7 @@ begin
            try CloseHandle(UnitMain.pHandle); except end;
         end else begin
            // STEAM
-           // Получаем адрес процесса ZDSimulator
+           // пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ ZDSimulator
            try
               UnitMain.tHandle := GetWindowThreadProcessId(wHandle, @ProcessID);
               UnitMain.pHandle := OpenProcess(PROCESS_ALL_ACCESS, FALSE, ProcessID);
@@ -437,28 +399,28 @@ begin
               UnitMain.Log_.DebugWriteErrorToErrorList('Error opening pHandle in read settings.ini');
            end;
 
-           // Тип Локомотива
+           // пїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ
            ReadProcessMemory(UnitMain.pHandle, ADDR_LOCOMOTIVE_TYPE, @_int, 4, temp);
            LocoGlobal := IntToStr(_int);
-           // Имя маршрута
+           // пїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ
            ADDR_ROUTE_PATH := ReadPointer(ADDR_ROUTE_PATH_POINTER);
            Route := ReadStringFromMemoryToZero(ADDR_ROUTE_PATH);
            //_pByte := ADDR_ROUTE_PATH; Inc(_pByte, 1);
            //ReadProcessMemory(UnitMain.pHandle, ADDR_ROUTE_PATH, @_Byte, 1, temp);
            //ReadProcessMemory(UnitMain.pHandle, _pByte, @Route, _Byte, temp);
-           // Направление движения по маршруту
+           // пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ
            ReadProcessMemory(UnitMain.pHandle, ADDR_ROUTE, @_Byte, 1, temp);
            Naprav := IntToStr(_Byte);
-           // Количество вагонов
+           // пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅ
            ReadProcessMemory(UnitMain.pHandle, ADDR_WAGONS_AMOUNT, @WagonsAmount, 1, temp);
-           // Номер локомотива
+           // пїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ
            try
               ADDR_LOC_NUMBER := ReadPointer(ADDR_LOC_NUMBER_POINTER);
               LocoNum := StrToInt(ReadStringFromMemoryToZero(ADDR_LOC_NUMBER));
            except
               UnitMain.Log_.DebugWriteErrorToErrorList('Error read LocoNum in read settings.ini');
            end;
-           // Тип поезда (пассажирский/грузовой)
+           // пїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅ (пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ/пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ)
            ReadProcessMemory(UnitMain.pHandle, ADDR_FREIGHT, @Freight, 1, temp);
 
            AssignFile(TF, extractfilepath(ParamStr(0))+'settings.ini');
@@ -502,7 +464,7 @@ begin
 end;
 
 //------------------------------------------------------------------------------//
-//        Подпрограмма для чтения локальных переменных локомотива 2ТЭ10у        //
+//        пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ 2пїЅпїЅ10пїЅ        //
 //------------------------------------------------------------------------------//
 procedure ReadDataMemory2TE10U();
 var
@@ -513,7 +475,7 @@ begin
 end;
 
 //------------------------------------------------------------------------------//
-//         Подпрограмма для чтения локальных переменных локомотива М62          //
+//         пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅ62          //
 //------------------------------------------------------------------------------//
 procedure ReadDataMemoryM62();
 var
@@ -528,7 +490,7 @@ begin
 end;
 
 //------------------------------------------------------------------------------//
-//        Подпрограмма для чтения локальных переменных локомотива ТЭП70         //
+//        пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅ70         //
 //------------------------------------------------------------------------------//
 procedure ReadDataMemoryTEP70();
 var
@@ -539,7 +501,7 @@ begin
 end;
 
 //------------------------------------------------------------------------------//
-//       Подпрограмма для чтения локальных переменных локомотива ТЭП70бс        //
+//       пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅ70пїЅпїЅ        //
 //------------------------------------------------------------------------------//
 procedure ReadDataMemoryTEP70BS();
 var
@@ -550,7 +512,7 @@ begin
 end;
 
 //------------------------------------------------------------------------------//
-//       Подпрограмма для чтения локальных переменных локомотива ТЭМ18дм        //
+//       пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅ18пїЅпїЅ        //
 //------------------------------------------------------------------------------//
 procedure ReadDataMemoryTEM18dm();
 begin
@@ -558,7 +520,7 @@ begin
 end;
 
 //------------------------------------------------------------------------------//
-//        Подпрограмма для чтения локальных переменных локомотива ВЛ11м         //
+//        пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅ11пїЅ         //
 //------------------------------------------------------------------------------//
 procedure ReadDataMemoryVL11m();
 begin
@@ -570,7 +532,7 @@ begin
 end;
 
 //------------------------------------------------------------------------------//
-//        Подпрограмма для чтения локальных переменных локомотива ВЛ80т         //
+//        пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅ80пїЅ         //
 //------------------------------------------------------------------------------//
 procedure ReadDataMemoryVL80t();
 var
@@ -588,7 +550,7 @@ begin
 end;
 
 //------------------------------------------------------------------------------//
-//        Подпрограмма для чтения локальных переменных локомотива ВЛ82м         //
+//        пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅ82пїЅ         //
 //------------------------------------------------------------------------------//
 procedure ReadDataMemoryVL82m();
 begin
@@ -600,7 +562,7 @@ begin
 end;
 
 //------------------------------------------------------------------------------//
-//         Подпрограмма для чтения локальных переменных локомотива ВЛ85         //
+//         пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅ85         //
 //------------------------------------------------------------------------------//
 procedure ReadDataMemoryVL85();
 begin
@@ -609,7 +571,7 @@ begin
 end;
 
 //------------------------------------------------------------------------------//
-//         Подпрограмма для чтения локальных переменных локомотива ЧС2к         //
+//         пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅ2пїЅ         //
 //------------------------------------------------------------------------------//
 procedure ReadDataMemoryCHS2k();
 begin
@@ -619,12 +581,12 @@ begin
     try ReadProcessMemory(UnitMain.pHandle, ADDR_CHS2K_BV, @BV, 1, temp);  except end;
     try ReadProcessMemory(UnitMain.pHandle, ADDR_CHS2K_BTP, @BackTP, 1, temp);  except end;
     try ReadProcessMemory(UnitMain.pHandle, ADDR_CHS7_VOLTAGE, @Voltage, 4, temp);  except end;
-    try ReadProcessMemory(UnitMain.pHandle, ADDR_CHS7_REVERSOR, @ReversorPos, 1, temp);  except end;         // Реверсор
+    try ReadProcessMemory(UnitMain.pHandle, ADDR_CHS7_REVERSOR, @ReversorPos, 1, temp);  except end;         // пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ
     if ((BV=0) Or (Voltage<1.5)) and (Vent<>0) then Vent := 0 else Vent := Vent;
 end;
 
 //------------------------------------------------------------------------------//
-//          Подпрограмма для чтения локальных переменных локомотива ЧС4         //
+//          пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅ4         //
 //------------------------------------------------------------------------------//
 procedure ReadDataMemoryCHS4();
 var
@@ -649,7 +611,7 @@ begin
 end;
 
 //------------------------------------------------------------------------------//
-//          Подпрограмма для чтения локальных переменных локомотива ЧС4т        //
+//          пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅ4пїЅ        //
 //------------------------------------------------------------------------------//
 procedure ReadDataMemoryCHS4t();
 var
@@ -674,7 +636,7 @@ begin
 end;
 
 //------------------------------------------------------------------------------//
-//         Подпрограмма для чтения локальных переменных локомотива ЧС4квр       //
+//         пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅ4пїЅпїЅпїЅ       //
 //------------------------------------------------------------------------------//
 procedure ReadDataMemoryCHS4kvr();
 var
@@ -698,24 +660,24 @@ begin
 end;
 
 //------------------------------------------------------------------------------//
-//          Подпрограмма для чтения локальных переменных локомотива ЧС7         //
+//          пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅ7         //
 //------------------------------------------------------------------------------//
 procedure ReadDataMemoryCHS7();
 begin
-    try ReadProcessMemory(UnitMain.pHandle, ADDR_CHS7_FTP, @FrontTP, 1, temp);  except end; 	    // Передний ТП
-    try ReadProcessMemory(UnitMain.pHandle, ADDR_CHS7_BTP, @BackTP, 1, temp);  except end;              // Задний ТП
-    try ReadProcessMemory(UnitMain.pHandle, ADDR_CHS7_REVERSOR, @ReversorPos, 1, temp);  except end;         // Реверсор
-    try ReadProcessMemory(UnitMain.pHandle, ADDR_CHS7_COMPRESSOR, @Compressor, 4, temp);  except end;    // Компрессор
-    try ReadProcessMemory(UnitMain.pHandle, ADDR_CHS7_VOLTAGE, @Voltage, 4, temp);  except end;          // Напряжение на эл-возе
-    try ReadProcessMemory(UnitMain.pHandle, ADDR_CHS7_BV, @BV, 1, temp);  except end;		    // БВ
-    try ReadProcessMemory(UnitMain.pHandle, ADDR_CHS7_VENT, @Vent, 1, temp);  except end;                // Вентилятор (положение тумблера)
-    try ReadProcessMemory(UnitMain.pHandle, ADDR_CHS7_ZHALUZI, @Zhaluzi, 1, temp); except end;       // Жалюзи
-    try ReadProcessMemory(UnitMain.pHandle, ADDR_CHS7_BV_PAKETNIK, @BV_Paketnik, 4, temp);  except end;          // Напряжение на эл-возе
+    try ReadProcessMemory(UnitMain.pHandle, ADDR_CHS7_FTP, @FrontTP, 1, temp);  except end; 	    // пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅ
+    try ReadProcessMemory(UnitMain.pHandle, ADDR_CHS7_BTP, @BackTP, 1, temp);  except end;              // пїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅ
+    try ReadProcessMemory(UnitMain.pHandle, ADDR_CHS7_REVERSOR, @ReversorPos, 1, temp);  except end;         // пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ
+    try ReadProcessMemory(UnitMain.pHandle, ADDR_CHS7_COMPRESSOR, @Compressor, 4, temp);  except end;    // пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ
+    try ReadProcessMemory(UnitMain.pHandle, ADDR_CHS7_VOLTAGE, @Voltage, 4, temp);  except end;          // пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅ пїЅпїЅ-пїЅпїЅпїЅпїЅ
+    try ReadProcessMemory(UnitMain.pHandle, ADDR_CHS7_BV, @BV, 1, temp);  except end;		    // пїЅпїЅ
+    try ReadProcessMemory(UnitMain.pHandle, ADDR_CHS7_VENT, @Vent, 1, temp);  except end;                // пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ (пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ)
+    try ReadProcessMemory(UnitMain.pHandle, ADDR_CHS7_ZHALUZI, @Zhaluzi, 1, temp); except end;       // пїЅпїЅпїЅпїЅпїЅпїЅ
+    try ReadProcessMemory(UnitMain.pHandle, ADDR_CHS7_BV_PAKETNIK, @BV_Paketnik, 4, temp);  except end;          // пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅ пїЅпїЅ-пїЅпїЅпїЅпїЅ
     if ((BV=0) Or (Voltage<1.5)) and (Vent<>0) then Vent := 0 else Vent := Vent;
 end;
 
 //------------------------------------------------------------------------------//
-//          Подпрограмма для чтения локальных переменных локомотива ЧС8         //
+//          пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅ8         //
 //------------------------------------------------------------------------------//
 procedure ReadDataMemoryCHS8();
 var
@@ -771,7 +733,7 @@ begin
 end;
 
 //------------------------------------------------------------------------------//
-//         Подпрограмма для чтения локальных переменных локомотива ЭП1м         //
+//         пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅ1пїЅ         //
 //------------------------------------------------------------------------------//
 procedure ReadDataMemoryEP1m();
 begin
@@ -782,7 +744,7 @@ begin
 end;
 
 //------------------------------------------------------------------------------//
-//         Подпрограмма для чтения локальных переменных локомотива 2ЭС5к        //
+//         пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ 2пїЅпїЅ5пїЅ        //
 //------------------------------------------------------------------------------//
 procedure ReadDataMemory2ES5k();
 var
@@ -797,7 +759,7 @@ begin
 end;
 
 //------------------------------------------------------------------------------//
-//       Подпрограмма для чтения локальных переменных электропоезда ЭД4м        //
+//       пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅ4пїЅ        //
 //------------------------------------------------------------------------------//
 procedure ReadDataMemoryED4M();
 var
@@ -815,7 +777,7 @@ begin
 end;
 
 //------------------------------------------------------------------------------//
-//       Подпрограмма для чтения локальных переменных электропоезда ЭД9м        //
+//       пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅ9пїЅ        //
 //------------------------------------------------------------------------------//
 procedure ReadDataMemoryED9M();
 var
@@ -833,50 +795,50 @@ begin
 end;
 
 //------------------------------------------------------------------------------//
-//             Подпрограмма для чтения переменных ZDSimulator в ОЗУ             //
+//             пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ ZDSimulator пїЅ пїЅпїЅпїЅ             //
 //------------------------------------------------------------------------------//
 procedure ReadVarsFromRAM;
 var
      wSpeed:         Double;
      wVstrDl:        Double;
      wPos_1:         Single;
-     wVstrSpeed:     Single; // [м/c]
+     wVstrSpeed:     Single; // [пїЅ/c]
      addr_waglength: PDouble;
      I:              Integer;
 begin
    With FormMain do begin
-     // Получаем адрес процесса ZDSimulator
+     // пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ ZDSimulator
      UnitMain.tHandle := GetWindowThreadProcessId(wHandle, @ProcessID);
      UnitMain.pHandle := OpenProcess(PROCESS_ALL_ACCESS, FALSE, ProcessID);
 
-     // --- Задаем указатель на длину первого вагона встречки --- //
+     // --- пїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅ пїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ --- //
      addr_waglength := ADDR_VSTRECHA_WAGON_DLINA;
      Vstrecha_dlina:=0;
 
      FindPnevm();
 
-     // ----- Читаем основные(общие) переменные ZDSimulator ----- //
-     try ReadProcessMemory(UnitMain.pHandle, ADDR_Track, @Track, 4, temp); except end;          // Получаем номер трэка
+     // ----- пїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ(пїЅпїЅпїЅпїЅпїЅ) пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ ZDSimulator ----- //
+     try ReadProcessMemory(UnitMain.pHandle, ADDR_Track, @Track, 4, temp); except end;          // пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅ
      try ReadProcessMemory(UnitMain.pHandle, ADDR_TRACK_TAIL, @TrackTail, 4, temp); except end;
-     try ReadProcessMemory(UnitMain.pHandle, ADDR_Speed, @wSpeed, 8, temp); except end;         // Получаем скорость 32CB38
-     try ReadProcessMemory(UnitMain.pHandle, ADDR_Svetofor, @Svetofor, 1, temp); except end;   // Получаем показания светофора
-     try ReadProcessMemory(UnitMain.pHandle, ADDR_KM_POS, @wPos_1, 4, temp); except end;	    // Получаем позиции 1-ой секции
-     try ReadProcessMemory(UnitMain.pHandle, ADDR_KM_POS_2, @KM_Pos_2, 1, temp); except end;	    // Получаем позиции 2-ой секции
-     try ReadProcessMemory(UnitMain.pHandle, ADDR_OP_POS, @KM_OP, 4, temp); except end;           // Получаем позицию шунтов
-     try ReadProcessMemory(UnitMain.pHandle, ADDR_395, @KM_395, 1, temp); except end;         // Получаем позицию 394(395) крана
-     try ReadProcessMemory(UnitMain.pHandle, ADDR_254, @KM_294, 4, temp); except end;         // Получаем позицию лок. крана
-     try ReadProcessMemory(UnitMain.pHandle, ADDR_VSTR_NW, @WagNum_Vstr, 1, temp);  except end;     // Получаем количество вагонов встречки
-     //try ReadProcessMemory(UnitMain.pHandle, ADDR_VSTR_TRACK, @wTrVstr, 2, temp);  except end;  // Получаем трэк встречки
-     try ReadProcessMemory(UnitMain.pHandle, ADDR_KLUB_OPEN, @KLUBOpen, 1, temp);  except end; // Получаем байт открытия клавиатуры КЛУБ-а
-     try ReadProcessMemory(UnitMain.pHandle, ADDR_ACCLRT, @Acceleretion, 8, temp);  except end;// Получаем ускорение
-     try ReadProcessMemory(UnitMain.pHandle, ADDR_VSTRECHA_WAG_ORDINATA, @VstrTrack, 2, temp);  except end;// Получаем ускорение
-     try ReadProcessMemory(UnitMain.pHandle, ADDR_OGRANICH, @OgrSpeed, 2, temp);  except end; // Получаем ограничение скорости с КЛУБ-а
+     try ReadProcessMemory(UnitMain.pHandle, ADDR_Speed, @wSpeed, 8, temp); except end;         // пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ 32CB38
+     try ReadProcessMemory(UnitMain.pHandle, ADDR_Svetofor, @Svetofor, 1, temp); except end;   // пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ
+     try ReadProcessMemory(UnitMain.pHandle, ADDR_KM_POS, @wPos_1, 4, temp); except end;	    // пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅ 1-пїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅ
+     try ReadProcessMemory(UnitMain.pHandle, ADDR_KM_POS_2, @KM_Pos_2, 1, temp); except end;	    // пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅ 2-пїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅ
+     try ReadProcessMemory(UnitMain.pHandle, ADDR_OP_POS, @KM_OP, 4, temp); except end;           // пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅ
+     try ReadProcessMemory(UnitMain.pHandle, ADDR_395, @KM_395, 1, temp); except end;         // пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅ 394(395) пїЅпїЅпїЅпїЅпїЅ
+     try ReadProcessMemory(UnitMain.pHandle, ADDR_254, @KM_294, 4, temp); except end;         // пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅ. пїЅпїЅпїЅпїЅпїЅ
+     try ReadProcessMemory(UnitMain.pHandle, ADDR_VSTR_NW, @WagNum_Vstr, 1, temp);  except end;     // пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ
+     //try ReadProcessMemory(UnitMain.pHandle, ADDR_VSTR_TRACK, @wTrVstr, 2, temp);  except end;  // пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ
+     try ReadProcessMemory(UnitMain.pHandle, ADDR_KLUB_OPEN, @KLUBOpen, 1, temp);  except end; // пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅ-пїЅ
+     try ReadProcessMemory(UnitMain.pHandle, ADDR_ACCLRT, @Acceleretion, 8, temp);  except end;// пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ
+     try ReadProcessMemory(UnitMain.pHandle, ADDR_VSTRECHA_WAG_ORDINATA, @VstrTrack, 2, temp);  except end;// пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ
+     try ReadProcessMemory(UnitMain.pHandle, ADDR_OGRANICH, @OgrSpeed, 2, temp);  except end; // пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅ пїЅпїЅпїЅпїЅ-пїЅ
      try ReadProcessMemory(UnitMain.pHandle, ADDR_NEXT_OGRANICH, @NextOgrSpeed, 1, temp);  except end;
-     try ReadProcessMemory(UnitMain.pHandle, ADDR_SVETOFOR_DISTANCE, @SvetoforDist, 2, temp);  except end; // Получаем расстояние до свотофора
-     try ReadProcessMemory(UnitMain.pHandle, ADDR_RAIN, @Rain, 1, temp);  except end;     // Получаем интенсивность дождя
-     try ReadProcessMemory(UnitMain.pHandle, ADDR_CAMERA, @UnitMain.CameraMode, 1, temp);  except end;   // Получаем положение камеры
-     try ReadProcessMemory(UnitMain.pHandle, ADDR_VIGILANCE_CHECK, @VCheck, 1, temp);  except end;   // Получаем состояние проверки бдительности
-     try ReadProcessMemory(UnitMain.pHandle, ADDR_SPEED_VSTRECHA, @wVstrSpeed, 4, temp);  except end;   // Получаем состояние проверки бдительности
+     try ReadProcessMemory(UnitMain.pHandle, ADDR_SVETOFOR_DISTANCE, @SvetoforDist, 2, temp);  except end; // пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ
+     try ReadProcessMemory(UnitMain.pHandle, ADDR_RAIN, @Rain, 1, temp);  except end;     // пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅ
+     try ReadProcessMemory(UnitMain.pHandle, ADDR_CAMERA, @UnitMain.CameraMode, 1, temp);  except end;   // пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅ
+     try ReadProcessMemory(UnitMain.pHandle, ADDR_VIGILANCE_CHECK, @VCheck, 1, temp);  except end;   // пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ
+     try ReadProcessMemory(UnitMain.pHandle, ADDR_SPEED_VSTRECHA, @wVstrSpeed, 4, temp);  except end;   // пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ
      if ZDSimSteamVersion = False then begin
         try ReadProcessMemory(UnitMain.pHandle, ADDR_CAMERA_X, @CameraX, 2, temp);  except end;
      end else begin
@@ -916,32 +878,32 @@ begin
            KM_Pos_1 := Round(wPos_1)
       except end;
 
-     // --- Вычисляем длину встречного поеда в метрах ---- //
+     // --- пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅ пїЅ пїЅпїЅпїЅпїЅпїЅпїЅ ---- //
      try
-        ReadProcessMemory(UnitMain.pHandle, addr_waglength, @wVstrDl, 8, temp); // Получаем длину первого вагона
+        ReadProcessMemory(UnitMain.pHandle, addr_waglength, @wVstrDl, 8, temp); // пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅ
         Vstrecha_dlina := Vstrecha_dlina + Trunc(wVstrDl);
         Inc(addr_waglength, 18);
         for I:=1 to WagNum_Vstr do begin
            try
-              ReadProcessMemory(UnitMain.pHandle, addr_waglength, @wVstrDl, 8, temp); // Получаем длину встречки в цикле
+              ReadProcessMemory(UnitMain.pHandle, addr_waglength, @wVstrDl, 8, temp); // пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅ пїЅпїЅпїЅпїЅпїЅ
               Vstrecha_dlina := Vstrecha_dlina + Trunc(wVstrDl);
               Inc(addr_waglength, 18);
            except end;
         end;
      except end;
 
-     // --- Вычисляем приблизительную длину трека в м. --- //
+     // --- пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅ пїЅ пїЅ. --- //
      if CoupleStat = 1 then begin
         try TrackLength := ConsistLength/(abs(Track-TrackTail)); except TrackLength := 100; end;
      end else begin
         TrackLength := 100;
      end;
 
-     // ------ Читаем переменные локомотива из ОЗУ ------- //
+     // ------ пїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅ пїЅпїЅпїЅ ------- //
      if LocoGlobal <> '' then
          try ProcReadDataMemoryAddr(); except end;
 
-     // --- Перевод локальных переменных в глобальные ---- //
+     // --- пїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ ---- //
      try Speed      := Trunc(wSpeed);         except end;
      try Vstr_Speed := Trunc(wVstrSpeed * 4); except end;
 
@@ -950,7 +912,7 @@ begin
 end;
 
 //------------------------------------------------------------------------------//
-//   Подпрограмма для задания начальных адресов в ОЗУ и параметров локомотива   //
+//   пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅ пїЅпїЅпїЅ пїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ   //
 //------------------------------------------------------------------------------//
 procedure InitializeStartParams(VersionID: Integer);
 var
@@ -998,7 +960,7 @@ begin
           ADDR_VL82_VENT:=Pointer($091D48BC);      ADDR_VL82_COMPRESSOR:=Pointer($091D48B8); ADDR_WAGS_NUM   :=   Pointer($00749990);
           ADDR_CAMERA_LAST_WAGON_OFFSET:=Pointer($0910CE48);
           ADDR_LAST_WAGON_SHADOW_OFF:=Pointer($0048A6BE);
-          // Звуки ЭМ защелки при включении пакетника управление на ЧС-ах, кроме ЧС2к (ЭКСКЛЮЗИВ версии 5.5.008)
+          // пїЅпїЅпїЅпїЅпїЅ пїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅ пїЅпїЅ-пїЅпїЅ, пїЅпїЅпїЅпїЅпїЅ пїЅпїЅ2пїЅ (пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅ 5.5.008)
           ADDR_CHS7_BV_PAKETNIK:=Pointer($091D5B9C);ADDR_CHS4T_GV_PAKETNIK_OFFSET:=Pointer($07D22254);
           ADDR_CHS8_GV_PAKETNIK_OFFSET:=Pointer($00803F78);
           ADDR_EXTRA_CODE_ZDS1:=Pointer($0040438C);
@@ -1046,11 +1008,11 @@ begin
           ADDR_CAMERA_LAST_WAGON_OFFSET:=Pointer($090F06C0);ADDR_WAGS_NUM:=Pointer($0072CB80); ADDR_CHS8_GV_1  :=   Pointer($08FEB82C);
        end;
 
-       // Версия 5.6
+       // пїЅпїЅпїЅпїЅпїЅпїЅ 5.6
        if VersionID = 3 then begin
           Ini:=TiniFile.Create(extractfilepath(ParamStr(0))+'tws.ini');
 
-          // Данные settings.ini из ОЗУ ZDSimulator
+          // пїЅпїЅпїЅпїЅпїЅпїЅ settings.ini пїЅпїЅ пїЅпїЅпїЅ ZDSimulator
           ADDR_LOCOMOTIVE_TYPE    := Pointer(strToInt('$' + Ini.ReadString('global', 'LocomotiveType', '0')));   // OK
           ADDR_ROUTE              := Pointer(strToInt('$' + Ini.ReadString('global', 'Route', '0')));            // OK
           ADDR_ROUTE_PATH_POINTER := Pointer(strToInt('$' + Ini.ReadString('global', 'RoutePath', '0')));        // OK [POINTER]
@@ -1072,594 +1034,594 @@ begin
           Ini.Free;
        end;
 
-        // -/- ВЛ80т (VL80t) -/- //
+        // -/- пїЅпїЅ80пїЅ (VL80t) -/- //
         if LocoGlobal='VL80t' then begin
            LocoWorkDir         := 'TWS/VL80t/';
-           UltimateTEDAmperage := 1000;		// Задаем предельный ток нагрузки ТЭД
-           LocoSectionsNum     := 2;		// Задаем количество секций для текущего локомотива
-           LocoPowerVoltage    := 25;           // Тип электрофикации локомотива [0, -, ~]
-           LocoWithTED         := True;         // Задаем состояние наличия на данном локомотиве звука ТЭД-ов
-           LocoWithReductor    := False;        // Задаем состояние наличия на данном локомотиве звука редуктора
-           LocoWithDIZ         := False;        // Задаем состояние наличия на данном локомотиве звуков дизеля
-           LocoWithSndKM       := False;        // Задаем состояние наличия на данном локомотиве звуков контроллера
-           LocoWithSndKM_OP    := False;        // Задаем состояние наличия на данном локомотиве звука постановки ОП
-           LocoWithSndTP       := True;         // Задаем состояние наличия на данном локомотиве звука ТП
-           LocoWithExtMVSound  := True;         // Задаем состояние наличия на данном локомотиве внешних звуков МВ
-           LocoWithExtMKSound  := True;         // Задаем состояние наличия на данном локомотиве внешних звуков МК
-           LocoWithMVPitch     := False;        // Задаем состояние наличия на данном локомотиве тонального регулирования МВ
-           LocoWithMVTDPitch   := False;        // Задаем состояние наличия на данном локомотиве тонального регулирования МВ ТД
+           UltimateTEDAmperage := 1000;		// пїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅ
+           LocoSectionsNum     := 2;		// пїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ
+           LocoPowerVoltage    := 25;           // пїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ [0, -, ~]
+           LocoWithTED         := True;         // пїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅ-пїЅпїЅ
+           LocoWithReductor    := False;        // пїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ
+           LocoWithDIZ         := False;        // пїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅ
+           LocoWithSndKM       := False;        // пїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ
+           LocoWithSndKM_OP    := False;        // пїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅ
+           LocoWithSndTP       := True;         // пїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅ пїЅпїЅ
+           LocoWithExtMVSound  := True;         // пїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅ
+           LocoWithExtMKSound  := True;         // пїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅ
+           LocoWithMVPitch     := False;        // пїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅ
+           LocoWithMVTDPitch   := False;        // пїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅ пїЅпїЅ
            VentStartF          := PChar('TWS/VL80t/MV-start.wav');
            VentCycleF          := PChar('TWS/VL80t/MV-loop.wav');
            VentStopF           := PChar('TWS/VL80t/MV-stop.wav');
            XVentStartF         := PChar('TWS/VL80t/x_MV-start.wav');
            XVentCycleF         := PChar('TWS/VL80t/x_MV-loop.wav');
            XVentStopF          := PChar('TWS/VL80t/x_MV-stop.wav');
-           VentTDPitchIncrementer:=0;           // Задаем значение для инкрементера тональности МВ ТД
-           VentTDPitchDecrementer:=0;           // Задаем значение для инкрементера тональности МВ ТД
-           VentPitchIncrementer:= 0;            // Задаем значение для инкрементера тональности МВ
-           LocoTEDNamePrefiks  := 'VL_TED';     // Задаем префикс названия папки с звуками ТЭД
-           LocoReductorNamePrefiks := '';       // Задаем префикс названия папки со звуками редуктора
-           LocoDIZNamePrefiks  := '';           // Задаем префикс названия папки с звуками работы дизеля
+           VentTDPitchIncrementer:=0;           // пїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅ пїЅпїЅ
+           VentTDPitchDecrementer:=0;           // пїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅ пїЅпїЅ
+           VentPitchIncrementer:= 0;            // пїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅ
+           LocoTEDNamePrefiks  := 'VL_TED';     // пїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅ пїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅ
+           LocoReductorNamePrefiks := '';       // пїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅ пїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ
+           LocoDIZNamePrefiks  := '';           // пїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅ пїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅ
            LocoSvistokF        := 'svistok';
            LocoHornF           := 'tifon';
            UnitMain.LocoLength := 17;
            ProcReadDataMemoryAddr :=
-              @ReadDataMemoryVL80t;		// Задаем указатель на функцию чтения памяти
+              @ReadDataMemoryVL80t;		// пїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅ
         end;
-        // -/- ВЛ85 (VL85) -/- //
+        // -/- пїЅпїЅ85 (VL85) -/- //
         if LocoGlobal='VL85' then begin
            LocoWorkDir         := 'TWS/VL85/';
-           UltimateTEDAmperage := 1000;		// Задаем предельный ток нагрузки ТЭД
-           LocoSectionsNum     := 2;		// Задаем количество секций для текущего локомотива
-           LocoPowerVoltage    := 25;           // Тип электрофикации локомотива [0, -, ~]
-           LocoWithTED         := True;         // Задаем состояние наличия на данном локомотиве звука ТЭД-ов
-           LocoWithReductor    := False;        // Задаем состояние наличия на данном локомотиве звука редуктора
-           LocoWithDIZ         := False;        // Задаем состояние наличия на данном локомотиве звуков дизеля
-           LocoWithSndKM       := False;        // Задаем состояние наличия на данном локомотиве звуков контроллера
-           LocoWithSndKM_OP    := False;        // Задаем состояние наличия на данном локомотиве звука постановки ОП
-           LocoWithSndTP       := True;         // Задаем состояние наличия на данном локомотиве звука ТП
-           LocoWithExtMVSound  := False;        // Задаем состояние наличия на данном локомотиве внешних звуков МВ
-           LocoWithExtMKSound  := False;        // Задаем состояние наличия на данном локомотиве внешних звуков МК
-           LocoWithMVPitch     := False;        // Задаем состояние наличия на данном локомотиве тонального регулирования МВ
-           LocoWithMVTDPitch   := False;        // Задаем состояние наличия на данном локомотиве тонального регулирования МВ ТД
-           VentTDPitchIncrementer:=0;           // Задаем значение для инкрементера тональности МВ ТД
-           VentTDPitchDecrementer:=0;           // Задаем значение для инкрементера тональности МВ ТД
-           VentPitchIncrementer:= 0;            // Задаем значение для инкрементера тональности МВ
-           LocoTEDNamePrefiks  := 'VL_TED';     // Задаем префикс названия папки с звуками ТЭД
-           LocoReductorNamePrefiks := '';       // Задаем префикс названия папки со звуками редуктора
-           LocoDIZNamePrefiks  := '';           // Задаем префикс названия папки с звуками работы дизеля
+           UltimateTEDAmperage := 1000;		// пїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅ
+           LocoSectionsNum     := 2;		// пїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ
+           LocoPowerVoltage    := 25;           // пїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ [0, -, ~]
+           LocoWithTED         := True;         // пїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅ-пїЅпїЅ
+           LocoWithReductor    := False;        // пїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ
+           LocoWithDIZ         := False;        // пїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅ
+           LocoWithSndKM       := False;        // пїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ
+           LocoWithSndKM_OP    := False;        // пїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅ
+           LocoWithSndTP       := True;         // пїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅ пїЅпїЅ
+           LocoWithExtMVSound  := False;        // пїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅ
+           LocoWithExtMKSound  := False;        // пїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅ
+           LocoWithMVPitch     := False;        // пїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅ
+           LocoWithMVTDPitch   := False;        // пїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅ пїЅпїЅ
+           VentTDPitchIncrementer:=0;           // пїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅ пїЅпїЅ
+           VentTDPitchDecrementer:=0;           // пїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅ пїЅпїЅ
+           VentPitchIncrementer:= 0;            // пїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅ
+           LocoTEDNamePrefiks  := 'VL_TED';     // пїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅ пїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅ
+           LocoReductorNamePrefiks := '';       // пїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅ пїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ
+           LocoDIZNamePrefiks  := '';           // пїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅ пїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅ
            LocoSvistokF        := 'svistok';
            LocoHornF           := 'tifon';
            UnitMain.LocoLength := 24;
            ProcReadDataMemoryAddr :=
-              @ReadDataMemoryVL85;		// Задаем указатель на функцию чтения памяти
+              @ReadDataMemoryVL85;		// пїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅ
         end;
-        // -/- ВЛ82м (VL82m) -/- //
+        // -/- пїЅпїЅ82пїЅ (VL82m) -/- //
         if LocoGlobal='VL82m' then begin
            LocoWorkDir         := 'TWS/VL82m/';
-           UltimateTEDAmperage := 650;          // Задаем предельный ток нагрузки ТЭД
-           LocoSectionsNum     := 2;		// Задаем количество секций для текущего локомотива
-           LocoPowerVoltage    := 3;            // Тип электрофикации локомотива [0, -, ~]
-           LocoWithTED         := True;         // Задаем состояние наличия на данном локомотиве звука ТЭД-ов
-           LocoWithReductor    := False;        // Задаем состояние наличия на данном локомотиве звука редуктора
-           LocoWithDIZ         := False;        // Задаем состояние наличия на данном локомотиве звуков дизеля
-           LocoWithSndKM       := False;        // Задаем состояние наличия на данном локомотиве звуков контроллера
-           LocoWithSndKM_OP    := False;        // Задаем состояние наличия на данном локомотиве звука постановки ОП
-           LocoWithSndTP       := True;         // Задаем состояние наличия на данном локомотиве звука ТП
-           LocoWithExtMVSound  := False;        // Задаем состояние наличия на данном локомотиве внешних звуков МВ
-           LocoWithExtMKSound  := False;        // Задаем состояние наличия на данном локомотиве внешних звуков МК
-           LocoWithMVPitch     := False;        // Задаем состояние наличия на данном локомотиве тонального регулирования МВ
-           LocoWithMVTDPitch   := False;        // Задаем состояние наличия на данном локомотиве тонального регулирования МВ ТД
+           UltimateTEDAmperage := 650;          // пїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅ
+           LocoSectionsNum     := 2;		// пїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ
+           LocoPowerVoltage    := 3;            // пїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ [0, -, ~]
+           LocoWithTED         := True;         // пїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅ-пїЅпїЅ
+           LocoWithReductor    := False;        // пїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ
+           LocoWithDIZ         := False;        // пїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅ
+           LocoWithSndKM       := False;        // пїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ
+           LocoWithSndKM_OP    := False;        // пїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅ
+           LocoWithSndTP       := True;         // пїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅ пїЅпїЅ
+           LocoWithExtMVSound  := False;        // пїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅ
+           LocoWithExtMKSound  := False;        // пїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅ
+           LocoWithMVPitch     := False;        // пїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅ
+           LocoWithMVTDPitch   := False;        // пїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅ пїЅпїЅ
            VentStartF          := PChar('TWS/VL82m/MV-start.wav');
            VentCycleF          := PChar('TWS/VL82m/MV-loop.wav');
            VentStopF           := PChar('TWS/VL82m/MV-stop.wav');
-           VentTDPitchIncrementer:=0;           // Задаем значение для инкрементера тональности МВ ТД
-           VentTDPitchDecrementer:=0;           // Задаем значение для инкрементера тональности МВ ТД
-           VentPitchIncrementer:= 0;            // Задаем значение для инкрементера тональности МВ
-           LocoTEDNamePrefiks  := 'VL_TED';     // Задаем префикс названия папки с звуками ТЭД
-           LocoReductorNamePrefiks := '';       // Задаем префикс названия папки со звуками редуктора
-           LocoDIZNamePrefiks  := '';           // Задаем префикс названия папки с звуками работы дизеля
+           VentTDPitchIncrementer:=0;           // пїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅ пїЅпїЅ
+           VentTDPitchDecrementer:=0;           // пїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅ пїЅпїЅ
+           VentPitchIncrementer:= 0;            // пїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅ
+           LocoTEDNamePrefiks  := 'VL_TED';     // пїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅ пїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅ
+           LocoReductorNamePrefiks := '';       // пїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅ пїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ
+           LocoDIZNamePrefiks  := '';           // пїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅ пїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅ
            LocoSvistokF        := 'svistok';
            LocoHornF           := 'tifon';
            UnitMain.LocoLength := 17;
            ProcReadDataMemoryAddr :=
-              @ReadDataMemoryVL82m;		// Задаем указатель на функцию чтения памяти
+              @ReadDataMemoryVL82m;		// пїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅ
         end;
-        // -/- ВЛ11м (VL11m) -/- //
+        // -/- пїЅпїЅ11пїЅ (VL11m) -/- //
         if LocoGlobal='VL11m' then begin
            LocoWorkDir         := 'TWS/VL11m/';
-           UltimateTEDAmperage := 650;          // Задаем предельный ток нагрузки ТЭД
-           LocoSectionsNum     := 2;		// Задаем количество секций для текущего локомотива
-           LocoPowerVoltage    := 3;            // Тип электрофикации локомотива [0, -, ~]
-           LocoWithTED         := True;         // Задаем состояние наличия на данном локомотиве звука ТЭД-ов
-           LocoWithReductor    := False;        // Задаем состояние наличия на данном локомотиве звука редуктора
-           LocoWithDIZ         := False;        // Задаем состояние наличия на данном локомотиве звуков дизеля
-           LocoWithSndKM       := False;        // Задаем состояние наличия на данном локомотиве звуков контроллера
-           LocoWithSndKM_OP    := False;        // Задаем состояние наличия на данном локомотиве звука постановки ОП
-           LocoWithSndTP       := True;         // Задаем состояние наличия на данном локомотиве звука ТП
-           LocoWithExtMVSound  := True;         // Задаем состояние наличия на данном локомотиве внешних звуков МВ
-           LocoWithExtMKSound  := True;         // Задаем состояние наличия на данном локомотиве внешних звуков МК
-           LocoWithMVPitch     := True;         // Задаем состояние наличия на данном локомотиве тонального регулирования МВ
-           LocoWithMVTDPitch   := False;        // Задаем состояние наличия на данном локомотиве тонального регулирования МВ ТД
-           VentTDPitchIncrementer:=0;           // Задаем значение для инкрементера тональности МВ ТД
-           VentTDPitchDecrementer:=0;           // Задаем значение для инкрементера тональности МВ ТД
-           VentPitchIncrementer:= 0.001;        // Задаем значение для инкрементера тональности МВ
+           UltimateTEDAmperage := 650;          // пїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅ
+           LocoSectionsNum     := 2;		// пїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ
+           LocoPowerVoltage    := 3;            // пїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ [0, -, ~]
+           LocoWithTED         := True;         // пїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅ-пїЅпїЅ
+           LocoWithReductor    := False;        // пїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ
+           LocoWithDIZ         := False;        // пїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅ
+           LocoWithSndKM       := False;        // пїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ
+           LocoWithSndKM_OP    := False;        // пїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅ
+           LocoWithSndTP       := True;         // пїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅ пїЅпїЅ
+           LocoWithExtMVSound  := True;         // пїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅ
+           LocoWithExtMKSound  := True;         // пїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅ
+           LocoWithMVPitch     := True;         // пїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅ
+           LocoWithMVTDPitch   := False;        // пїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅ пїЅпїЅ
+           VentTDPitchIncrementer:=0;           // пїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅ пїЅпїЅ
+           VentTDPitchDecrementer:=0;           // пїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅ пїЅпїЅ
+           VentPitchIncrementer:= 0.001;        // пїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅ
            VentStartF          := PChar('TWS/VL11m/MV-start.wav');
            VentCycleF          := PChar('TWS/VL11m/MV-loop.wav');
            VentStopF           := PChar('TWS/VL11m/MV-stop.wav');
            XVentStartF         := PChar('TWS/VL11m/x_MV-start.wav');
            XVentCycleF         := PChar('TWS/VL11m/x_MV-loop.wav');
            XVentStopF          := PChar('TWS/VL11m/x_MV-stop.wav');
-           LocoTEDNamePrefiks  := 'VL_TED';     // Задаем префикс названия папки с звуками ТЭД
-           LocoReductorNamePrefiks := '';       // Задаем префикс названия папки со звуками редуктора
-           LocoDIZNamePrefiks  := '';           // Задаем префикс названия папки с звуками работы дизеля
+           LocoTEDNamePrefiks  := 'VL_TED';     // пїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅ пїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅ
+           LocoReductorNamePrefiks := '';       // пїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅ пїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ
+           LocoDIZNamePrefiks  := '';           // пїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅ пїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅ
            LocoSvistokF        := 'svistok';
            LocoHornF           := 'tifon';
            UnitMain.LocoLength := 17;
            ProcReadDataMemoryAddr :=
-              @ReadDataMemoryVL11m;		// Задаем указатель на функцию чтения памяти
+              @ReadDataMemoryVL11m;		// пїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅ
         end;
-        // -/- 2ЭС5К (2ES5K) -/- //
+        // -/- 2пїЅпїЅ5пїЅ (2ES5K) -/- //
         if LocoGlobal='2ES5K' then begin
            LocoWorkDir         := 'TWS/2ES5K/';
-           UltimateTEDAmperage := 1000;         // Задаем предельный ток нагрузки ТЭД
-           LocoSectionsNum     := 2;		// Задаем количество секций для текущего локомотива
-           LocoPowerVoltage    := 25;           // Тип электрофикации локомотива [0, -, ~]
-           LocoWithTED         := True;         // Задаем состояние наличия на данном локомотиве звука ТЭД-ов
-           LocoWithReductor    := False;        // Задаем состояние наличия на данном локомотиве звука редуктора
-           LocoWithDIZ         := False;        // Задаем состояние наличия на данном локомотиве звуков дизеля
-           LocoWithSndKM       := False;        // Задаем состояние наличия на данном локомотиве звуков контроллера
-           LocoWithSndKM_OP    := False;        // Задаем состояние наличия на данном локомотиве звука постановки ОП
-           LocoWithSndTP       := True;         // Задаем состояние наличия на данном локомотиве звука ТП
-           LocoWithExtMVSound  := False;        // Задаем состояние наличия на данном локомотиве внешних звуков МВ
-           LocoWithExtMKSound  := False;        // Задаем состояние наличия на данном локомотиве внешних звуков МК
-           LocoWithMVPitch     := False;        // Задаем состояние наличия на данном локомотиве тонального регулирования МВ
-           LocoWithMVTDPitch   := False;        // Задаем состояние наличия на данном локомотиве тонального регулирования МВ ТД
+           UltimateTEDAmperage := 1000;         // пїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅ
+           LocoSectionsNum     := 2;		// пїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ
+           LocoPowerVoltage    := 25;           // пїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ [0, -, ~]
+           LocoWithTED         := True;         // пїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅ-пїЅпїЅ
+           LocoWithReductor    := False;        // пїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ
+           LocoWithDIZ         := False;        // пїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅ
+           LocoWithSndKM       := False;        // пїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ
+           LocoWithSndKM_OP    := False;        // пїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅ
+           LocoWithSndTP       := True;         // пїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅ пїЅпїЅ
+           LocoWithExtMVSound  := False;        // пїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅ
+           LocoWithExtMKSound  := False;        // пїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅ
+           LocoWithMVPitch     := False;        // пїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅ
+           LocoWithMVTDPitch   := False;        // пїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅ пїЅпїЅ
            VentStartF          := PChar('TWS/EP1m/MV-start.wav');
            VentCycleF          := PChar('TWS/EP1m/MV-loop.wav');
            VentStopF           := PChar('TWS/EP1m/MV-stop.wav');
            XVentStartF         := PChar('TWS/EP1m/MV-start.wav');
            XVentCycleF         := PChar('TWS/EP1m/MV-loop.wav');
            XVentStopF          := PChar('TWS/EP1m/MV-stop.wav');
-           VentTDPitchIncrementer:=0;           // Задаем значение для инкрементера тональности МВ ТД
-           VentTDPitchDecrementer:=0;           // Задаем значение для инкрементера тональности МВ ТД
-           VentPitchIncrementer:= 0;            // Задаем значение для инкрементера тональности МВ
-           LocoTEDNamePrefiks  := 'VL_TED';     // Задаем префикс названия папки с звуками ТЭД
-           LocoReductorNamePrefiks := '';       // Задаем префикс названия папки со звуками редуктора
-           LocoDIZNamePrefiks  := '';           // Задаем префикс названия папки с звуками работы дизеля
+           VentTDPitchIncrementer:=0;           // пїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅ пїЅпїЅ
+           VentTDPitchDecrementer:=0;           // пїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅ пїЅпїЅ
+           VentPitchIncrementer:= 0;            // пїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅ
+           LocoTEDNamePrefiks  := 'VL_TED';     // пїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅ пїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅ
+           LocoReductorNamePrefiks := '';       // пїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅ пїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ
+           LocoDIZNamePrefiks  := '';           // пїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅ пїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅ
            LocoSvistokF        := 'svistok';
            LocoHornF           := 'tifon';
            UnitMain.LocoLength := 17;
            ProcReadDataMemoryAddr :=
-              @ReadDataMemory2ES5k;		// Задаем указатель на функцию чтения памяти
+              @ReadDataMemory2ES5k;		// пїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅ
         end;
-        // -/- ЭП1м (EP1m) -/- //
+        // -/- пїЅпїЅ1пїЅ (EP1m) -/- //
         if LocoGlobal='EP1m' then begin
            LocoWorkDir         := 'TWS/EP1m/';
            UltimateTEDAmperage := 1500;
-           LocoSectionsNum     := 1;		// Задаем количество секций для текущего локомотива
-           LocoPowerVoltage    := 25;           // Тип электрофикации локомотива [0, -, ~]
-           LocoWithTED         := True;         // Задаем состояние наличия на данном локомотиве звука ТЭД-ов
-           LocoWithReductor    := True;         // Задаем состояние наличия на данном локомотиве звука редуктора
-           LocoWithDIZ         := False;        // Задаем состояние наличия на данном локомотиве звуков дизеля
-           LocoWithSndKM       := False;        // Задаем состояние наличия на данном локомотиве звуков контроллера
-           LocoWithSndKM_OP    := False;        // Задаем состояние наличия на данном локомотиве звука постановки ОП
-           LocoWithSndTP       := True;         // Задаем состояние наличия на данном локомотиве звука ТП
-           LocoWithExtMVSound  := False;        // Задаем состояние наличия на данном локомотиве внешних звуков МВ
-           LocoWithExtMKSound  := False;        // Задаем состояние наличия на данном локомотиве внешних звуков МК
-           LocoWithMVPitch     := False;        // Задаем состояние наличия на данном локомотиве тонального регулирования МВ
-           LocoWithMVTDPitch   := False;        // Задаем состояние наличия на данном локомотиве тонального регулирования МВ ТД
+           LocoSectionsNum     := 1;		// пїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ
+           LocoPowerVoltage    := 25;           // пїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ [0, -, ~]
+           LocoWithTED         := True;         // пїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅ-пїЅпїЅ
+           LocoWithReductor    := True;         // пїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ
+           LocoWithDIZ         := False;        // пїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅ
+           LocoWithSndKM       := False;        // пїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ
+           LocoWithSndKM_OP    := False;        // пїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅ
+           LocoWithSndTP       := True;         // пїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅ пїЅпїЅ
+           LocoWithExtMVSound  := False;        // пїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅ
+           LocoWithExtMKSound  := False;        // пїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅ
+           LocoWithMVPitch     := False;        // пїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅ
+           LocoWithMVTDPitch   := False;        // пїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅ пїЅпїЅ
            VentStartF          := PChar('TWS/EP1m/MV-start.wav');
            VentCycleF          := PChar('TWS/EP1m/MV-loop.wav');
            VentStopF           := PChar('TWS/EP1m/MV-stop.wav');
            XVentStartF         := PChar('TWS/EP1m/MV-start.wav');
            XVentCycleF         := PChar('TWS/EP1m/MV-loop.wav');
            XVentStopF          := PChar('TWS/EP1m/MV-stop.wav');
-           VentTDPitchIncrementer:=0;           // Задаем значение для инкрементера тональности МВ ТД
-           VentTDPitchDecrementer:=0;           // Задаем значение для инкрементера тональности МВ ТД
-           VentPitchIncrementer:= 0;            // Задаем значение для инкрементера тональности МВ
-           LocoTEDNamePrefiks  := 'EP_TED';     // Задаем префикс названия папки с звуками ТЭД
-           LocoReductorNamePrefiks := 'EP_TED'; // Задаем префикс названия папки со звуками редуктора
-           LocoDIZNamePrefiks  := '';           // Задаем префикс названия папки с звуками работы дизеля
+           VentTDPitchIncrementer:=0;           // пїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅ пїЅпїЅ
+           VentTDPitchDecrementer:=0;           // пїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅ пїЅпїЅ
+           VentPitchIncrementer:= 0;            // пїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅ
+           LocoTEDNamePrefiks  := 'EP_TED';     // пїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅ пїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅ
+           LocoReductorNamePrefiks := 'EP_TED'; // пїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅ пїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ
+           LocoDIZNamePrefiks  := '';           // пїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅ пїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅ
            LocoSvistokF        := 'svistok';
            LocoHornF           := 'tifon';
            ProcReadDataMemoryAddr :=
-              @ReadDataMemoryEP1m;		// Задаем указатель на функцию чтения памяти
+              @ReadDataMemoryEP1m;		// пїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅ
         end;
-        // -/- ЧС2к (CHS2K) -/- //
+        // -/- пїЅпїЅ2пїЅ (CHS2K) -/- //
         if LocoGlobal='CHS2K' then begin
            LocoWorkDir         := 'TWS/CHS2K/';
-           UltimateTEDAmperage := 600;          // Задаем предельный ток нагрузки ТЭД
-           LocoSectionsNum     := 1;		// Задаем количество секций для текущего локомотива
-           LocoPowerVoltage    := 3;            // Тип электрофикации локомотива [0, -, ~]
-           LocoWithTED         := True;         // Задаем состояние наличия на данном локомотиве звука ТЭД-ов
-           LocoWithReductor    := False;        // Задаем состояние наличия на данном локомотиве звука редуктора
-           LocoWithDIZ         := False;        // Задаем состояние наличия на данном локомотиве звуков дизеля
-           LocoWithSndKM       := False;        // Задаем состояние наличия на данном локомотиве звуков контроллера
-           LocoWithSndKM_OP    := False;        // Задаем состояние наличия на данном локомотиве звука постановки ОП
-           LocoWithSndTP       := True;         // Задаем состояние наличия на данном локомотиве звука ТП
-           LocoWithExtMVSound  := False;        // Задаем состояние наличия на данном локомотиве внешних звуков МВ
-           LocoWithExtMKSound  := False;        // Задаем состояние наличия на данном локомотиве внешних звуков МК
-           LocoWithMVPitch     := True;         // Задаем состояние наличия на данном локомотиве тонального регулирования МВ
-           LocoWithMVTDPitch   := False;        // Задаем состояние наличия на данном локомотиве тонального регулирования МВ ТД
+           UltimateTEDAmperage := 600;          // пїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅ
+           LocoSectionsNum     := 1;		// пїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ
+           LocoPowerVoltage    := 3;            // пїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ [0, -, ~]
+           LocoWithTED         := True;         // пїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅ-пїЅпїЅ
+           LocoWithReductor    := False;        // пїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ
+           LocoWithDIZ         := False;        // пїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅ
+           LocoWithSndKM       := False;        // пїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ
+           LocoWithSndKM_OP    := False;        // пїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅ
+           LocoWithSndTP       := True;         // пїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅ пїЅпїЅ
+           LocoWithExtMVSound  := False;        // пїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅ
+           LocoWithExtMKSound  := False;        // пїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅ
+           LocoWithMVPitch     := True;         // пїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅ
+           LocoWithMVTDPitch   := False;        // пїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅ пїЅпїЅ
            VentStartF          := PChar('TWS/CHS2K/vent-start.wav');
            VentCycleF          := PChar('TWS/CHS2K/vent.wav');
            VentStopF           := PChar('TWS/CHS2K/vent-stop.wav');
            XVentStartF         := PChar('TWS/CHS2K/vent-start.wav');
            XVentCycleF         := PChar('TWS/CHS2K/vent.wav');
            XVentStopF          := PChar('TWS/CHS2K/vent-stop.wav');
-           VentTDPitchIncrementer:=0;           // Задаем значение для инкрементера тональности МВ ТД
-           VentTDPitchDecrementer:=0;           // Задаем значение для инкрементера тональности МВ ТД
-           VentPitchIncrementer:= 0.001;        // Задаем значение для инкрементера тональности МВ
-           LocoTEDNamePrefiks  := 'CHS_TED';    // Задаем префикс названия папки с звуками ТЭД
-           LocoReductorNamePrefiks := '';       // Задаем префикс названия папки со звуками редуктора
-           LocoDIZNamePrefiks  := '';           // Задаем префикс названия папки с звуками работы дизеля
+           VentTDPitchIncrementer:=0;           // пїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅ пїЅпїЅ
+           VentTDPitchDecrementer:=0;           // пїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅ пїЅпїЅ
+           VentPitchIncrementer:= 0.001;        // пїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅ
+           LocoTEDNamePrefiks  := 'CHS_TED';    // пїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅ пїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅ
+           LocoReductorNamePrefiks := '';       // пїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅ пїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ
+           LocoDIZNamePrefiks  := '';           // пїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅ пїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅ
            LocoSvistokF        := 'svistok';
            LocoHornF           := 'tifon';
            ProcReadDataMemoryAddr :=
-              @ReadDataMemoryCHS2k;		// Задаем указатель на функцию чтения памяти
+              @ReadDataMemoryCHS2k;		// пїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅ
         end;
-        // -/- ЧС4 (CHS4) -/- //
+        // -/- пїЅпїЅ4 (CHS4) -/- //
         if LocoGlobal='CHS4' then begin
            LocoWorkDir         := 'TWS/CHS4/';
-           UltimateTEDAmperage := 1500;         // Задаем предельный ток нагрузки ТЭД
-           LocoSectionsNum     := 1;		// Задаем количество секций для текущего локомотива
-           LocoPowerVoltage    := 25;           // Тип электрофикации локомотива [0, -, ~]
-           LocoWithTED         := True;         // Задаем состояние наличия на данном локомотиве звука ТЭД-ов
-           LocoWithReductor    := False;        // Задаем состояние наличия на данном локомотиве звука редуктора
-           LocoWithDIZ         := False;        // Задаем состояние наличия на данном локомотиве звуков дизеля
-           LocoWithSndKM       := True;         // Задаем состояние наличия на данном локомотиве звуков контроллера
-           LocoWithSndKM_OP    := True;         // Задаем состояние наличия на данном локомотиве звука постановки ОП
-           LocoWithSndTP       := True;         // Задаем состояние наличия на данном локомотиве звука ТП
-           LocoWithExtMVSound  := True;         // Задаем состояние наличия на данном локомотиве внешних звуков МВ
-           LocoWithExtMKSound  := True;         // Задаем состояние наличия на данном локомотиве внешних звуков МК
-           LocoWithMVPitch     := True;         // Задаем состояние наличия на данном локомотиве тонального регулирования МВ
-           LocoWithMVTDPitch   := False;        // Задаем состояние наличия на данном локомотиве тонального регулирования МВ ТД
+           UltimateTEDAmperage := 1500;         // пїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅ
+           LocoSectionsNum     := 1;		// пїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ
+           LocoPowerVoltage    := 25;           // пїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ [0, -, ~]
+           LocoWithTED         := True;         // пїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅ-пїЅпїЅ
+           LocoWithReductor    := False;        // пїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ
+           LocoWithDIZ         := False;        // пїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅ
+           LocoWithSndKM       := True;         // пїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ
+           LocoWithSndKM_OP    := True;         // пїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅ
+           LocoWithSndTP       := True;         // пїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅ пїЅпїЅ
+           LocoWithExtMVSound  := True;         // пїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅ
+           LocoWithExtMKSound  := True;         // пїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅ
+           LocoWithMVPitch     := True;         // пїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅ
+           LocoWithMVTDPitch   := False;        // пїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅ пїЅпїЅ
            VentStartF          := PChar('TWS/CHS4KVR/ventVU-start.wav');
            VentCycleF          := PChar('TWS/CHS4KVR/ventVU.wav');
            VentStopF           := PChar('TWS/CHS4KVR/ventVU-stop.wav');
            XVentStartF         := PChar('TWS/CHS4/x_ventVU-start.wav');
            XVentCycleF         := PChar('TWS/CHS4/x_ventVU.wav');
            XVentStopF          := PChar('TWS/CHS4/x_ventVU-stop.wav');
-           VentTDPitchIncrementer:=0;           // Задаем значение для инкрементера тональности МВ ТД
-           VentTDPitchDecrementer:=0;           // Задаем значение для инкрементера тональности МВ ТД
-           VentPitchIncrementer:= 0;            // Задаем значение для инкрементера тональности МВ
-           LocoTEDNamePrefiks  := 'CHS_TED';    // Задаем префикс названия папки с звуками ТЭД
-           LocoReductorNamePrefiks := '';       // Задаем префикс названия папки со звуками редуктора
-           LocoDIZNamePrefiks  := '';           // Задаем префикс названия папки с звуками работы дизеля
+           VentTDPitchIncrementer:=0;           // пїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅ пїЅпїЅ
+           VentTDPitchDecrementer:=0;           // пїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅ пїЅпїЅ
+           VentPitchIncrementer:= 0;            // пїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅ
+           LocoTEDNamePrefiks  := 'CHS_TED';    // пїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅ пїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅ
+           LocoReductorNamePrefiks := '';       // пїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅ пїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ
+           LocoDIZNamePrefiks  := '';           // пїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅ пїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅ
            LocoSvistokF        := 'svistok';
            LocoHornF           := 'tifon';
            ProcReadDataMemoryAddr :=
-              @ReadDataMemoryCHS4;		// Задаем указатель на функцию чтения памяти
+              @ReadDataMemoryCHS4;		// пїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅ
         end;
-        // -/- ЧС4квр (CHS4 KVR) -/- //
+        // -/- пїЅпїЅ4пїЅпїЅпїЅ (CHS4 KVR) -/- //
         if LocoGlobal='CHS4 KVR' then begin
            LocoWorkDir         := 'TWS/CHS4KVR/';
-           UltimateTEDAmperage := 1500;         // Задаем предельный ток нагрузки ТЭД
-           LocoSectionsNum     := 1;		// Задаем количество секций для текущего локомотива
-           LocoPowerVoltage    := 25;           // Тип электрофикации локомотива [0, -, ~]
-           LocoWithTED         := True;         // Задаем состояние наличия на данном локомотиве звука ТЭД-ов
-           LocoWithReductor    := False;        // Задаем состояние наличия на данном локомотиве звука редуктора
-           LocoWithDIZ         := False;        // Задаем состояние наличия на данном локомотиве звуков дизеля
-           LocoWithSndKM       := True;         // Задаем состояние наличия на данном локомотиве звуков контроллера
-           LocoWithSndKM_OP    := True;         // Задаем состояние наличия на данном локомотиве звука постановки ОП
-           LocoWithSndTP       := True;         // Задаем состояние наличия на данном локомотиве звука ТП
-           LocoWithExtMVSound  := True;         // Задаем состояние наличия на данном локомотиве внешних звуков МВ
-           LocoWithExtMKSound  := True;         // Задаем состояние наличия на данном локомотиве внешних звуков МК
-           LocoWithMVPitch     := True;         // Задаем состояние наличия на данном локомотиве тонального регулирования МВ
-           LocoWithMVTDPitch   := False;        // Задаем состояние наличия на данном локомотиве тонального регулирования МВ ТД
+           UltimateTEDAmperage := 1500;         // пїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅ
+           LocoSectionsNum     := 1;		// пїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ
+           LocoPowerVoltage    := 25;           // пїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ [0, -, ~]
+           LocoWithTED         := True;         // пїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅ-пїЅпїЅ
+           LocoWithReductor    := False;        // пїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ
+           LocoWithDIZ         := False;        // пїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅ
+           LocoWithSndKM       := True;         // пїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ
+           LocoWithSndKM_OP    := True;         // пїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅ
+           LocoWithSndTP       := True;         // пїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅ пїЅпїЅ
+           LocoWithExtMVSound  := True;         // пїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅ
+           LocoWithExtMKSound  := True;         // пїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅ
+           LocoWithMVPitch     := True;         // пїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅ
+           LocoWithMVTDPitch   := False;        // пїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅ пїЅпїЅ
            VentStartF          := PChar('TWS/CHS4KVR/ventVU-start.wav');
            VentCycleF          := PChar('TWS/CHS4KVR/ventVU.wav');
            VentStopF           := PChar('TWS/CHS4KVR/ventVU-stop.wav');
            XVentStartF         := PChar('TWS/CHS4KVR/x_ventVU-start.wav');
            XVentCycleF         := PChar('TWS/CHS4KVR/x_ventVU.wav');
            XVentStopF          := PChar('TWS/CHS4KVR/x_ventVU-stop.wav');
-           VentTDPitchIncrementer:=0;           // Задаем значение для инкрементера тональности МВ ТД
-           VentTDPitchDecrementer:=0;           // Задаем значение для инкрементера тональности МВ ТД
-           VentPitchIncrementer:= 0.004;        // Задаем значение для инкрементера тональности МВ
-           LocoTEDNamePrefiks  := 'CHS_TED';    // Задаем префикс названия папки с звуками ТЭД
-           LocoReductorNamePrefiks := '';       // Задаем префикс названия папки со звуками редуктора
-           LocoDIZNamePrefiks  := '';           // Задаем префикс названия папки с звуками работы дизеля
+           VentTDPitchIncrementer:=0;           // пїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅ пїЅпїЅ
+           VentTDPitchDecrementer:=0;           // пїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅ пїЅпїЅ
+           VentPitchIncrementer:= 0.004;        // пїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅ
+           LocoTEDNamePrefiks  := 'CHS_TED';    // пїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅ пїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅ
+           LocoReductorNamePrefiks := '';       // пїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅ пїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ
+           LocoDIZNamePrefiks  := '';           // пїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅ пїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅ
            LocoSvistokF        := 'svistok';
            LocoHornF           := 'tifon';
            ProcReadDataMemoryAddr :=
-              @ReadDataMemoryCHS4kvr;		// Задаем указатель на функцию чтения памяти
+              @ReadDataMemoryCHS4kvr;		// пїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅ
         end;
-        // -/- ЧС4т (CHS4t) -/- //
+        // -/- пїЅпїЅ4пїЅ (CHS4t) -/- //
         if LocoGlobal='CHS4t' then begin
            LocoWorkDir         := 'TWS/CHS4t/';
-           UltimateTEDAmperage := 1500;         // Задаем предельный ток нагрузки ТЭД
-           LocoSectionsNum     := 1;		// Задаем количество секций для текущего локомотива
-           LocoPowerVoltage    := 25;           // Тип электрофикации локомотива [0, -, ~]
-           LocoWithTED         := True;         // Задаем состояние наличия на данном локомотиве звука ТЭД-ов
-           LocoWithReductor    := False;        // Задаем состояние наличия на данном локомотиве звука редуктора
-           LocoWithDIZ         := False;        // Задаем состояние наличия на данном локомотиве звуков дизеля
-           LocoWithSndKM       := True;         // Задаем состояние наличия на данном локомотиве звуков контроллера
-           LocoWithSndKM_OP    := True;         // Задаем состояние наличия на данном локомотиве звука постановки ОП
-           LocoWithSndTP       := True;         // Задаем состояние наличия на данном локомотиве звука ТП
-           LocoWithExtMVSound  := True;         // Задаем состояние наличия на данном локомотиве внешних звуков МВ
-           LocoWithExtMKSound  := True;         // Задаем состояние наличия на данном локомотиве внешних звуков МК
-           LocoWithMVPitch     := False;        // Задаем состояние наличия на данном локомотиве тонального регулирования МВ
-           LocoWithMVTDPitch   := True;         // Задаем состояние наличия на данном локомотиве тонального регулирования МВ ТД
-           VentTDPitchIncrementer:=0.0025;      // Задаем значение для инкрементера тональности МВ ТД
-           VentTDPitchDecrementer:=0.0025;           // Задаем значение для инкрементера тональности МВ ТД
-           VentPitchIncrementer:= 0;            // Задаем значение для инкрементера тональности МВ
-           LocoTEDNamePrefiks  := 'CHS_TED';    // Задаем префикс названия папки с звуками ТЭД
-           LocoReductorNamePrefiks := '';       // Задаем префикс названия папки со звуками редуктора
-           LocoDIZNamePrefiks  := '';           // Задаем префикс названия папки с звуками работы дизеля
+           UltimateTEDAmperage := 1500;         // пїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅ
+           LocoSectionsNum     := 1;		// пїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ
+           LocoPowerVoltage    := 25;           // пїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ [0, -, ~]
+           LocoWithTED         := True;         // пїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅ-пїЅпїЅ
+           LocoWithReductor    := False;        // пїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ
+           LocoWithDIZ         := False;        // пїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅ
+           LocoWithSndKM       := True;         // пїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ
+           LocoWithSndKM_OP    := True;         // пїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅ
+           LocoWithSndTP       := True;         // пїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅ пїЅпїЅ
+           LocoWithExtMVSound  := True;         // пїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅ
+           LocoWithExtMKSound  := True;         // пїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅ
+           LocoWithMVPitch     := False;        // пїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅ
+           LocoWithMVTDPitch   := True;         // пїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅ пїЅпїЅ
+           VentTDPitchIncrementer:=0.0025;      // пїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅ пїЅпїЅ
+           VentTDPitchDecrementer:=0.0025;           // пїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅ пїЅпїЅ
+           VentPitchIncrementer:= 0;            // пїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅ
+           LocoTEDNamePrefiks  := 'CHS_TED';    // пїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅ пїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅ
+           LocoReductorNamePrefiks := '';       // пїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅ пїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ
+           LocoDIZNamePrefiks  := '';           // пїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅ пїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅ
            LocoSvistokF        := 'svistok';
            LocoHornF           := 'tifon';
            ProcReadDataMemoryAddr :=
-              @ReadDataMemoryCHS4t;		// Задаем указатель на функцию чтения памяти
+              @ReadDataMemoryCHS4t;		// пїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅ
         end;
-        // -/- ЧС8 (CHS8) -/- //
+        // -/- пїЅпїЅ8 (CHS8) -/- //
         if LocoGlobal='CHS8' then begin
            LocoWorkDir         := 'TWS/CHS8/';
-           UltimateTEDAmperage := 1500;         // Задаем предельный ток нагрузки ТЭД
-           LocoSectionsNum     := 2;		// Задаем количество секций для текущего локомотива
-           LocoPowerVoltage    := 25;           // Тип электрофикации локомотива [0, -, ~]
-           LocoWithTED         := True;         // Задаем состояние наличия на данном локомотиве звука ТЭД-ов
-           LocoWithReductor    := False;        // Задаем состояние наличия на данном локомотиве звука редуктора
-           LocoWithDIZ         := False;        // Задаем состояние наличия на данном локомотиве звуков дизеля
-           LocoWithSndKM       := True;         // Задаем состояние наличия на данном локомотиве звуков контроллера
-           LocoWithSndKM_OP    := True;         // Задаем состояние наличия на данном локомотиве звука постановки ОП
-           LocoWithSndTP       := True;         // Задаем состояние наличия на данном локомотиве звука ТП
-           LocoWithExtMVSound  := True;         // Задаем состояние наличия на данном локомотиве внешних звуков МВ
-           LocoWithExtMKSound  := True;         // Задаем состояние наличия на данном локомотиве внешних звуков МК
-           LocoWithMVPitch     := False;        // Задаем состояние наличия на данном локомотиве тонального регулирования МВ
-           LocoWithMVTDPitch   := True;         // Задаем состояние наличия на данном локомотиве тонального регулирования МВ ТД
-           VentTDPitchIncrementer:=0.0027;        // Задаем значение для инкрементера тональности МВ ТД
-           VentTDPitchDecrementer:=0.0025;       // Задаем значение для инкрементера тональности МВ ТД
-           VentPitchIncrementer:= 0;            // Задаем значение для инкрементера тональности МВ
-           LocoTEDNamePrefiks  := 'CHS_TED';    // Задаем префикс названия папки с звуками ТЭД
-           LocoReductorNamePrefiks := '';       // Задаем префикс названия папки со звуками редуктора
-           LocoDIZNamePrefiks  := '';           // Задаем префикс названия папки с звуками работы дизеля
+           UltimateTEDAmperage := 1500;         // пїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅ
+           LocoSectionsNum     := 2;		// пїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ
+           LocoPowerVoltage    := 25;           // пїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ [0, -, ~]
+           LocoWithTED         := True;         // пїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅ-пїЅпїЅ
+           LocoWithReductor    := False;        // пїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ
+           LocoWithDIZ         := False;        // пїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅ
+           LocoWithSndKM       := True;         // пїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ
+           LocoWithSndKM_OP    := True;         // пїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅ
+           LocoWithSndTP       := True;         // пїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅ пїЅпїЅ
+           LocoWithExtMVSound  := True;         // пїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅ
+           LocoWithExtMKSound  := True;         // пїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅ
+           LocoWithMVPitch     := False;        // пїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅ
+           LocoWithMVTDPitch   := True;         // пїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅ пїЅпїЅ
+           VentTDPitchIncrementer:=0.0027;        // пїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅ пїЅпїЅ
+           VentTDPitchDecrementer:=0.0025;       // пїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅ пїЅпїЅ
+           VentPitchIncrementer:= 0;            // пїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅ
+           LocoTEDNamePrefiks  := 'CHS_TED';    // пїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅ пїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅ
+           LocoReductorNamePrefiks := '';       // пїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅ пїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ
+           LocoDIZNamePrefiks  := '';           // пїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅ пїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅ
            LocoSvistokF        := 'svistok';
            LocoHornF           := 'tifon';
            UnitMain.LocoLength := 17;
            ProcReadDataMemoryAddr :=
-              @ReadDataMemoryCHS8;		// Задаем указатель на функцию чтения памяти
+              @ReadDataMemoryCHS8;		// пїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅ
         end;
-        // -/- ЧС7 (CHS7) -/- //
+        // -/- пїЅпїЅ7 (CHS7) -/- //
         if LocoGlobal='CHS7' then begin
            LocoWorkDir         := 'TWS/CHS7/';
-           UltimateTEDAmperage := 800;          // Задаем предельный ток нагрузки ТЭД
-           LocoSectionsNum     := 2;		// Задаем количество секций для текущего локомотива
-           LocoPowerVoltage    := 3;            // Тип электрофикации локомотива [0, -, ~]
-           LocoWithTED         := True;         // Задаем состояние наличия на данном локомотиве звука ТЭД-ов
-           LocoWithReductor    := False;        // Задаем состояние наличия на данном локомотиве звука редуктора
-           LocoWithDIZ         := False;        // Задаем состояние наличия на данном локомотиве звуков дизеля
-           LocoWithSndKM       := True;         // Задаем состояние наличия на данном локомотиве звуков контроллера
-           LocoWithSndKM_OP    := True;         // Задаем состояние наличия на данном локомотиве звука постановки ОП
-           LocoWithSndTP       := True;         // Задаем состояние наличия на данном локомотиве звука ТП
-           LocoWithExtMVSound  := True;         // Задаем состояние наличия на данном локомотиве внешних звуков МВ
-           LocoWithExtMKSound  := True;         // Задаем состояние наличия на данном локомотиве внешних звуков МК
-           LocoWithMVPitch     := True;         // Задаем состояние наличия на данном локомотиве тонального регулирования МВ
-           LocoWithMVTDPitch   := True;         // Задаем состояние наличия на данном локомотиве тонального регулирования МВ ТД
+           UltimateTEDAmperage := 800;          // пїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅ
+           LocoSectionsNum     := 2;		// пїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ
+           LocoPowerVoltage    := 3;            // пїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ [0, -, ~]
+           LocoWithTED         := True;         // пїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅ-пїЅпїЅ
+           LocoWithReductor    := False;        // пїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ
+           LocoWithDIZ         := False;        // пїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅ
+           LocoWithSndKM       := True;         // пїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ
+           LocoWithSndKM_OP    := True;         // пїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅ
+           LocoWithSndTP       := True;         // пїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅ пїЅпїЅ
+           LocoWithExtMVSound  := True;         // пїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅ
+           LocoWithExtMKSound  := True;         // пїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅ
+           LocoWithMVPitch     := True;         // пїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅ
+           LocoWithMVTDPitch   := True;         // пїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅ пїЅпїЅ
            VentStartF          := PChar('TWS/CHS7/mv-start.wav');
            VentCycleF          := PChar('TWS/CHS7/mv-loop.wav');
            VentStopF           := PChar('TWS/CHS7/mv-stop.wav');
            XVentStartF         := PChar('TWS/CHS7/x_mv-start.wav');
            XVentCycleF         := PChar('TWS/CHS7/x_mv-loop.wav');
            XVentStopF          := Pchar('TWS/CHS7/x_mv-stop.wav');
-           VentTDPitchIncrementer:=0;           // Задаем значение для инкрементера тональности МВ ТД
-           VentTDPitchDecrementer:=0;           // Задаем значение для инкрементера тональности МВ ТД
-           VentPitchIncrementer:= 0.001;        // Задаем значение для инкрементера тональности МВ
-           LocoTEDNamePrefiks  := 'CHS_TED';    // Задаем префикс названия папки с звуками ТЭД
-           LocoReductorNamePrefiks := '';       // Задаем префикс названия папки со звуками редуктора
-           LocoDIZNamePrefiks  := '';           // Задаем префикс названия папки с звуками работы дизеля
+           VentTDPitchIncrementer:=0;           // пїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅ пїЅпїЅ
+           VentTDPitchDecrementer:=0;           // пїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅ пїЅпїЅ
+           VentPitchIncrementer:= 0.001;        // пїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅ
+           LocoTEDNamePrefiks  := 'CHS_TED';    // пїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅ пїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅ
+           LocoReductorNamePrefiks := '';       // пїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅ пїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ
+           LocoDIZNamePrefiks  := '';           // пїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅ пїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅ
            LocoSvistokF        := 'svistok';
            LocoHornF           := 'tifon';
            UnitMain.LocoLength := 17;
            ProcReadDataMemoryAddr :=
-              @ReadDataMemoryCHS7;		// Задаем указатель на функцию чтения памяти
+              @ReadDataMemoryCHS7;		// пїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅ
         end;
-        // -/- ТЭП70 (TEP70) -/- //
+        // -/- пїЅпїЅпїЅ70 (TEP70) -/- //
         if LocoGlobal='TEP70' then begin
            LocoWorkDir         := 'TWS/TEP70/';
-           UltimateTEDAmperage := 800;          // Задаем предельный ток нагрузки ТЭД
-           LocoSectionsNum     := 1;		// Задаем количество секций для текущего локомотива
-           LocoPowerVoltage    := 0;            // Тип электрофикации локомотива [0, -, ~]
-           LocoWithTED         := True;         // Задаем состояние наличия на данном локомотиве звука ТЭД-ов
-           LocoWithReductor    := False;        // Задаем состояние наличия на данном локомотиве звука редуктора
-           LocoWithDIZ         := True;         // Задаем состояние наличия на данном локомотиве звуков дизеля
-           LocoWithSndKM       := False;        // Задаем состояние наличия на данном локомотиве звуков контроллера
-           LocoWithSndKM_OP    := False;        // Задаем состояние наличия на данном локомотиве звука постановки ОП
-           LocoWithSndTP       := False;        // Задаем состояние наличия на данном локомотиве звука ТП
-           LocoWithExtMVSound  := False;        // Задаем состояние наличия на данном локомотиве внешних звуков МВ
-           LocoWithExtMKSound  := False;        // Задаем состояние наличия на данном локомотиве внешних звуков МК
-           LocoWithMVPitch     := False;        // Задаем состояние наличия на данном локомотиве тонального регулирования МВ
-           LocoWithMVTDPitch   := False;        // Задаем состояние наличия на данном локомотиве тонального регулирования МВ ТД
-           VentTDPitchIncrementer:=0;           // Задаем значение для инкрементера тональности МВ ТД
-           VentTDPitchDecrementer:=0;           // Задаем значение для инкрементера тональности МВ ТД
-           VentPitchIncrementer:= 0;            // Задаем значение для инкрементера тональности МВ
-           LocoTEDNamePrefiks  := 'VL_TED';     // Задаем префикс названия папки с звуками ТЭД
-           LocoReductorNamePrefiks := '';       // Задаем префикс названия папки со звуками редуктора
-           LocoDIZNamePrefiks  := 'TEP70';      // Задаем префикс названия папки с звуками работы дизеля
+           UltimateTEDAmperage := 800;          // пїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅ
+           LocoSectionsNum     := 1;		// пїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ
+           LocoPowerVoltage    := 0;            // пїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ [0, -, ~]
+           LocoWithTED         := True;         // пїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅ-пїЅпїЅ
+           LocoWithReductor    := False;        // пїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ
+           LocoWithDIZ         := True;         // пїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅ
+           LocoWithSndKM       := False;        // пїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ
+           LocoWithSndKM_OP    := False;        // пїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅ
+           LocoWithSndTP       := False;        // пїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅ пїЅпїЅ
+           LocoWithExtMVSound  := False;        // пїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅ
+           LocoWithExtMKSound  := False;        // пїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅ
+           LocoWithMVPitch     := False;        // пїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅ
+           LocoWithMVTDPitch   := False;        // пїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅ пїЅпїЅ
+           VentTDPitchIncrementer:=0;           // пїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅ пїЅпїЅ
+           VentTDPitchDecrementer:=0;           // пїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅ пїЅпїЅ
+           VentPitchIncrementer:= 0;            // пїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅ
+           LocoTEDNamePrefiks  := 'VL_TED';     // пїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅ пїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅ
+           LocoReductorNamePrefiks := '';       // пїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅ пїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ
+           LocoDIZNamePrefiks  := 'TEP70';      // пїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅ пїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅ
            LocoSvistokF        := 'svistok';
            LocoHornF           := 'tifon';
            ProcReadDataMemoryAddr :=
-              @ReadDataMemoryTEP70;		// Задаем указатель на функцию чтения памяти
+              @ReadDataMemoryTEP70;		// пїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅ
         end;
-        // -/- ТЭП70бс (TEP70bs) -/- //
+        // -/- пїЅпїЅпїЅ70пїЅпїЅ (TEP70bs) -/- //
         if LocoGlobal='TEP70bs' then begin
            LocoWorkDir         := 'TWS/TEP70bs/';
-           UltimateTEDAmperage := 800;          // Задаем предельный ток нагрузки ТЭД
-           LocoSectionsNum     := 1;		// Задаем количество секций для текущего локомотива
-           LocoPowerVoltage    := 0;            // Тип электрофикации локомотива [0, -, ~]
-           LocoWithTED         := True;         // Задаем состояние наличия на данном локомотиве звука ТЭД-ов
-           LocoWithReductor    := False;        // Задаем состояние наличия на данном локомотиве звука редуктора
-           LocoWithDIZ         := True;         // Задаем состояние наличия на данном локомотиве звуков дизеля
-           LocoWithSndKM       := False;        // Задаем состояние наличия на данном локомотиве звуков контроллера
-           LocoWithSndKM_OP    := False;        // Задаем состояние наличия на данном локомотиве звука постановки ОП
-           LocoWithSndTP       := False;        // Задаем состояние наличия на данном локомотиве звука ТП
-           LocoWithExtMVSound  := False;        // Задаем состояние наличия на данном локомотиве внешних звуков МВ
-           LocoWithExtMKSound  := False;        // Задаем состояние наличия на данном локомотиве внешних звуков МК
-           LocoWithMVPitch     := False;        // Задаем состояние наличия на данном локомотиве тонального регулирования МВ
-           LocoWithMVTDPitch   := False;        // Задаем состояние наличия на данном локомотиве тонального регулирования МВ ТД
-           VentTDPitchIncrementer:=0;           // Задаем значение для инкрементера тональности МВ ТД
-           VentTDPitchDecrementer:=0;           // Задаем значение для инкрементера тональности МВ ТД
-           VentPitchIncrementer:= 0;            // Задаем значение для инкрементера тональности МВ
-           LocoTEDNamePrefiks  := 'VL_TED';     // Задаем префикс названия папки с звуками ТЭД
-           LocoReductorNamePrefiks := '';       // Задаем префикс названия папки со звуками редуктора
-           LocoDIZNamePrefiks  := 'TEP70bs';    // Задаем префикс названия папки с звуками работы дизеля
+           UltimateTEDAmperage := 800;          // пїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅ
+           LocoSectionsNum     := 1;		// пїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ
+           LocoPowerVoltage    := 0;            // пїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ [0, -, ~]
+           LocoWithTED         := True;         // пїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅ-пїЅпїЅ
+           LocoWithReductor    := False;        // пїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ
+           LocoWithDIZ         := True;         // пїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅ
+           LocoWithSndKM       := False;        // пїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ
+           LocoWithSndKM_OP    := False;        // пїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅ
+           LocoWithSndTP       := False;        // пїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅ пїЅпїЅ
+           LocoWithExtMVSound  := False;        // пїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅ
+           LocoWithExtMKSound  := False;        // пїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅ
+           LocoWithMVPitch     := False;        // пїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅ
+           LocoWithMVTDPitch   := False;        // пїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅ пїЅпїЅ
+           VentTDPitchIncrementer:=0;           // пїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅ пїЅпїЅ
+           VentTDPitchDecrementer:=0;           // пїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅ пїЅпїЅ
+           VentPitchIncrementer:= 0;            // пїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅ
+           LocoTEDNamePrefiks  := 'VL_TED';     // пїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅ пїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅ
+           LocoReductorNamePrefiks := '';       // пїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅ пїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ
+           LocoDIZNamePrefiks  := 'TEP70bs';    // пїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅ пїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅ
            LocoSvistokF        := 'svistok';
            LocoHornF           := 'tifon';
            ProcReadDataMemoryAddr :=
-              @ReadDataMemoryTEP70BS;		// Задаем указатель на функцию чтения памяти
+              @ReadDataMemoryTEP70BS;		// пїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅ
         end;
-        // -/- М62 (M62) -/- //
+        // -/- пїЅ62 (M62) -/- //
         if LocoGlobal='M62' then begin
            LocoWorkDir         := 'TWS/M62/';
-           UltimateTEDAmperage := 800;          // Задаем предельный ток нагрузки ТЭД
+           UltimateTEDAmperage := 800;          // пїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅ
            if VersionID = 1 then
-              LocoSectionsNum     := 1		// Задаем количество секций для текущего локомотива
+              LocoSectionsNum     := 1		// пїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ
            else
               LocoSectionsNum     := 2;
-           LocoPowerVoltage    := 0;            // Тип электрофикации локомотива [0, -, ~]
-           LocoWithTED         := True;         // Задаем состояние наличия на данном локомотиве звука ТЭД-ов
-           LocoWithReductor    := False;        // Задаем состояние наличия на данном локомотиве звука редуктора
-           LocoWithDIZ         := True;         // Задаем состояние наличия на данном локомотиве звуков дизеля
-           LocoWithSndKM       := True;         // Задаем состояние наличия на данном локомотиве звуков контроллера
-           LocoWithSndKM_OP    := False;        // Задаем состояние наличия на данном локомотиве звука постановки ОП
-           LocoWithSndTP       := False;        // Задаем состояние наличия на данном локомотиве звука ТП
-           LocoWithExtMVSound  := False;        // Задаем состояние наличия на данном локомотиве внешних звуков МВ
-           LocoWithExtMKSound  := False;        // Задаем состояние наличия на данном локомотиве внешних звуков МК
-           LocoWithMVPitch     := False;        // Задаем состояние наличия на данном локомотиве тонального регулирования МВ
-           LocoWithMVTDPitch   := False;        // Задаем состояние наличия на данном локомотиве тонального регулирования МВ ТД
-           VentTDPitchIncrementer:=0;           // Задаем значение для инкрементера тональности МВ ТД
-           VentTDPitchDecrementer:=0;           // Задаем значение для инкрементера тональности МВ ТД
-           VentPitchIncrementer:= 0;            // Задаем значение для инкрементера тональности МВ
-           LocoTEDNamePrefiks  := 'VL_TED';     // Задаем префикс названия папки с звуками ТЭД
-           LocoReductorNamePrefiks := '';       // Задаем префикс названия папки со звуками редуктора
-           LocoDIZNamePrefiks  := 'M62';        // Задаем префикс названия папки с звуками работы дизеля
+           LocoPowerVoltage    := 0;            // пїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ [0, -, ~]
+           LocoWithTED         := True;         // пїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅ-пїЅпїЅ
+           LocoWithReductor    := False;        // пїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ
+           LocoWithDIZ         := True;         // пїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅ
+           LocoWithSndKM       := True;         // пїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ
+           LocoWithSndKM_OP    := False;        // пїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅ
+           LocoWithSndTP       := False;        // пїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅ пїЅпїЅ
+           LocoWithExtMVSound  := False;        // пїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅ
+           LocoWithExtMKSound  := False;        // пїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅ
+           LocoWithMVPitch     := False;        // пїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅ
+           LocoWithMVTDPitch   := False;        // пїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅ пїЅпїЅ
+           VentTDPitchIncrementer:=0;           // пїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅ пїЅпїЅ
+           VentTDPitchDecrementer:=0;           // пїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅ пїЅпїЅ
+           VentPitchIncrementer:= 0;            // пїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅ
+           LocoTEDNamePrefiks  := 'VL_TED';     // пїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅ пїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅ
+           LocoReductorNamePrefiks := '';       // пїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅ пїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ
+           LocoDIZNamePrefiks  := 'M62';        // пїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅ пїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅ
            LocoSvistokF        := 'svistok';
            LocoHornF           := 'tifon';
            UnitMain.LocoLength := 17;
            ProcReadDataMemoryAddr :=
-              @ReadDataMemoryM62;		// Задаем указатель на функцию чтения памяти
+              @ReadDataMemoryM62;		// пїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅ
         end;
-        // -/- ТЭМ18дм (TEM18dm) -/- //
+        // -/- пїЅпїЅпїЅ18пїЅпїЅ (TEM18dm) -/- //
         if LocoGlobal='TEM18dm' then begin
            LocoWorkDir         := 'TWS/TEM18dm/';
-           //UltimateTEDAmperage := 800;        // Задаем предельный ток нагрузки ТЭД
-           LocoSectionsNum     := 1;		// Задаем количество секций для текущего локомотива
-           LocoPowerVoltage    := 0;            // Тип электрофикации локомотива [0, -, ~]
-           LocoWithTED         := False;        // Задаем состояние наличия на данном локомотиве звука ТЭД-ов
-           LocoWithReductor    := False;        // Задаем состояние наличия на данном локомотиве звука редуктора
-           LocoWithDIZ         := False;        // Задаем состояние наличия на данном локомотиве звуков дизеля
-           LocoWithSndKM       := False;        // Задаем состояние наличия на данном локомотиве звуков контроллера
-           LocoWithSndKM_OP    := False;        // Задаем состояние наличия на данном локомотиве звука постановки ОП
-           LocoWithSndTP       := False;        // Задаем состояние наличия на данном локомотиве звука ТП
-           LocoWithExtMVSound  := False;        // Задаем состояние наличия на данном локомотиве внешних звуков МВ
-           LocoWithExtMKSound  := False;        // Задаем состояние наличия на данном локомотиве внешних звуков МК
-           LocoWithMVPitch     := False;        // Задаем состояние наличия на данном локомотиве тонального регулирования МВ
-           LocoWithMVTDPitch   := False;        // Задаем состояние наличия на данном локомотиве тонального регулирования МВ ТД
-           VentTDPitchIncrementer:=0;           // Задаем значение для инкрементера тональности МВ ТД
-           VentTDPitchDecrementer:=0;           // Задаем значение для инкрементера тональности МВ ТД
-           VentPitchIncrementer:= 0;            // Задаем значение для инкрементера тональности МВ
-           LocoDIZNamePrefiks  := '';           // Задаем префикс названия папки с звуками работы дизеля
-           LocoReductorNamePrefiks := '';       // Задаем префикс названия папки со звуками редуктора
+           //UltimateTEDAmperage := 800;        // пїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅ
+           LocoSectionsNum     := 1;		// пїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ
+           LocoPowerVoltage    := 0;            // пїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ [0, -, ~]
+           LocoWithTED         := False;        // пїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅ-пїЅпїЅ
+           LocoWithReductor    := False;        // пїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ
+           LocoWithDIZ         := False;        // пїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅ
+           LocoWithSndKM       := False;        // пїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ
+           LocoWithSndKM_OP    := False;        // пїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅ
+           LocoWithSndTP       := False;        // пїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅ пїЅпїЅ
+           LocoWithExtMVSound  := False;        // пїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅ
+           LocoWithExtMKSound  := False;        // пїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅ
+           LocoWithMVPitch     := False;        // пїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅ
+           LocoWithMVTDPitch   := False;        // пїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅ пїЅпїЅ
+           VentTDPitchIncrementer:=0;           // пїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅ пїЅпїЅ
+           VentTDPitchDecrementer:=0;           // пїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅ пїЅпїЅ
+           VentPitchIncrementer:= 0;            // пїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅ
+           LocoDIZNamePrefiks  := '';           // пїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅ пїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅ
+           LocoReductorNamePrefiks := '';       // пїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅ пїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ
            LocoSvistokF        := 'svistok';
            LocoHornF           := 'tifon';
            ProcReadDataMemoryAddr :=
-              @ReadDataMemoryTEM18dm;		// Задаем указатель на функцию чтения памяти
+              @ReadDataMemoryTEM18dm;		// пїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅ
         end;
-        // -/- 2ТЭ10у (2TE10U) -/- //
+        // -/- 2пїЅпїЅ10пїЅ (2TE10U) -/- //
         if LocoGlobal='2TE10U' then begin
            LocoWorkDir         := 'TWS/2TE10U/';
-           UltimateTEDAmperage := 400;          // Задаем предельный ток нагрузки ТЭД
-           LocoSectionsNum     := 2;		// Задаем количество секций для текущего локомотива
-           LocoPowerVoltage    := 0;            // Тип электрофикации локомотива [0, -, ~]
-           LocoWithTED         := True;         // Задаем состояние наличия на данном локомотиве звука ТЭД-ов
-           LocoWithReductor    := False;        // Задаем состояние наличия на данном локомотиве звука редуктора
-           LocoWithDIZ         := False;        // Задаем состояние наличия на данном локомотиве звуков дизеля
-           LocoWithSndKM       := False;        // Задаем состояние наличия на данном локомотиве звуков контроллера
-           LocoWithSndKM_OP    := False;        // Задаем состояние наличия на данном локомотиве звука постановки ОП
-           LocoWithSndTP       := False;        // Задаем состояние наличия на данном локомотиве звука ТП
-           LocoWithExtMVSound  := False;        // Задаем состояние наличия на данном локомотиве внешних звуков МВ
-           LocoWithExtMKSound  := False;        // Задаем состояние наличия на данном локомотиве внешних звуков МК
-           LocoWithMVPitch     := False;        // Задаем состояние наличия на данном локомотиве тонального регулирования МВ
-           LocoWithMVTDPitch   := False;        // Задаем состояние наличия на данном локомотиве тонального регулирования МВ ТД
-           VentTDPitchIncrementer:=0;           // Задаем значение для инкрементера тональности МВ ТД
-           VentTDPitchDecrementer:=0;           // Задаем значение для инкрементера тональности МВ ТД
-           VentPitchIncrementer:= 0;            // Задаем значение для инкрементера тональности МВ
-           LocoTEDNamePrefiks  := 'VL_TED';     // Задаем префикс названия папки с звуками ТЭД
-           LocoReductorNamePrefiks := '';       // Задаем префикс названия папки со звуками редуктора
-           LocoDIZNamePrefiks  := '2TE10U';     // Задаем префикс названия папки с звуками работы дизеля
+           UltimateTEDAmperage := 400;          // пїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅ
+           LocoSectionsNum     := 2;		// пїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ
+           LocoPowerVoltage    := 0;            // пїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ [0, -, ~]
+           LocoWithTED         := True;         // пїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅ-пїЅпїЅ
+           LocoWithReductor    := False;        // пїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ
+           LocoWithDIZ         := False;        // пїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅ
+           LocoWithSndKM       := False;        // пїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ
+           LocoWithSndKM_OP    := False;        // пїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅ
+           LocoWithSndTP       := False;        // пїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅ пїЅпїЅ
+           LocoWithExtMVSound  := False;        // пїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅ
+           LocoWithExtMKSound  := False;        // пїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅ
+           LocoWithMVPitch     := False;        // пїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅ
+           LocoWithMVTDPitch   := False;        // пїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅ пїЅпїЅ
+           VentTDPitchIncrementer:=0;           // пїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅ пїЅпїЅ
+           VentTDPitchDecrementer:=0;           // пїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅ пїЅпїЅ
+           VentPitchIncrementer:= 0;            // пїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅ
+           LocoTEDNamePrefiks  := 'VL_TED';     // пїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅ пїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅ
+           LocoReductorNamePrefiks := '';       // пїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅ пїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ
+           LocoDIZNamePrefiks  := '2TE10U';     // пїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅ пїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅ
            LocoSvistokF        := 'svistok';
            LocoHornF           := 'tifon';
            UnitMain.LocoLength := 17;
            ProcReadDataMemoryAddr :=
-              @ReadDataMemory2TE10U;		// Задаем указатель на функцию чтения памяти
+              @ReadDataMemory2TE10U;		// пїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅ
         end;
-        // -/- ЭД4м (ED4M) -/- //
+        // -/- пїЅпїЅ4пїЅ (ED4M) -/- //
         if LocoGlobal='ED4M' then begin
            LocoWorkDir         := 'TWS/ED4m/';
-           //UltimateTEDAmperage := 800;        // Задаем предельный ток нагрузки ТЭД
-           LocoSectionsNum     := 1;	        // Задаем количество секций для текущего локомотива
-           LocoPowerVoltage    := 0;            // Тип электрофикации локомотива [0, -, ~]
-           LocoWithTED         := True;         // Задаем состояние наличия на данном локомотиве звука ТЭД-ов
-           LocoWithReductor    := True;         // Задаем состояние наличия на данном локомотиве звука редуктора
-           LocoWithDIZ         := False;        // Задаем состояние наличия на данном локомотиве звуков дизеля
-           LocoWithSndKM       := True;         // Задаем состояние наличия на данном локомотиве звуков контроллера
-           LocoWithSndKM_OP    := False;        // Задаем состояние наличия на данном локомотиве звука постановки ОП
-           LocoWithSndTP       := True;         // Задаем состояние наличия на данном локомотиве звука ТП
-           LocoWithExtMVSound  := False;        // Задаем состояние наличия на данном локомотиве внешних звуков МВ
-           LocoWithExtMKSound  := False;        // Задаем состояние наличия на данном локомотиве внешних звуков МК
-           LocoWithMVPitch     := False;        // Задаем состояние наличия на данном локомотиве тонального регулирования МВ
-           LocoWithMVTDPitch   := False;        // Задаем состояние наличия на данном локомотиве тонального регулирования МВ ТД
+           //UltimateTEDAmperage := 800;        // пїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅ
+           LocoSectionsNum     := 1;	        // пїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ
+           LocoPowerVoltage    := 0;            // пїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ [0, -, ~]
+           LocoWithTED         := True;         // пїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅ-пїЅпїЅ
+           LocoWithReductor    := True;         // пїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ
+           LocoWithDIZ         := False;        // пїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅ
+           LocoWithSndKM       := True;         // пїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ
+           LocoWithSndKM_OP    := False;        // пїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅ
+           LocoWithSndTP       := True;         // пїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅ пїЅпїЅ
+           LocoWithExtMVSound  := False;        // пїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅ
+           LocoWithExtMKSound  := False;        // пїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅ
+           LocoWithMVPitch     := False;        // пїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅ
+           LocoWithMVTDPitch   := False;        // пїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅ пїЅпїЅ
            VentStartF          := PChar('TWS/ED4m/sinxrom_start.wav');
            VentCycleF          := PChar('TWS/ED4m/sinxrom_loop.wav');
            VentStopF           := PChar('TWS/ED4m/sinxrom_stop.wav');
            XVentStartF         := PChar('TWS/ED4m/sinxrom_start.wav');
            XVentCycleF         := PChar('TWS/ED4m/sinxrom_loop.wav');
            XVentStopF          := PChar('TWS/ED4m/sinxrom_stop.wav');
-           VentTDPitchIncrementer:=0;           // Задаем значение для инкрементера тональности МВ ТД
-           VentTDPitchDecrementer:=0;           // Задаем значение для инкрементера тональности МВ ТД
-           VentPitchIncrementer:= 0;            // Задаем значение для инкрементера тональности МВ
-           LocoTEDNamePrefiks  := 'ED4m';       // Задаем префикс названия папки с звуками ТЭД
-           LocoReductorNamePrefiks := 'ED4m';   // Задаем префикс названия папки со звуками редуктора
+           VentTDPitchIncrementer:=0;           // пїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅ пїЅпїЅ
+           VentTDPitchDecrementer:=0;           // пїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅ пїЅпїЅ
+           VentPitchIncrementer:= 0;            // пїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅ
+           LocoTEDNamePrefiks  := 'ED4m';       // пїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅ пїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅ
+           LocoReductorNamePrefiks := 'ED4m';   // пїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅ пїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ
            ReduktorF := PChar('TWS/'+LocoReductorNamePrefiks+'/ted_vibeg.wav');
-           LocoDIZNamePrefiks  := '';           // Задаем префикс названия папки с звуками работы дизеля
+           LocoDIZNamePrefiks  := '';           // пїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅ пїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅ
            LocoSvistokF        := 'svistok';
            LocoHornF           := 'tifon';
            ProcReadDataMemoryAddr :=
-              @ReadDataMemoryED4M;		// Задаем указатель на функцию чтения памяти
+              @ReadDataMemoryED4M;		// пїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅ
         end;
-        // -/- ЭД9м (ED9M) -/- //
+        // -/- пїЅпїЅ9пїЅ (ED9M) -/- //
         if LocoGlobal='ED9M' then begin
            LocoWorkDir         := 'TWS/ED4m/';
-           //UltimateTEDAmperage := 800;        // Задаем предельный ток нагрузки ТЭД
-           LocoSectionsNum     := 1;	        // Задаем количество секций для текущего локомотива
-           LocoPowerVoltage    := 0;            // Тип электрофикации локомотива [0, -, ~]
-           LocoWithTED         := True;         // Задаем состояние наличия на данном локомотиве звука ТЭД-ов
-           LocoWithReductor    := True;         // Задаем состояние наличия на данном локомотиве звука редуктора
-           LocoWithDIZ         := False;        // Задаем состояние наличия на данном локомотиве звуков дизеля
-           LocoWithSndKM       := True;         // Задаем состояние наличия на данном локомотиве звуков контроллера
-           LocoWithSndKM_OP    := False;        // Задаем состояние наличия на данном локомотиве звука постановки ОП
-           LocoWithSndTP       := True;         // Задаем состояние наличия на данном локомотиве звука ТП
-           LocoWithExtMVSound  := False;        // Задаем состояние наличия на данном локомотиве внешних звуков МВ
-           LocoWithExtMKSound  := False;        // Задаем состояние наличия на данном локомотиве внешних звуков МК
-           LocoWithMVPitch     := False;        // Задаем состояние наличия на данном локомотиве тонального регулирования МВ
-           LocoWithMVTDPitch   := False;        // Задаем состояние наличия на данном локомотиве тонального регулирования МВ ТД
+           //UltimateTEDAmperage := 800;        // пїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅ
+           LocoSectionsNum     := 1;	        // пїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ
+           LocoPowerVoltage    := 0;            // пїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ [0, -, ~]
+           LocoWithTED         := True;         // пїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅ-пїЅпїЅ
+           LocoWithReductor    := True;         // пїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ
+           LocoWithDIZ         := False;        // пїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅ
+           LocoWithSndKM       := True;         // пїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ
+           LocoWithSndKM_OP    := False;        // пїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅ
+           LocoWithSndTP       := True;         // пїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅ пїЅпїЅ
+           LocoWithExtMVSound  := False;        // пїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅ
+           LocoWithExtMKSound  := False;        // пїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅ
+           LocoWithMVPitch     := False;        // пїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅ
+           LocoWithMVTDPitch   := False;        // пїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅ пїЅпїЅ
            VentStartF          := PChar('TWS/ED4m/trans_start.wav');
            VentCycleF          := PChar('TWS/ED4m/trans_loop.wav');
            VentStopF           := PChar('TWS/ED4m/trans_stop.wav');
            XVentStartF         := PChar('TWS/ED4m/trans_start.wav');
            XVentCycleF         := PChar('TWS/ED4m/trans_loop.wav');
            XVentStopF          := PChar('TWS/ED4m/trans_stop.wav');
-           VentTDPitchIncrementer:=0;           // Задаем значение для инкрементера тональности МВ ТД
-           VentTDPitchDecrementer:=0;           // Задаем значение для инкрементера тональности МВ ТД
-           VentPitchIncrementer:= 0;            // Задаем значение для инкрементера тональности МВ
-           LocoTEDNamePrefiks  := 'ED4m';       // Задаем префикс названия папки с звуками ТЭД
-           LocoReductorNamePrefiks := 'ED4m';   // Задаем префикс названия папки со звуками редуктора
+           VentTDPitchIncrementer:=0;           // пїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅ пїЅпїЅ
+           VentTDPitchDecrementer:=0;           // пїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅ пїЅпїЅ
+           VentPitchIncrementer:= 0;            // пїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅ
+           LocoTEDNamePrefiks  := 'ED4m';       // пїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅ пїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅ
+           LocoReductorNamePrefiks := 'ED4m';   // пїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅ пїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ
            ReduktorF := PChar('TWS/'+LocoReductorNamePrefiks+'/ted_vibeg.wav');
-           LocoDIZNamePrefiks  := '';           // Задаем префикс названия папки с звуками работы дизеля
+           LocoDIZNamePrefiks  := '';           // пїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅ пїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅ
            LocoSvistokF        := 'svistok';
            LocoHornF           := 'tifon';
            ProcReadDataMemoryAddr :=
-              @ReadDataMemoryED9M;		// Задаем указатель на функцию чтения памяти
+              @ReadDataMemoryED9M;		// пїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅ
         end;
 
         if FileExists(LocoWorkDir+'DNoise.wav') = True then
