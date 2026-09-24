@@ -39,14 +39,11 @@ interface
       UnipulsFaktPos:              Integer;
       UnipulsTargetPos:            Integer;
       UnipulsVol1:                 Integer;
-      Unipuls2SecWait: Boolean; //True - ждем 2секунды до запуска унипул
-      Vent2SecWait: Boolean; //True - ждем 2секунды до запуска вентиляторов
+      Unipuls2SecWait: Boolean; //True - пїЅпїЅпїЅпїЅ 2пїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅ
+      Vent2SecWait: Boolean; //True - пїЅпїЅпїЅпїЅ 2пїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ
 
       procedure step();
-
-    published
-
-    constructor Create;
+         constructor Create;
 
    end;
 
@@ -268,7 +265,7 @@ uses UnitMain, SoundManager, Windows, Bass, SysUtils, Math;
       if VentTDVol < VentTDVolDest then VentTDVol := VentTDVol + 0.01 * MainCycleFreq;
       if Vent = 0 then begin
          VentTDPitchDest := -20;
-         if VentTDPitch < -19 then VentTDVol := 0.0; // Полная остановка вентиляторов
+         if VentTDPitch < -19 then VentTDVol := 0.0; // пїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ
       end;
    end;
 
