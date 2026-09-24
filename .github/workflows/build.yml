@@ -5,6 +5,9 @@ on:
   pull_request:
   workflow_dispatch:
 
+permissions:
+  contents: write
+
 jobs:
   build-win32:
     runs-on: windows-latest
@@ -51,6 +54,29 @@ jobs:
           if (-not (Test-Path $lazbuild)) { throw "lazbuild not found: $lazbuild" }
           & $lazbuild --build-all --os=win32 --cpu=i386 TWS.lpi
           if ($LASTEXITCODE -ne 0) { exit $LASTEXITCODE }
+
+      - name: Package Win32 build
+        shell: pwsh
+        run: |
+          $packageDir = 'TWS-win32'
+          New-Item -ItemType Directory -Path $packageDir -Force | Out-Null
+          Copy-Item 'lib/units/TWS.exe' "$packageDir/TWS.exe"
+          Copy-Item 'innosetup/TWS_MainFiles/*' $packageDir -Recurse -Force
+          Compress-Archive -Path "$packageDir/*" -DestinationPath 'TWS-win32.zip' -Force
+
+      - name: Upload Win32 artifact
+        uses: actions/upload-artifact@v4
+        with:
+          name: TWS-win32
+          path: TWS-win32.zip
+          if-no-files-found: error
+
+      - name: Create GitHub release
+        if: startsWith(github.ref, 'refs/tags/v')
+        shell: pwsh
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: gh release create "${{ github.ref_name }}" TWS-win32.zip --title "TWS ${{ github.ref_name }}" --generate-notes
 
       - name: Upload build log
         if: failure()
