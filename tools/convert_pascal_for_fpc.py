@@ -28,6 +28,8 @@ CAMERA_MODE_RENAMES = (
     (re.compile(r"\bCamera\s*<>\s*2\b"), "UnitMain.CameraMode<>2"),
     (re.compile(r"\bCamera\s*=\s*([012])\b"), r"UnitMain.CameraMode=\1"),
     (re.compile(r"@Camera\b"), "@UnitMain.CameraMode"),
+    (re.compile(r", Camera,"), ", UnitMain.CameraMode,"),
+    (re.compile(r"IntToStr\(Camera\)"), "IntToStr(UnitMain.CameraMode)"),
 )
 
 

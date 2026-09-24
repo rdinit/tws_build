@@ -103,7 +103,7 @@ begin
            AddNewLineToDebugger('Показание АЛС', Svetofor, 'ZDS переменная');
            AddNewLineToDebugger('Ограничение скорости', OgrSpeed, 'ZDS переменная');
            AddNewLineToDebugger('Расстояние до светофора', SvetoforDist, 'ZDS переменная');
-           AddNewLineToDebugger('Номер вида', Camera, 'ZDS переменная');
+           AddNewLineToDebugger('Номер вида', UnitMain.CameraMode, 'ZDS переменная');
            if ZDSimSteamVersion = False then begin
               AddNewLineToDebugger('Положение камеры в кабине', CameraX, 'ZDS переменная');
            end else begin
@@ -251,7 +251,7 @@ begin
               11: ListItem.SubItems[3] := IntToStr(Svetofor);
               12: ListItem.SubItems[3] := IntToStr(OgrSpeed);
               13: ListItem.SubItems[3] := IntToStr(SvetoforDist);
-              14: ListItem.SubItems[3] := IntToStr(Camera);
+              14: ListItem.SubItems[3] := IntToStr(UnitMain.CameraMode);
               15: ListItem.SubItems[3] := FloatToStr(CamX);
               16: ListItem.SubItems[3] := IntToStr(Rain);
               17: ListItem.SubItems[3] := IntToStr(VCheck);
