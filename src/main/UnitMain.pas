@@ -799,12 +799,12 @@ begin
    FS := TFileStream.Create(fileName, fmShareDenyNone);
    FileText := GetStringFromFileStream(FS);
    FS.Free();
-   FileLinesList := ExtractWord(FileText, #13);
+   FileLinesList := ExtractWordList(FileText, #13);
    isPlayPerestuk_OnStation:=False;
    StationCount := FileLinesList.Count;
    for I := 0 to StationCount - 1 do begin
       Log_.DebugWriteErrorToErrorList(FileLinesList[I]);
-      StationsList := ExtractWord(FileLinesList[I], ' ');
+      StationsList := ExtractWordList(FileLinesList[I], ' ');
       if StationsList.Count >= 3 then begin
          try
             StationTrack1[I] := StrToInt(StationsList[1]);

@@ -466,7 +466,7 @@ begin
            while Not EoF(TF) do begin
               Readln(TF, St);
               if (st<>'') AND (st[1]<>';') then begin
-                 try TSt := ExtractWord(St, '='); except end;
+                 try TSt := ExtractWordList(St, '='); except end;
 
                  //try if TSt[0] = 'LocomotiveType' then LocoGlobal := TSt[1]; except end;
                  //try if TSt[0] = 'RoutePath' then Route := TSt[1]; except end;

@@ -16,7 +16,7 @@ interface
    function GetStrToSep(St1:string;Sym:char;Pos:smallint):string;overload;
    function GetStrToSep(St1:string;Sym:char):string;overload;
    function GetSymPos(St1:string;Sym:char;StartI:integer=0):smallint;
-   function ExtractWord(const AString: string; const ADelimiter: Char): TStringList;
+   function ExtractWordList(const AString: string; const ADelimiter: Char): TStringList;
    function base64Decode(const Text : ansiString): ansiString;
    function DecodeBase64(Value: String): String;
    function GetStringFromFileStream(FileStream: TFileStream) : String;
@@ -112,7 +112,7 @@ end;
 //------------------------------------------------------------------------------//
 // Подпрограмма для получения списка строк, которые отделены в ориг. разделитм. //
 //------------------------------------------------------------------------------//
-function ExtractWord(const AString: string; const ADelimiter: Char): TStringList;
+function ExtractWordList(const AString: string; const ADelimiter: Char): TStringList;
 var
   I, K: integer;
   AStringList: TStringList;

@@ -13,6 +13,7 @@ PUBLISHED_SECTION = re.compile(r"^(?P<indent>\s*)published\s*$", re.IGNORECASE)
 DECLARATION = re.compile(
     r"^(constructor|procedure|function|property)\b", re.IGNORECASE
 )
+IDENTIFIER_RENAMES = ((re.compile(r"\bExtractWord\b"), "ExtractWordList"),)
 
 
 def has_method_after(lines: list[str], index: int) -> bool:
@@ -36,7 +37,12 @@ def convert_text(text: str) -> tuple[str, int]:
             lines[index] = f"{indent}public{newline}"
             converted += 1
 
-    return "".join(lines), converted
+    converted_text = "".join(lines)
+    for pattern, replacement in IDENTIFIER_RENAMES:
+        converted_text, count = pattern.subn(replacement, converted_text)
+        converted += count
+
+    return converted_text, converted
 
 
 def read_source(path: Path) -> tuple[str, str]:

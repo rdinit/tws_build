@@ -98,11 +98,11 @@ begin
    FS := TFileStream.Create(fileDir, fmShareDenyNone);
    FileText := GetStringFromFileStream(FS);
    FS.Free();
-   FileLinesList := ExtractWord(FileText, #10);
+   FileLinesList := ExtractWordList(FileText, #10);
    Result := $0;
    for I := FileLinesList.Count-1 downto 0 do begin
       if Pos('Created Model object at address:', FileLinesList[I])>0 then begin
-         LineList := ExtractWord(FileLinesList[I], ' ');
+         LineList := ExtractWordList(FileLinesList[I], ' ');
          Result := ptr(StrToInt('$' + StringReplace(LineList[LineList.Count-1], '0x', '', [rfReplaceAll])));
          Break;
       end;
@@ -123,12 +123,12 @@ begin
    FS := TFileStream.Create(fileDir, fmShareDenyNone);
    FileText := GetStringFromFileStream(FS);
    FS.Free();
-   FileLinesList := ExtractWord(FileText, #13);
+   FileLinesList := ExtractWordList(FileText, #13);
    Result := $0;
    for I := FileLinesList.Count-1 downto 0 do begin
       FileLinesList[I] := StringReplace(StringReplace(FileLinesList[I], #13, '', [rfReplaceAll]), #10, ' ', [rfReplaceAll]);
       if Pos('RenderStage::runCameraSetUp(osg::RenderInfo& renderInfo)', FileLinesList[I])>0 then begin
-         LineList := ExtractWord(FileLinesList[I], ' ');
+         LineList := ExtractWordList(FileLinesList[I], ' ');
          Result := ptr(StrToInt('$' + StringReplace(LineList[LineList.Count-1], '0x', '', [rfReplaceAll])));
          LineList.Destroy;
          Break;

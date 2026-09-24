@@ -78,7 +78,7 @@ procedure SAVPE_DoorCloseTimerTick();
 begin
      With FormMain do begin
         SAVPEMessageIndex := 0;
-        SAVPEInformatorMessages := ExtractWord(SAVPBaseInfoName2[InformIndx], ';');
+        SAVPEInformatorMessages := ExtractWordList(SAVPBaseInfoName2[InformIndx], ';');
         DecodeResAndPlay('TWS/SAVPE_INFORMATOR/Info/'+ComboBox1.Items[ComboBox1.ItemIndex]+'/'+SAVPEInformatorMessages[0],
                          isPlaySAVPEInfo, SAVPEInfoF, SAVPE_INFO_Channel, ResPotok, PlayRESFlag);
         Inc(InformIndx);
@@ -205,7 +205,7 @@ begin
          FS := TFileStream.Create(fileDir, fmShareDenyNone);
          FileText := GetStringFromFileStream(FS);
          FS.Free();
-         FileLinesList := ExtractWord(FileText, #13);
+         FileLinesList := ExtractWordList(FileText, #13);
          for I := 0 to FileLinesList.Count-1 do begin
             FileLinesList[I] := StringReplace(StringReplace(FileLinesList[I], #13, '', [rfReplaceAll]), #10, ' ', [rfReplaceAll]);
             if FOO = True then begin
@@ -248,7 +248,7 @@ begin
            FS := TFileStream.Create(fileDir, fmShareDenyNone);
            FileText := GetStringFromFileStream(FS);
            FS.Free();
-           FileLinesList := ExtractWord(FileText, #13);
+           FileLinesList := ExtractWordList(FileText, #13);
            timerDoorCloseDelay.Enabled:=False; AutoInformDoorFlag:=False; AutoInformIndx:=0; InformIndx:=0;
            TotalInfoFiles:=0; TotalAutoInfoFiles:=0; TotalServiceFiles:=0; FOO:=False; BAR:=False; ZOO:=False;
            ThirdColumnAval := False;
@@ -257,7 +257,7 @@ begin
               if (FOO=True) or (BAR=True) or (ZOO=True) then begin
                  if FOO=True then begin
                     if Trim(FileLinesList[I])='[MARKETING]' then begin BAR:=True; FOO:=False; ZOO:=False; end else begin
-                    FileLineColumn := ExtractWord(FileLinesList[I], #9);
+                    FileLineColumn := ExtractWordList(FileLinesList[I], #9);
                     if FileLineColumn.Count >= 3 then begin
                        if Trim(FileLineColumn[0]) <> 'start' then
                           BaseInfoTrack[TotalInfoFiles] := StrToInt(FileLineColumn[0])
@@ -277,7 +277,7 @@ begin
                  end;
                  if BAR=True then begin
                     if Trim(FileLinesList[I])='[SERVICE]' then begin ZOO:=True; FOO:=False; BAR:=False; end;
-                    FileLineColumn := ExtractWord(FileLinesList[I], #9);
+                    FileLineColumn := ExtractWordList(FileLinesList[I], #9);
                     if FileLineColumn.Count >= 2 then begin
                        BaseAutoInfoTrack[TotalAutoInfoFiles] := StrToInt(FileLineColumn[0]);
                        BaseAutoInfoName[TotalAutoInfoFiles] := FileLineColumn[1];
@@ -285,7 +285,7 @@ begin
                     end;
                  end;
                  if ZOO=True then begin
-                    FileLineColumn := ExtractWord(FileLinesList[I], #9);
+                    FileLineColumn := ExtractWordList(FileLinesList[I], #9);
                     if FileLineColumn.Count >= 2 then begin
                        BaseServiceInfoTrack[TotalServiceFiles] := StrToInt(FileLineColumn[0]);
                        BaseServiceInfoName[TotalServiceFiles] := FileLineColumn[1];
@@ -346,7 +346,7 @@ begin
       FS := TFileStream.Create(sceneryDir, fmShareDenyNone);
       FileText := GetStringFromFileStream(FS);
       FS.Free();
-      FileLinesList := ExtractWord(FileText, #13);
+      FileLinesList := ExtractWordList(FileText, #13);
       scBaseInfoCount := FileLinesList.Count;
       for I := 0 to scBaseInfoCount - 1 do begin
          if Pos('[TWS-EK]', FileLinesList[I]) > 0 then begin
@@ -359,7 +359,7 @@ begin
          for I := J + 1 to scBaseInfoCount - 1 do begin
             UnitMain.Log_.DebugWriteErrorToErrorList(FileLinesList[I]);
             FileLinesList[I] := StringReplace(StringReplace(FileLinesList[I], #13, '', [rfReplaceAll]), #10, ' ', [rfReplaceAll]);
-            ObjectsList := ExtractWord(FileLinesList[I], #9);
+            ObjectsList := ExtractWordList(FileLinesList[I], #9);
             if ObjectsList.Count >= 2 then begin
                if (Pos('OverrideRouteEK', ObjectsList[0]) > 0) Or
                   (Pos('overrideRouteEK', ObjectsList[0]) > 0) then begin
@@ -425,11 +425,11 @@ begin
    FS := TFileStream.Create(fileName, fmShareDenyNone);
    FileText := GetStringFromFileStream(FS);
    FS.Free();
-   FileLinesList := ExtractWord(FileText, #13);
+   FileLinesList := ExtractWordList(FileText, #13);
    clearZvonBaseData();
    for I := 0 to FileLinesList.Count - 1 do begin
       FileLinesList[I] := StringReplace(StringReplace(FileLinesList[I], #13, '', [rfReplaceAll]), #10, ' ', [rfReplaceAll]);
-      ObjectsList := ExtractWord(FileLinesList[I], #9);
+      ObjectsList := ExtractWordList(FileLinesList[I], #9);
       if Pos('Zvon', ObjectsList[1]) > 0 then begin
          if (Pos('o', ObjectsList[0]) > 0) then begin
             ZvonOrdinats[ZvonObjectsCount] := StrToInt(StringReplace(ObjectsList[0], 'o', '', [rfReplaceAll]));
@@ -458,11 +458,11 @@ begin
    FS := TFileStream.Create(fileName, fmShareDenyNone);
    FileText := GetStringFromFileStream(FS);
    FS.Free();
-   FileLinesList := ExtractWord(FileText, #13);
+   FileLinesList := ExtractWordList(FileText, #13);
    clearNatureBaseData();
    for I := 0 to FileLinesList.Count - 1 do begin
       FileLinesList[I] := StringReplace(StringReplace(FileLinesList[I], #13, '', [rfReplaceAll]), #10, ' ', [rfReplaceAll]);
-      ObjectsList := ExtractWord(FileLinesList[I], #9);
+      ObjectsList := ExtractWordList(FileLinesList[I], #9);
       if Pos('nature', ObjectsList[0]) > 0 then begin
          if (Pos('o', ObjectsList[1]) > 0) then begin
             NatureOrdinats1[NatureObjectsCount] := StrToInt(StringReplace(ObjectsList[1], 'o', '', [rfReplaceAll]));
@@ -495,12 +495,12 @@ begin
      FS := TFileStream.Create(fileName, fmShareDenyNone);
      FileText := GetStringFromFileStream(FS);
      FS.Free();
-     FileLinesList := ExtractWord(FileText, #13);
+     FileLinesList := ExtractWordList(FileText, #13);
      SAVPBaseObjectsCount := 0;
      for I := 0 to FileLinesList.Count - 1 do begin
         UnitMain.Log_.DebugWriteErrorToErrorList(FileLinesList[I]);
         FileLinesList[I] := StringReplace(StringReplace(FileLinesList[I], #13, '', [rfReplaceAll]), #10, ' ', [rfReplaceAll]);
-        ObjectsList := ExtractWord(FileLinesList[I], #9);
+        ObjectsList := ExtractWordList(FileLinesList[I], #9);
         if ObjectsList.Count >= 2 then begin
            if (Pos('Zvon', ObjectsList[1]) = 0) and (Pos('nature', ObjectsList[0]) = 0) then begin
               BaseInfoTrack[SAVPBaseObjectsCount] := StrToInt(ObjectsList[0]);
@@ -975,7 +975,7 @@ begin
               // --- NUM5 --- //
               if (GetAsyncKeyState(101) = 0) and (PrevKeyNum5 <> 0) then begin
                  isPlaySAVPEPeek:=False;
-                 SAVPEInformatorMessages := ExtractWord(SAVPBaseInfoName1[InformIndx], ';');
+                 SAVPEInformatorMessages := ExtractWordList(SAVPBaseInfoName1[InformIndx], ';');
                  SAVPEMessageIndex := 0;
                  DecodeResAndPlay('TWS/SOVI_INFORMATOR/Info/'+ComboBox3.Items[ComboBox3.ItemIndex]+'/'+SAVPEInformatorMessages[0],
                     isPlaySAVPEInfo, SAVPEInfoF, SAVPE_INFO_Channel, ResPotok, PlayRESFlag);
@@ -1087,12 +1087,12 @@ begin
                  SAVPEMessageIndex := 0;
                  if ThirdColumnAval = True then begin
                     if (InformIndx >= 0) AND (Trim(SAVPBaseInfoName3[InformIndx]) <> '') then
-                       SAVPEInformatorMessages := ExtractWord(SAVPBaseInfoName3[InformIndx], ';')
+                       SAVPEInformatorMessages := ExtractWordList(SAVPBaseInfoName3[InformIndx], ';')
                  end else begin
-                    SAVPEInformatorMessages := ExtractWord(SAVPBaseInfoName1[0], ';');
+                    SAVPEInformatorMessages := ExtractWordList(SAVPBaseInfoName1[0], ';');
                  end;
                  if (SAVPEInformatorMessages.Count = 0) Or (Trim(SAVPEInformatorMessages[0]) = '') then
-                    SAVPEInformatorMessages := ExtractWord(SAVPBaseInfoName1[0], ';');
+                    SAVPEInformatorMessages := ExtractWordList(SAVPBaseInfoName1[0], ';');
                     DecodeResAndPlay('TWS/SAVPE_INFORMATOR/Info/'+ComboBox1.Items[ComboBox1.ItemIndex]+'/'+SAVPEInformatorMessages[0],
                                      isPlaySAVPEInfo, SAVPEInfoF, SAVPE_INFO_Channel, ResPotok, PlayRESFlag);
               end;
@@ -1105,14 +1105,14 @@ begin
                        if AutoInformDoorFlag = False then begin
                           BASS_ChannelStop(SAVPE_INFO_Channel); BASS_StreamFree(SAVPE_INFO_Channel);
                           SAVPEMessageIndex := 0;
-                          SAVPEInformatorMessages := ExtractWord(SAVPBaseInfoName1[InformIndx], ';');
+                          SAVPEInformatorMessages := ExtractWordList(SAVPBaseInfoName1[InformIndx], ';');
                           DecodeResAndPlay('TWS/SAVPE_INFORMATOR/Info/'+ComboBox1.Items[ComboBox1.ItemIndex]+'/'+SAVPEInformatorMessages[0],
                                            isPlaySAVPEInfo, SAVPEInfoF, SAVPE_INFO_Channel, ResPotok, PlayRESFlag);
                           AutoInformDoorFlag:=True;
                        end else begin
                           BASS_ChannelStop(SAVPE_INFO_Channel); BASS_StreamFree(SAVPE_INFO_Channel);
                           SAVPEMessageIndex := 0;
-                          SAVPEInformatorMessages := ExtractWord(SAVPBaseInfoName2[InformIndx], ';');
+                          SAVPEInformatorMessages := ExtractWordList(SAVPBaseInfoName2[InformIndx], ';');
                           DecodeResAndPlay('TWS/SAVPE_INFORMATOR/Info/'+ComboBox1.Items[ComboBox1.ItemIndex]+'/'+SAVPEInformatorMessages[0],
                                            isPlaySAVPEInfo, SAVPEInfoF, SAVPE_INFO_Channel, ResPotok, PlayRESFlag);
                           AutoInformDoorFlag:=False;
@@ -1129,11 +1129,11 @@ begin
                              if AutoInformDoorFlag = False then begin
                                 SAVPEMessageIndex := 0;
                                 //AutoInformDoorFlag := True;
-                                SAVPEInformatorMessages := ExtractWord(SAVPBaseInfoName1[InformIndx], ';');
+                                SAVPEInformatorMessages := ExtractWordList(SAVPBaseInfoName1[InformIndx], ';');
                              end else begin
                                 SAVPEMessageIndex := 0;
                                 //AutoInformDoorFlag := False;
-                                SAVPEInformatorMessages := ExtractWord(SAVPBaseInfoName2[InformIndx], ';');
+                                SAVPEInformatorMessages := ExtractWordList(SAVPBaseInfoName2[InformIndx], ';');
                                 Inc(InformIndx);
                              end;
                              AutoInformDoorFlag := Not(AutoInformDoorFlag);
@@ -1142,7 +1142,7 @@ begin
                           end else begin
                              if AutoInformDoorFlag=True then begin
                                 SAVPEMessageIndex := 0;
-                                SAVPEInformatorMessages := ExtractWord(SAVPBaseInfoName2[InformIndx], ';');
+                                SAVPEInformatorMessages := ExtractWordList(SAVPBaseInfoName2[InformIndx], ';');
                                 DecodeResAndPlay('TWS/SAVPE_INFORMATOR/Info/'+ComboBox1.Items[ComboBox1.ItemIndex]+'/'+SAVPEInformatorMessages[0],
                                                  isPlaySAVPEInfo, SAVPEInfoF, SAVPE_INFO_Channel, ResPotok, PlayRESFlag);
                                 Inc(InformIndx);
@@ -1207,7 +1207,7 @@ begin
                     if BaseInfoTrack[I]=Track then begin
                        BASS_ChannelStop(SAVPE_INFO_Channel); BASS_StreamFree(SAVPE_INFO_Channel);
                        SAVPEMessageIndex := 0;
-                       SAVPEInformatorMessages := ExtractWord(SAVPBaseInfoName1[I], ';');
+                       SAVPEInformatorMessages := ExtractWordList(SAVPBaseInfoName1[I], ';');
                        DecodeResAndPlay('TWS/SAVPE_INFORMATOR/Info/'+ComboBox1.Items[ComboBox1.ItemIndex]+'/'+SAVPEInformatorMessages[0],
                                          isPlaySAVPEInfo, SAVPEInfoF, SAVPE_INFO_Channel, ResPotok, PlayRESFlag);
                        InformIndx:=I;
