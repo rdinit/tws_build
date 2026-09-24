@@ -28,7 +28,7 @@ interface
 
 implementation
 
-uses IdCoder3to4, IdCoderMIME, SysUtils, Windows, TlHelp32, Forms, Math;
+uses base64, SysUtils, Windows, TlHelp32, Forms, Math;
 
 function OneInstance: boolean;
 var g_hAppCritSecMutex: THandle;
@@ -69,15 +69,8 @@ end;
 //                 РџРѕРґРїСЂРѕРіСЂР°РјРјР° РґР»СЏ РґРµРєРѕРґРёСЂРѕРІР°РЅРёСЏ СЃС‚СЂРѕРєРё BASE64                 //
 //------------------------------------------------------------------------------//
 function base64Decode(const Text : ansiString): ansiString;
-var
-  Decoder : TIdDecoderMime;
 begin
-  Decoder := TIdDecoderMime.Create(nil);
-  try
-    Result := Decoder.DecodeString(Text);
-  finally
-    FreeAndNil(Decoder)
-  end
+  Result := DecodeStringBase64(Text, False);
 end;
 
 //------------------------------------------------------------------------------//
@@ -225,7 +218,7 @@ begin
 end;
 
 //------------------------------------------------------------------------------//
-//      Подпрограмма для поиска количества файлов *.res в заданной папке        //
+//      пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅ *.res пїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅ        //
 //------------------------------------------------------------------------------//
 function GetFileCount(Dir: string):integer;
 var
@@ -245,7 +238,7 @@ Result := Pics-1;
 end;
 
 //------------------------------------------------------------------------------//
-//    Подпрограмма для создания случайного float-числа в заданном диапазоне     //
+//    пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ float-пїЅпїЅпїЅпїЅпїЅ пїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ     //
 //------------------------------------------------------------------------------//
 function randomizeFloat(beginValue: Single; endValue: Single) : Single;
 var

@@ -1182,11 +1182,6 @@ object FormMain: TFormMain
     Left = 440
     Top = 304
   end
-  object IdDecoderMIME1: TIdDecoderMIME
-    FillChar = '='
-    Left = 328
-    Top = 40
-  end
   object timerPerehodUnipulsSwitch: TTimer
     Enabled = False
     Interval = 1100

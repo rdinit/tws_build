@@ -2,7 +2,7 @@ Unit SoundRes;
 
 interface
 
-uses SysUtils, Classes, Forms, Windows, IdCoderMIME;
+uses SysUtils, Classes, Forms, Windows, base64;
 
 procedure DecodeResAndPlay(FileName: String;
                            var FlagName: Boolean;
@@ -14,7 +14,7 @@ procedure DecodeResAndPlay(FileName: String;
 implementation
 
 //------------------------------------------------------------------------------//
-//     Подпрограмма, для воспроизведения зашифрованых звуков *.res формата      //
+//     пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ, пїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅ *.res пїЅпїЅпїЅпїЅпїЅпїЅпїЅ      //
 //------------------------------------------------------------------------------//
 procedure DecodeResAndPlay(FileName: String;
                            var FlagName: Boolean;
@@ -27,7 +27,6 @@ var
         J,K,codeAdder: Integer;
         sDecodeString: String;
         Len: Integer;
-        decoderMIME1: TIdDecoderMIME;
 begin
      if FileExists(FileName)=True then begin
 	try
@@ -52,9 +51,8 @@ begin
                  if K > 32 then K := 0;
               end;
            end;
-           decoderMIME1 := TIdDecoderMIME.Create(nil);
            if (Pos('.mp3', FileName) = 0) and (Pos('.wav', FileName) = 0) then
-              sDecodeString := decoderMIME1.DecodeString(sDecodeString);
+              sDecodeString := DecodeStringBase64(sDecodeString, False);
            ResPotok.Write(sDecodeString[1], Length(sDecodeString));
            ResPotok.Position := 0;
 

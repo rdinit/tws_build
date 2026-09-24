@@ -10,11 +10,14 @@
     <BuildModes Count="1">
       <Item0 Name="Default" Default="True"/>
     </BuildModes>
-    <RequiredPackages Count="1">
+    <RequiredPackages Count="2">
       <Item1>
         <PackageName Value="LCL"/>
         <MinVersion Value="3.0.0.0"/>
       </Item1>
+      <Item2>
+        <PackageName Value="FCL"/>
+      </Item2>
     </RequiredPackages>
     <Units Count="1">
       <Unit0>

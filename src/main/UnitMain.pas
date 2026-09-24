@@ -23,10 +23,10 @@ interface
 
 uses
   Windows, Messages, SysUtils, Graphics, Forms, Dialogs, StdCtrls, ComCtrls,
-  Menus, IdBaseComponent, IdCoder, IdCoder3to4, IdCoderMIME, ExtCtrls,
+  Menus, ExtCtrls,
   Controls, Classes, Bass, inifiles, UnitAuthors, TlHelp32, ShellApi, Grids,
   ValEdit, jpeg, UnitSAVPEHelp, UnitDebug, Math, UnitUSAVP,
-  EncdDecd, SAVP, RAMMemModule, FileManager, ExtraUtils, SoundManager, Debug,
+  SAVP, RAMMemModule, FileManager, ExtraUtils, SoundManager, Debug,
   bass_fx, UnitSOVIHelp, UnitSoundRRS, CHS8, CHS4KVR, CHS7, CHS4T, VL80T,
   ES5K, EP1M, ED4M, ED9M, CHS2K, sl2m, VL82M, CHS4, TE10U, M62, VL85,
   TEM18dm, TEP70, TEP70bs, VL11M, SoundRes, Camera;
@@ -125,7 +125,6 @@ type
     RB_AutoEKMode: TRadioButton;
     Image1: TImage;
     Image2: TImage;
-    IdDecoderMIME1: TIdDecoderMIME;
     Edit1: TEdit;
     MainMenu1: TMainMenu;
     N1: TMenuItem;
