@@ -25,7 +25,7 @@ uses
   Windows, Messages, SysUtils, Graphics, Forms, Dialogs, StdCtrls, ComCtrls,
   Menus, ExtCtrls,
   Controls, Classes, Bass, inifiles, UnitAuthors, TlHelp32, ShellApi, Grids,
-  ValEdit, jpeg, UnitSAVPEHelp, UnitDebug, Math, UnitUSAVP,
+  ValEdit, UnitSAVPEHelp, UnitDebug, Math, UnitUSAVP,
   SAVP, RAMMemModule, FileManager, ExtraUtils, SoundManager, Debug,
   bass_fx, UnitSOVIHelp, UnitSoundRRS, CHS8, CHS4KVR, CHS7, CHS4T, VL80T,
   ES5K, EP1M, ED4M, ED9M, CHS2K, sl2m, VL82M, CHS4, TE10U, M62, VL85,
