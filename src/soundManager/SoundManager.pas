@@ -382,7 +382,7 @@ begin
          BASS_ChannelSetAttribute(LocoChannel_FX[ChannelNum], BASS_ATTRIB_VOL, 0);
          if ChannelNum=0 then ChannelNum:=1 else ChannelNum:=0;
          if (Camera=0) Or (Camera=1) then LocoVolume := FormMain.trcBarLocoPerestukVol.Position;
-         if Camera=2 then begin
+         if UnitMain.CameraMode=2 then begin
             if Loco<>'ED4M' then LocoVolume:=0 else LocoVolume := FormMain.trcBarLocoPerestukVol.Position;
          end;
          LocoVolume2:=0; PerehodLoco:=True;	// Установки для перехода
@@ -400,7 +400,7 @@ begin
        With FormMain do begin
           if Camera=0 then BASS_ChannelSetAttribute(LDOORChannel, BASS_ATTRIB_VOL, trcBarVspomMahVol.Position/120);
           if Camera=1 then BASS_ChannelSetAttribute(LDOORChannel, BASS_ATTRIB_VOL, trcBarVspomMahVol.Position/100);
-          if Camera=2 then BASS_ChannelSetAttribute(LDOORChannel, BASS_ATTRIB_VOL, trcBarVspomMahVol.Position/100);
+          if UnitMain.CameraMode=2 then BASS_ChannelSetAttribute(LDOORChannel, BASS_ATTRIB_VOL, trcBarVspomMahVol.Position/100);
        end;
     except end;
 end;
@@ -416,7 +416,7 @@ begin
        With FormMain do begin
           if Camera=0 then BASS_ChannelSetAttribute(RDOORChannel, BASS_ATTRIB_VOL, trcBarVspomMahVol.Position/120);
           if Camera=1 then BASS_ChannelSetAttribute(RDOORChannel, BASS_ATTRIB_VOL, trcBarVspomMahVol.Position/100);
-          if Camera=2 then BASS_ChannelSetAttribute(RDOORChannel, BASS_ATTRIB_VOL, trcBarVspomMahVol.Position/100);
+          if UnitMain.CameraMode=2 then BASS_ChannelSetAttribute(RDOORChannel, BASS_ATTRIB_VOL, trcBarVspomMahVol.Position/100);
        end;
     except end;
 end;
@@ -434,11 +434,11 @@ begin
             Unipuls_Channel[UnipulsChanNum] := BASS_StreamCreateFile(FALSE, FileName, 0, 0, 0 {$IFDEF UNICODE} or BASS_UNICODE {$ENDIF});
           BASS_ChannelSetAttribute(Unipuls_Channel[UnipulsChanNum], BASS_ATTRIB_VOL, 0);
           BASS_ChannelPlay(Unipuls_Channel[UnipulsChanNum], FALSE);
-          if Camera<>2 then
+          if UnitMain.CameraMode<>2 then
              UnipulsVol1 := FormMain.trcBarVspomMahVol.Position
           else
              UnipulsVol1:=0;
-          if Camera=2 then UnipulsVol1:=0;
+          if UnitMain.CameraMode=2 then UnipulsVol1:=0;
           if UnipulsChanNum=0 then begin
              BASS_ChannelSlideAttribute(Unipuls_Channel[0], BASS_ATTRIB_VOL, UnipulsVol1/100, 500);
              BASS_ChannelSlideAttribute(Unipuls_Channel[1], BASS_ATTRIB_VOL, 0, 1000);
@@ -654,7 +654,7 @@ begin
          BASS_ChannelSetAttribute(StochistUdar_Channel, BASS_ATTRIB_VOL, 0);
       end;
       // -/- ВИД: ХВОСТ -/- //
-      if Camera=2 then begin
+      if UnitMain.CameraMode=2 then begin
          BASS_ChannelSetAttribute(Rain_Channel, BASS_ATTRIB_VOL, trcBarNatureVol.Position/100);
          if Loco='ED4M' then begin
             BASS_ChannelSetAttribute(LocoChannel_FX[ChannelNum], BASS_ATTRIB_VOL, trcBarLocoPerestukVol.Position/100);
@@ -732,7 +732,7 @@ begin
 
           if LChannelPerestuk=0 then LChannelPerestuk:=1 else LChannelPerestuk:=0;
           if (Camera=0) Or (Camera=1) then LocoVolumePerestuk := FormMain.trcBarLocoPerestukVol.Position;
-          if Camera=2 then begin
+          if UnitMain.CameraMode=2 then begin
              if Loco<>'ED4M' then LocoVolumePerestuk:=0 else LocoVolumePerestuk := FormMain.trcBarLocoPerestukVol.Position;
           end;
           LocoVolumePerestuk2:=0; PerehodLocoPerestuk:=True;	// Установки для перехода
@@ -930,7 +930,7 @@ begin
           DizChannel := BASS_StreamCreateFile(FALSE, dizF, 0, 0, BASS_SAMPLE_LOOP {$IFDEF UNICODE} or BASS_UNICODE {$ENDIF});
           BASS_ChannelSetAttribute(DizChannel, BASS_ATTRIB_VOL, 0);
           BASS_ChannelPlay(DizChannel, True); isPlayDiz:=True; ChannelNumDiz:=1;
-          if Camera <> 2 then begin
+          if UnitMain.CameraMode<>2 then begin
              if (BV <> 0) Or (Camera = 1) then
                 DizVolume := trcBarDieselVol.Position/100
              else
@@ -948,7 +948,7 @@ begin
           DizChannel2 := BASS_StreamCreateFile(FALSE, dizF, 0, 0, BASS_SAMPLE_LOOP {$IFDEF UNICODE} or BASS_UNICODE {$ENDIF});
           BASS_ChannelSetAttribute(DizChannel2, BASS_ATTRIB_VOL, 0);
           BASS_ChannelPlay(DizChannel2, True); isPlayDiz:=True; ChannelNumDiz:=0;
-          if Camera <> 2 then begin
+          if UnitMain.CameraMode<>2 then begin
              if (BV <> 0) Or (Camera = 1) then
                 DizVolume := trcBarDieselVol.Position/100
              else

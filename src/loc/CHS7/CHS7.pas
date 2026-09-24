@@ -192,7 +192,7 @@ implementation
          if isCameraInCabin then begin
             ZhalusiF := StrNew(PChar(soundDir + 'zhalusi_on.wav'))
          end else begin
-            if (Camera<>2) or (CoupleStat=0) then begin
+            if (UnitMain.CameraMode<>2) or (CoupleStat=0) then begin
                ZhalusiF := StrNew(PChar(soundDir + 'x_zhalusi_on.wav'));
             end;
          end;
@@ -203,7 +203,7 @@ implementation
          if isCameraInCabin=True then begin
             ZhalusiF := StrNew(PChar(soundDir + 'zhalusi_off.wav'));
          end else begin
-            if (Camera<>2) or (CoupleStat=0) then begin
+            if (UnitMain.CameraMode<>2) or (CoupleStat=0) then begin
                ZhalusiF := StrNew(PChar(soundDir + 'x_zhalusi_off.wav'));
             end;
          end;
