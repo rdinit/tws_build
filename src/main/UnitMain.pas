@@ -144,7 +144,7 @@ type
     procedure ChangeVolume(Sender: TObject);
     procedure FormCreate(Sender: TObject);
     procedure ClockMainTimer(Sender: TObject);
-    procedure FormClose(Sender: TObject; var Action: TCloseAction);
+    procedure FormClose(Sender: TObject; var CloseAction: TCloseAction);
     procedure cbWagPerestukClick(Sender: TObject);
     procedure timerSoundSliderTimer(Sender: TObject);
     procedure cbLocPerestukClick(Sender: TObject);
@@ -342,7 +342,7 @@ var
   Reostat,           PrevReostat:     Byte;         // Переменная включения ЭДТ на ЧС8, для звука защелки
   Fazan,             PrevFazan:       Byte;         // Фазорасщепитель для ВЛ80т
   Rain,              PrevRain:        Byte;         // Переменные интенсивности дождя
-  Camera,            PrevCamera:      Byte;         // Переменные для определения типа камеры
+  CameraMode,        PrevCamera:      Byte;         // Переменные для определения типа камеры
   RB,                PrevRB:          Byte;         // Переменные для РБ (ПИКУРОВ)
   RBS,               PrevRBS:         Byte;         // Переменные для РБC (ПИКУРОВ)
   EPT,               PrevEPT:         Byte;         // Переменная состояния ЭПТ (для тумблера ЭД-шэк)
@@ -665,7 +665,7 @@ end;
 //------------------------------------------------------------------------------//
 //                       Подпрограмма Закрытие программы                        //
 //------------------------------------------------------------------------------//
-procedure TFormMain.FormClose(Sender: TObject; var Action: TCloseAction);
+procedure TFormMain.FormClose(Sender: TObject; var CloseAction: TCloseAction);
 begin
   Log_.DebugFreeLog();
   try SaveTWSParams('TWS\settings_TWS.ini');  except end;   // Автосохранение всех параметров
@@ -1008,9 +1008,9 @@ try
       end;
 
       if ZDSimSteamVersion = False then begin
-         isCameraInCabin := CameraInCabinCheck(CameraX, Camera);
+         isCameraInCabin := CameraInCabinCheck(CameraX, CameraMode);
       end else begin
-         isCameraInCabin := CameraInCabinCheck(CameraX_Steam, Camera);
+         isCameraInCabin := CameraInCabinCheck(CameraX_Steam, CameraMode);
       end;
 
       if NapravOrdinata = 'Tuda' then
@@ -1140,11 +1140,11 @@ try
          end;
 
          // Блок задачи громкости ТЭД-ам и дизелям
-         if (PerehodTED=False) and (Camera<>2) then begin
+         if (PerehodTED=False) and (CameraMode<>2) then begin
             if ChannelNumTED=1 then BASS_ChannelSetAttribute(TEDChannel_FX , BASS_ATTRIB_VOL, TEDvlm)
             else BASS_ChannelSetAttribute(TEDChannel2, BASS_ATTRIB_VOL, TEDvlm);
          end else begin
-            if Camera=2 then begin
+            if CameraMode=2 then begin
                if (Loco <> 'ED4M') and (Loco <> 'ED9M') then begin
                   BASS_ChannelSetAttribute(TEDChannel_FX, BASS_ATTRIB_VOL, 0);
                   BASS_ChannelSetAttribute(TEDChannel2, BASS_ATTRIB_VOL, 0);
@@ -1446,7 +1446,7 @@ try
          if VentTDVol > trcBarVspomMahVol.Position / 100 then VentTDVol := trcBarVspomMahVol.Position / 100;
          if VentTDVol < 0 then VentTDVol := 0;
          // Задаём громкость звуков работы вентиляторов (ПТР) //
-         if (isCameraInCabin = True) and (Camera = 0) then begin
+         if (isCameraInCabin = True) and (CameraMode = 0) then begin
             BASS_ChannelSetAttribute(VentTD_Channel_FX, BASS_ATTRIB_VOL, VentTDVol);
             BASS_ChannelSetAttribute(VentCycleTD_Channel_FX, BASS_ATTRIB_VOL, VentTDVol);
             BASS_ChannelSetAttribute(XVentTD_Channel_FX, BASS_ATTRIB_VOL, 0);
@@ -1516,11 +1516,11 @@ try
            end else begin
               BASS_ChannelSetAttribute(Brake_Channel[0], BASS_ATTRIB_VOL, 0);
               //if EDTAmperage=0 then
-              if Camera <> 2 then begin
+              if CameraMode <> 2 then begin
                  BASS_ChannelSetAttribute(Brake_Channel[1], BASS_ATTRIB_VOL, Brake_slipp_Volume); //else
                  BASS_ChannelSetAttribute(Brake_Channel[2], BASS_ATTRIB_VOL, Brake_slipp_Volume*0.8);
               end;
-              if Camera = 2 then begin
+              if CameraMode = 2 then begin
                  BASS_ChannelSetAttribute(Brake_Channel[2], BASS_ATTRIB_VOL, Brake_slipp_Volume);
                  BASS_ChannelSetAttribute(Brake_Channel[1], BASS_ATTRIB_VOL, 0);
               end;
@@ -1539,7 +1539,7 @@ try
   // **************************************** //
 
   // Проверяем менялись-ли показания камеры?
-  if (Camera<>PrevCamera) or (CameraX<>PrevCameraX) then
+  if (CameraMode<>PrevCamera) or (CameraX<>PrevCameraX) then
      VolumeMaster_RefreshVolume();
 
   // -/- Блок загрузки сэмплов, содержащих в имени границы -/- //
@@ -1620,7 +1620,7 @@ try
         DNoisePitchDest := ((power(Speed*2.5, 0.4) - 15) * 2) + 15;
         TWS_DNoisePitchRegulation();
         LocoVolume := Trunc(power(Speed/105,0.7)*100);
-        if Camera <> 2 then
+        if CameraMode <> 2 then
            BASS_ChannelSetAttribute(LocoChannel_FX[ChannelNum], BASS_ATTRIB_VOL, LocoVolume / 100)
         else
            BASS_ChannelSetAttribute(LocoChannel_FX[ChannelNum], BASS_ATTRIB_VOL, 0);
@@ -1800,7 +1800,7 @@ try
     PrevPerestukStation := isPlayPerestuk_OnStation;
     PrevRain := Rain;
     PrevVstrechStatus := VstrechStatus;
-    PrevCamera := Camera;
+    PrevCamera := CameraMode;
     PrevSpeed_Fakt:=Speed;
     PrevKME_ED := KME_ED;
     PrevVCheck := VCheck;
@@ -1859,7 +1859,7 @@ end;
 procedure PlaySvistokIsEnd(vHandle, vStream, vData: Cardinal; vUser: Pointer); stdcall;
 begin
      if BASS_ChannelIsActive(SvistokCycleChannel) <> 0 then
-        if Camera <> 2 then
+        if CameraMode <> 2 then
            BASS_ChannelSetAttribute(SvistokCycleChannel, BASS_ATTRIB_VOL, FormMain.trcBarSignalsVol.Position / 100)
         else
            BASS_ChannelSetAttribute(SvistokCycleChannel, BASS_ATTRIB_VOL,
@@ -1871,7 +1871,7 @@ begin
     try BASS_ChannelStop(SvistokChannel); BASS_StreamFree(SvistokChannel);
        SvistokChannel:=BASS_StreamCreateFile(FALSE, PChar(FileName), 0, 0, 0 {$IFDEF UNICODE} or BASS_UNICODE {$ENDIF});
        BASS_ChannelPlay(SvistokChannel, TRUE);
-       if Camera <> 2 then
+       if CameraMode <> 2 then
           BASS_ChannelSetAttribute(SvistokChannel, BASS_ATTRIB_VOL, trcBarSignalsVol.Position/100)
        else
           BASS_ChannelSetAttribute(SvistokChannel, BASS_ATTRIB_VOL,
@@ -1894,7 +1894,7 @@ end;
 procedure PlayTifonIsEnd(vHandle, vStream, vData: Cardinal; vUser: Pointer); stdcall;
 begin
   if BASS_ChannelIsActive(TifonCycleChannel) <> 0 then
-     if Camera <> 2 then
+     if CameraMode <> 2 then
         BASS_ChannelSetAttribute(TifonCycleChannel, BASS_ATTRIB_VOL, FormMain.trcBarSignalsVol.Position / 100)
      else
         BASS_ChannelSetAttribute(TifonCycleChannel, BASS_ATTRIB_VOL,
@@ -1906,7 +1906,7 @@ begin
     try BASS_ChannelStop(TifonChannel); BASS_StreamFree(TifonChannel);
        TifonChannel:=BASS_StreamCreateFile(FALSE, PChar(FileName), 0, 0, 0 {$IFDEF UNICODE} or BASS_UNICODE {$ENDIF});
        BASS_ChannelPlay(TifonChannel, TRUE);
-       if Camera <> 2 then
+       if CameraMode <> 2 then
           BASS_ChannelSetAttribute(TifonChannel, BASS_ATTRIB_VOL, trcBarSignalsVol.Position/100)
        else
           BASS_ChannelSetAttribute(TifonChannel, BASS_ATTRIB_VOL,
