@@ -39,7 +39,7 @@ implementation
 
 uses UnitMain, SoundManager, UnitSoundRRS;
 
-{$R *.dfm}
+{$R *.lfm}
 
 procedure AddNewLineToDebugger(Wname: String; Wariant: Variant; groupp: String);
 var

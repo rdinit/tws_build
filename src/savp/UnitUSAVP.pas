@@ -27,7 +27,7 @@ implementation
 
 uses UnitMain;
 
-{$R *.dfm}
+{$R *.lfm}
 
 procedure TFormUSAVP.FormClose(Sender: TObject; var Action: TCloseAction);
 begin

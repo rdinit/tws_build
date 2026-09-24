@@ -36,7 +36,7 @@ var
 implementation
 
 uses UnitMain;
-{$R *.dfm}
+{$R *.lfm}
 
 // -------------------------------------------------
 // ON FORM ACTIVATION
