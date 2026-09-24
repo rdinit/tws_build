@@ -332,7 +332,7 @@ begin
                  end else begin
                     UnitMain.tHandle := GetWindowThreadProcessId(wHandle, @ProcessID);
                     UnitMain.pHandle := OpenProcess(PROCESS_ALL_ACCESS, FALSE, ProcessID);
-                    //if I = 0 then ADDR_ZDS_EXE_LABEL:=ptr($00172C28);
+                    //if I = 0 then ADDR_ZDS_EXE_LABEL:=Pointer($00172C28);
                     //if ReadStringFromMemory(ADDR_ZDS_EXE_LABEL,17)='DGLEngine Launcher' then
                     isGameOnPause     := False;
                     CloseHandle(UnitMain.pHandle);
@@ -632,7 +632,7 @@ var
 begin
     try ReadProcessMemory(UnitMain.pHandle, ADDR_CHS4T_FTP, @FrontTP, 1, temp);  except end;
     try ReadProcessMemory(UnitMain.pHandle, ADDR_CHS4T_BTP, @BackTP, 1, temp);  except end;
-    try ReadProcessMemory(UnitMain.pHandle, ptr($0536FA2F), @ReversorPos, 1, temp);  except end;
+    try ReadProcessMemory(UnitMain.pHandle, Pointer($0536FA2F), @ReversorPos, 1, temp);  except end;
     try ReadProcessMemory(UnitMain.pHandle, ADDR_CHS4T_VENT, @Vent, 1, temp);  except end;
     try ReadProcessMemory(UnitMain.pHandle, ADDR_CHS4T_COMPRESSOR, @Compressor, 4, temp);  except end;
     try ReadProcessMemory(UnitMain.pHandle, ADDR_CHS7_VOLTAGE, @Voltage, 4, temp);  except end;
@@ -657,7 +657,7 @@ var
 begin
     try ReadProcessMemory(UnitMain.pHandle, ADDR_CHS4T_FTP, @FrontTP, 1, temp);  except end;
     try ReadProcessMemory(UnitMain.pHandle, ADDR_CHS4T_BTP, @BackTP, 1, temp);  except end;
-    try ReadProcessMemory(UnitMain.pHandle, ptr($0536FA2F), @ReversorPos, 1, temp);  except end;
+    try ReadProcessMemory(UnitMain.pHandle, Pointer($0536FA2F), @ReversorPos, 1, temp);  except end;
     try ReadProcessMemory(UnitMain.pHandle, ADDR_CHS4T_VENT, @Vent, 1, temp);  except end;
     //try ReadProcessMemory(UnitMain.pHandle, ADDR_CHS4T_COMPRESSOR, @Compressor, 4, temp);  except end;
     try ReadProcessMemory(UnitMain.pHandle, ADDR_CHS7_VOLTAGE, @Voltage, 4, temp);  except end;
@@ -874,7 +874,7 @@ begin
      try ReadProcessMemory(UnitMain.pHandle, ADDR_NEXT_OGRANICH, @NextOgrSpeed, 1, temp);  except end;
      try ReadProcessMemory(UnitMain.pHandle, ADDR_SVETOFOR_DISTANCE, @SvetoforDist, 2, temp);  except end; // Получаем расстояние до свотофора
      try ReadProcessMemory(UnitMain.pHandle, ADDR_RAIN, @Rain, 1, temp);  except end;     // Получаем интенсивность дождя
-     try ReadProcessMemory(UnitMain.pHandle, ADDR_CAMERA, @Camera, 1, temp);  except end;   // Получаем положение камеры
+     try ReadProcessMemory(UnitMain.pHandle, ADDR_CAMERA, @UnitMain.CameraMode, 1, temp);  except end;   // Получаем положение камеры
      try ReadProcessMemory(UnitMain.pHandle, ADDR_VIGILANCE_CHECK, @VCheck, 1, temp);  except end;   // Получаем состояние проверки бдительности
      try ReadProcessMemory(UnitMain.pHandle, ADDR_SPEED_VSTRECHA, @wVstrSpeed, 4, temp);  except end;   // Получаем состояние проверки бдительности
      if ZDSimSteamVersion = False then begin
@@ -958,92 +958,92 @@ var
 begin
     With FormMain do begin
        if versionID = 0 then begin
-          ADDR_254   :=   ptr($007499E4);     ADDR_395        :=     ptr($090043A0); ADDR_Speed      :=   ptr($00749958);
-          ADDR_ACCLRT:=   ptr($007498B8);     ADDR_Track      :=     ptr($00749A0C); ADDR_KM_POS     :=   ptr($0911072C);
-          ADDR_OP_POS:=   ptr($0911081C);     ADDR_Svetofor   :=     ptr($09007ECC); ADDR_AMPERAGE1  :=   ptr($0538BFDC);
-          ADDR_KLUB_OPEN:=ptr($0538D915);     ADDR_CAMERA     :=     ptr($09008024); ADDR_CAMERA_X   :=   ptr($007499EE);
-          ADDR_RB    :=   ptr($00749914);  ADDR_CHS7_REVERSOR :=     ptr($0538BFD6); ADDR_RBS        :=   ptr($00749910);
-          ADDR_OGRANICH:= ptr($0074987C); ADDR_SVETOFOR_DISTANCE:=   ptr($09007EB8);ADDR_VIGILANCE_CHECK:=ptr($007499D0);
-          ADDR_CHS7_BV := ptr($091D5B9E); ADDR_BRAKE_CYLINDERS:=     ptr($0538C268); ADDR_CHS7_VOLTAGE:=  ptr($091106B8);
-          ADDR_CHS7_VENT:=ptr($091D5BA0); ADDR_CHS7_COMPRESSOR:=     ptr($091D48C8); ADDR_CHS7_FTP   :=   ptr($091D5BAF);
-          ADDR_CHS7_BTP:= ptr($091D5BB3);       ADDR_STOCHIST :=     ptr($007497CC); ADDR_STCHSTDGR  :=   ptr($007497BC);
-          ADDR_RAIN  :=   ptr($00803D56);       ADDR_CHS8_FTP :=     ptr($09110707); ADDR_CHS8_BTP   :=   ptr($091108B7);
-          ADDR_KVR_VENTS:=ptr($091D48BD);    ADDR_CHS4KVR_BTP :=     ptr($0911070F); ADDR_CHS4KVR_FTP:=   ptr($09110707);
-          ADDR_VL80TComp:=ptr($091D48B8);ADDR_CHS4KVR_REVERSOR:=     ptr($0538BFD7); ADDR_CHS8_REOSTAT:=  ptr($0538BFD8);
-          ADDR_AB_ZB_1:=  ptr($091106D7);     ADDR_VL80TFazan :=     ptr($091D48D3); ADDR_VL80TVent1 :=   ptr($091D506C);
-          ADDR_AB_ZB_2:=  ptr($09110887);  ADDR_VL80TVent2    :=     ptr($091D5074); ADDR_VL80TVent3 :=   ptr($091D507C);
-          ADDR_BV_ED4M:=  ptr($091D5B06);ADDR_VSTRECHA_WAG_ORDINATA:=ptr($09005FE4); ADDR_TEP70BS_RPM:=   ptr($091D5C9A);
-          ADDR_BV_ED9M:=  ptr($091D5B16);     ADDR_VL80TVent4 :=     ptr($091D5084); ADDR_TEP70BS_KMPOS:= ptr($091D5C7D);
-          ADDR_TP_ED4M:=  ptr($091D5B07);        ADDR_TP_ED9M :=     ptr($091D5B17);ADDR_CHS8_COMPRESSOR:=ptr($091D48DC);
-          ADDR_VL85_FTP:= ptr($091D5C47); ADDR_ED4M_COMPRESSOR:=     ptr($091D48C6); ADDR_ED9M_COMPRESSOR:=ADDR_ED4M_COMPRESSOR;
-          ADDR_CHS4T_FTP:=ptr($09110707);  ADDR_ED4M_REVERSOR :=     ptr($0538BFD6); ADDR_ED9M_REVERS:=ADDR_ED4M_REVERSOR;
-          ADDR_CHS4T_BTP:=ptr($0911070F); ADDR_VL85_BTP       :=     ptr($091D5C4B); ADDR_TEP70_RPM  :=   ptr($091D5BDC);
-          ADDR_CHS2K_FTP:=ptr($091D5BEF); ADDR_CHS2K_COMPRESSOR:=    ptr($091D48C8); ADDR_CHS4T_VENT :=   ptr($091D48BB);
-          ADDR_CHS2K_BTP:=ptr($091D5BF3); ADDR_EP1M_COMPRESSOR:=     ptr($091D48B8); ADDR_2ES5K_FTP  :=   ptr($091D5B5F);
-          ADDR_EP1M_FTP:= ptr($091D5C17); ADDR_2ES5K_BTP      :=     ptr($091D5B63); ADDR_KM_POS_2   :=   ptr($091D5AA9);
-          ADDR_EP1M_BTP:= ptr($091D5C1B); ADDR_2TE10U_DIESEL2 :=     ptr($091D5AB0); ADDR_M62_RPM_1  :=   ptr($091D5A00);
-          ADDR_VL11M_FTP:=ptr($091D5C2F); ADDR_2TE10U_DIESEL1 :=     ptr($091D5AAC); ADDR_M62_RPM_2  :=   ptr($091D5A24);
-          ADDR_VL11M_BTP:=ptr($091D5C33); ADDR_M62_KMPOS_1    :=     ptr($091D5A14); ADDR_M62_KMPOS_2:= ADDR_M62_KMPOS_1;
-          ADDR_VSTR_NW  :=ptr($09005FE0); ADDR_VSTRECHA_WAGON_DLINA:=ptr($090043D0); ADDR_BOKSOVANIE :=   ptr($0538C29C);
-          ADDR_LDOORED4M:=ptr($090043B0); ADDR_VL11M_COMPRESSOR:=    ptr($091D48C8); ADDR_SPEED_VSTRECHA:=ptr($00791FB8);
-          ADDR_RDOORED4M:=ptr($090043B1); ADDR_EDT_AMPERAGE   :=     ptr($0538C274); ADDR_CHS7_ZHALUZI:=  ptr($091D5BA7);
-          ADDR_EPT      :=ptr($09007C59); ADDR_COUPLE_STATUS  :=     ptr($00749788); ADDR_CHS2K_VENT :=   ptr($091D5BE3);
-          ADDR_CHS2K_BV :=ptr($091D5BE2); ADDR_HIGHLIGHTS     :=     ptr($09007C7A); ADDR_TRACK_TAIL :=   ptr($09008054);
-          ADDR_SVISTOK  :=ptr($007499D8); ADDR_TIFON          :=     ptr($007499DC); ADDR_NEXT_OGRANICH:= ptr($00749880);
-          ADDR_ED9M_KONTROLLER:=ptr($091D5B15); ADDR_VSTRECH_STATUS:=ptr($090043F8); ADDR_SETTINGS_INI_POINTER:=ptr($00803F48);
-          ADDR_ED4M_KONTROLLER:=ptr($091D5B04); ADDR_VL11m_VENT:=    ptr($091D5C25); ADDR_ORDINATA   :=   ptr($00803F50);
-          ADDR_OUTSIDE_LOCO_STATUS:=ptr($00749865);ADDR_CHS8_VENT_VOLUME:=ptr($091D48BC); ADDR_CHS8_VENT_VOLUME_INCREMENTER:=ptr($091D48CC);
-          ADDR_2ES5K_BV :=ptr($091D48CC); ADDR_CHS8_UNIPULS_AVARIA:= ptr($091D5024); ADDR_CHS8_GV_1  :=   ptr($09007FB4);
-          ADDR_VR242    :=ptr($0911080C); ADDR_PNEVM_SIGNAL   :=     ptr($0538D8D4); ADDR_TEP70_TED  :=   ptr($091D5BD8);
-          ADDR_VL82_VENT:=ptr($091D48BC);      ADDR_VL82_COMPRESSOR:=ptr($091D48B8); ADDR_WAGS_NUM   :=   ptr($00749990);
-          ADDR_CAMERA_LAST_WAGON_OFFSET:=ptr($0910CE48);
-          ADDR_LAST_WAGON_SHADOW_OFF:=ptr($0048A6BE);
+          ADDR_254   :=   Pointer($007499E4);     ADDR_395        :=     Pointer($090043A0); ADDR_Speed      :=   Pointer($00749958);
+          ADDR_ACCLRT:=   Pointer($007498B8);     ADDR_Track      :=     Pointer($00749A0C); ADDR_KM_POS     :=   Pointer($0911072C);
+          ADDR_OP_POS:=   Pointer($0911081C);     ADDR_Svetofor   :=     Pointer($09007ECC); ADDR_AMPERAGE1  :=   Pointer($0538BFDC);
+          ADDR_KLUB_OPEN:=Pointer($0538D915);     ADDR_CAMERA     :=     Pointer($09008024); ADDR_CAMERA_X   :=   Pointer($007499EE);
+          ADDR_RB    :=   Pointer($00749914);  ADDR_CHS7_REVERSOR :=     Pointer($0538BFD6); ADDR_RBS        :=   Pointer($00749910);
+          ADDR_OGRANICH:= Pointer($0074987C); ADDR_SVETOFOR_DISTANCE:=   Pointer($09007EB8);ADDR_VIGILANCE_CHECK:=Pointer($007499D0);
+          ADDR_CHS7_BV := Pointer($091D5B9E); ADDR_BRAKE_CYLINDERS:=     Pointer($0538C268); ADDR_CHS7_VOLTAGE:=  Pointer($091106B8);
+          ADDR_CHS7_VENT:=Pointer($091D5BA0); ADDR_CHS7_COMPRESSOR:=     Pointer($091D48C8); ADDR_CHS7_FTP   :=   Pointer($091D5BAF);
+          ADDR_CHS7_BTP:= Pointer($091D5BB3);       ADDR_STOCHIST :=     Pointer($007497CC); ADDR_STCHSTDGR  :=   Pointer($007497BC);
+          ADDR_RAIN  :=   Pointer($00803D56);       ADDR_CHS8_FTP :=     Pointer($09110707); ADDR_CHS8_BTP   :=   Pointer($091108B7);
+          ADDR_KVR_VENTS:=Pointer($091D48BD);    ADDR_CHS4KVR_BTP :=     Pointer($0911070F); ADDR_CHS4KVR_FTP:=   Pointer($09110707);
+          ADDR_VL80TComp:=Pointer($091D48B8);ADDR_CHS4KVR_REVERSOR:=     Pointer($0538BFD7); ADDR_CHS8_REOSTAT:=  Pointer($0538BFD8);
+          ADDR_AB_ZB_1:=  Pointer($091106D7);     ADDR_VL80TFazan :=     Pointer($091D48D3); ADDR_VL80TVent1 :=   Pointer($091D506C);
+          ADDR_AB_ZB_2:=  Pointer($09110887);  ADDR_VL80TVent2    :=     Pointer($091D5074); ADDR_VL80TVent3 :=   Pointer($091D507C);
+          ADDR_BV_ED4M:=  Pointer($091D5B06);ADDR_VSTRECHA_WAG_ORDINATA:=Pointer($09005FE4); ADDR_TEP70BS_RPM:=   Pointer($091D5C9A);
+          ADDR_BV_ED9M:=  Pointer($091D5B16);     ADDR_VL80TVent4 :=     Pointer($091D5084); ADDR_TEP70BS_KMPOS:= Pointer($091D5C7D);
+          ADDR_TP_ED4M:=  Pointer($091D5B07);        ADDR_TP_ED9M :=     Pointer($091D5B17);ADDR_CHS8_COMPRESSOR:=Pointer($091D48DC);
+          ADDR_VL85_FTP:= Pointer($091D5C47); ADDR_ED4M_COMPRESSOR:=     Pointer($091D48C6); ADDR_ED9M_COMPRESSOR:=ADDR_ED4M_COMPRESSOR;
+          ADDR_CHS4T_FTP:=Pointer($09110707);  ADDR_ED4M_REVERSOR :=     Pointer($0538BFD6); ADDR_ED9M_REVERS:=ADDR_ED4M_REVERSOR;
+          ADDR_CHS4T_BTP:=Pointer($0911070F); ADDR_VL85_BTP       :=     Pointer($091D5C4B); ADDR_TEP70_RPM  :=   Pointer($091D5BDC);
+          ADDR_CHS2K_FTP:=Pointer($091D5BEF); ADDR_CHS2K_COMPRESSOR:=    Pointer($091D48C8); ADDR_CHS4T_VENT :=   Pointer($091D48BB);
+          ADDR_CHS2K_BTP:=Pointer($091D5BF3); ADDR_EP1M_COMPRESSOR:=     Pointer($091D48B8); ADDR_2ES5K_FTP  :=   Pointer($091D5B5F);
+          ADDR_EP1M_FTP:= Pointer($091D5C17); ADDR_2ES5K_BTP      :=     Pointer($091D5B63); ADDR_KM_POS_2   :=   Pointer($091D5AA9);
+          ADDR_EP1M_BTP:= Pointer($091D5C1B); ADDR_2TE10U_DIESEL2 :=     Pointer($091D5AB0); ADDR_M62_RPM_1  :=   Pointer($091D5A00);
+          ADDR_VL11M_FTP:=Pointer($091D5C2F); ADDR_2TE10U_DIESEL1 :=     Pointer($091D5AAC); ADDR_M62_RPM_2  :=   Pointer($091D5A24);
+          ADDR_VL11M_BTP:=Pointer($091D5C33); ADDR_M62_KMPOS_1    :=     Pointer($091D5A14); ADDR_M62_KMPOS_2:= ADDR_M62_KMPOS_1;
+          ADDR_VSTR_NW  :=Pointer($09005FE0); ADDR_VSTRECHA_WAGON_DLINA:=Pointer($090043D0); ADDR_BOKSOVANIE :=   Pointer($0538C29C);
+          ADDR_LDOORED4M:=Pointer($090043B0); ADDR_VL11M_COMPRESSOR:=    Pointer($091D48C8); ADDR_SPEED_VSTRECHA:=Pointer($00791FB8);
+          ADDR_RDOORED4M:=Pointer($090043B1); ADDR_EDT_AMPERAGE   :=     Pointer($0538C274); ADDR_CHS7_ZHALUZI:=  Pointer($091D5BA7);
+          ADDR_EPT      :=Pointer($09007C59); ADDR_COUPLE_STATUS  :=     Pointer($00749788); ADDR_CHS2K_VENT :=   Pointer($091D5BE3);
+          ADDR_CHS2K_BV :=Pointer($091D5BE2); ADDR_HIGHLIGHTS     :=     Pointer($09007C7A); ADDR_TRACK_TAIL :=   Pointer($09008054);
+          ADDR_SVISTOK  :=Pointer($007499D8); ADDR_TIFON          :=     Pointer($007499DC); ADDR_NEXT_OGRANICH:= Pointer($00749880);
+          ADDR_ED9M_KONTROLLER:=Pointer($091D5B15); ADDR_VSTRECH_STATUS:=Pointer($090043F8); ADDR_SETTINGS_INI_POINTER:=Pointer($00803F48);
+          ADDR_ED4M_KONTROLLER:=Pointer($091D5B04); ADDR_VL11m_VENT:=    Pointer($091D5C25); ADDR_ORDINATA   :=   Pointer($00803F50);
+          ADDR_OUTSIDE_LOCO_STATUS:=Pointer($00749865);ADDR_CHS8_VENT_VOLUME:=Pointer($091D48BC); ADDR_CHS8_VENT_VOLUME_INCREMENTER:=Pointer($091D48CC);
+          ADDR_2ES5K_BV :=Pointer($091D48CC); ADDR_CHS8_UNIPULS_AVARIA:= Pointer($091D5024); ADDR_CHS8_GV_1  :=   Pointer($09007FB4);
+          ADDR_VR242    :=Pointer($0911080C); ADDR_PNEVM_SIGNAL   :=     Pointer($0538D8D4); ADDR_TEP70_TED  :=   Pointer($091D5BD8);
+          ADDR_VL82_VENT:=Pointer($091D48BC);      ADDR_VL82_COMPRESSOR:=Pointer($091D48B8); ADDR_WAGS_NUM   :=   Pointer($00749990);
+          ADDR_CAMERA_LAST_WAGON_OFFSET:=Pointer($0910CE48);
+          ADDR_LAST_WAGON_SHADOW_OFF:=Pointer($0048A6BE);
           // Звуки ЭМ защелки при включении пакетника управление на ЧС-ах, кроме ЧС2к (ЭКСКЛЮЗИВ версии 5.5.008)
-          ADDR_CHS7_BV_PAKETNIK:=ptr($091D5B9C);ADDR_CHS4T_GV_PAKETNIK_OFFSET:=ptr($07D22254);
-          ADDR_CHS8_GV_PAKETNIK_OFFSET:=ptr($00803F78);
-          ADDR_EXTRA_CODE_ZDS1:=ptr($0040438C);
+          ADDR_CHS7_BV_PAKETNIK:=Pointer($091D5B9C);ADDR_CHS4T_GV_PAKETNIK_OFFSET:=Pointer($07D22254);
+          ADDR_CHS8_GV_PAKETNIK_OFFSET:=Pointer($00803F78);
+          ADDR_EXTRA_CODE_ZDS1:=Pointer($0040438C);
        end;
        if versionID = 1 then begin
-          ADDR_Speed :=   ptr($0072CB38);       ADDR_Track    :=     ptr($0072CBFC); ADDR_KM_POS     :=   ptr($090F3F9C);
-          ADDR_KM_POS_2 :=ptr($091B9251);
-          ADDR_OP_POS:=   ptr($090F408C);             ADDR_REVERSOR:=ptr($0536FA2E);ADDR_KLUB_OPEN   :=   ptr($0537118D);
-          ADDR_395  :=    ptr($08FE7C18);              ADDR_254  :=  ptr($0072CBD4); ADDR_Svetofor   :=   ptr($08FEB744);
-          ADDR_VSTR_NW := ptr($08FE9858);           ADDR_VSTR_TRACK:=ptr($08FE985C); ADDR_ACCLRT     :=   ptr($0072CAAC);
-          ADDR_TP_ED4M := ptr($091B92AF);       ADDR_SPEED_VSTRECHA:=ptr($007759C0); ADDR_BV_ED4M    :=   ptr($091B92AE);
-          ADDR_BV_ED9M := ptr($091B92BE);ADDR_VSTRECHA_WAG_ORDINATA:=ptr($08FE985C); ADDR_KME_ED4M   :=   ptr($091B92AD);
-          ADDR_KME_ED9M:= ptr($091B92AD);      ADDR_VIGILANCE_CHECK:=ptr($0072CBC0);  ADDR_TP_ED9M   :=   ptr($091B92BF);
-          ADDR_CAMERA_X:= ptr($0072CBDE);         ADDR_EDT_AMPERAGE:=ptr($0536FA3C);ADDR_AMPERAGE1   :=   ptr($0536FA34);
-          ADDR_AMPERAGE2:=ptr($0536FA54);      ADDR_CHS7_COMPRESSOR:=ptr($091B8120);ADDR_BRAKE_CYLINDERS:=ptr($0536FD18);
-          ADDR_CHS7_VENT:=ptr($091B934C);      ADDR_CHS8_COMPRESSOR:=ptr($091B8134);ADDR_CHS4T_VENT  :=   ptr($091B8113);
-          ADDR_NM   :=    ptr($0072CA6C);     ADDR_CHS4T_COMPRESSOR:=ptr($091B9208);ADDR_ED4M_COMPRESSOR:=ptr($091B92AC);
-          ADDR_KVR_VENTS:=ptr($091B8115);     ADDR_CHS2K_COMPRESSOR:=ptr($091B8120);ADDR_ED9M_COMPRESSOR:=ptr($091B811F);
-          ADDR_CHS7_BV := ptr($08FEB779);         ADDR_CHS7_VOLTAGE:=ptr($090F3F30);ADDR_2TE10U_DIESEL1:= ptr($091B9254);
-          ADDR_TEP70_RPM:=ptr($091B9388);		   ADDR_EPT:=ptr($08FEB4D1);ADDR_2TE10U_DIESEL2:= ptr($091B9258);
-          ADDR_VL80TVent1  :=   ptr($091B8860);
-          ADDR_VL80TVent2:=ptr($091B8868);          ADDR_VL80TVent4:=ptr($091B8870);ADDR_VL80TVent3  :=   ptr($091B8878);
-          ADDR_VL80TComp:=ptr($091B8110);            ADDR_M62_RPM_1:= ptr($091B91E4);ADDR_STOCHIST    :=   ptr($0072C9C8);
-          ADDR_STCHSTDGR:=ptr($0072C9C0);      ADDR_EP1M_COMPRESSOR:=ptr($091B8110);ADDR_CHS7_REVERSOR:=  ptr($0536FA2E);
-          ADDR_CAMERA   :=ptr($08FEB89C);      ADDR_ED4M_REVERSOR := ptr($0536FA2E); ADDR_RB         :=   ptr($0072CB08);
-          ADDR_RBS      :=ptr($0072CB04);    ADDR_SVETOFOR_DISTANCE:=ptr($08FEB730);ADDR_OGRANICH    :=   ptr($0072CA78);
-          ADDR_CHS7_FTP :=ptr($091B935B);             ADDR_CHS7_BTP:=ptr($091B935F);ADDR_CHS8_FTP    :=   ptr($090F3F77);
-          ADDR_CHS8_BTP :=ptr($090F411F);         ADDR_CHS8_REOSTAT:=ptr($0536FA30);ADDR_CHS4KVR_FTP :=   ptr($090F3F77);
-          ADDR_VL80TFazan:=ptr($091B812A);         ADDR_CHS4KVR_BTP:=ptr($090F3F7F);ADDR_CHS4KVR_REVERSOR:=ptr($0536FA2F);
-          ADDR_ED9M_REVERS:=ptr($0536FA2E);          ADDR_CHS2K_FTP:=ptr($091B939F);ADDR_CHS2K_BTP   :=   ptr($091B939B);
-          ADDR_CHS4T_FTP:=ptr($090F3F77);            ADDR_CHS4T_BTP:=ptr($090F3F7F);ADDR_EP1M_FTP    :=   ptr($091B93C3);
-          ADDR_EP1M_BTP :=ptr($091B93C7);                 ADDR_RAIN:=ptr($007E77AC);ADDR_2ES5K_BTP   :=   ptr($091B930B);
-          ADDR_2ES5K_FTP:=ptr($091B9307); ADDR_VSTRECHA_WAGON_DLINA:=ptr($08FE7C48);ADDR_VL11M_FTP   :=   ptr($091B93D7);
-          ADDR_VL11M_BTP:=ptr($091B93DB);             ADDR_VL85_FTP:=ptr($091B93F3);ADDR_VL85_BTP    :=   ptr($091B93F7);
-          ADDR_AB_ZB_1  :=ptr($090F3F4F);           ADDR_BOKSOVANIE:=ptr($0536FDF8);ADDR_AB_ZB_2     :=   ptr($090F40F7);
-          ADDR_LDOORED4M  := ptr($08FE7C28);      ADDR_RDOORED4M  := ptr($08FE7C29);ADDR_M62_RPM_2   :=   ptr($00000000);
-          ADDR_COUPLE_STATUS:=ptr($0072C984);     ADDR_CHS7_ZHALUZI:=ptr($091B9353); ADDR_CHS2K_VENT :=   ptr($091B938F);
-          ADDR_CHS2K_BV :=ptr($091B938E);           ADDR_HIGHLIGHTS:=ptr($08FEB4F2);ADDR_TRACK_TAIL  :=   ptr($08FEB8CC);
-          ADDR_SVISTOK  :=ptr($0072CBC8);                ADDR_TIFON:=ptr($0072CBCC);ADDR_VL11m_VENT  :=   ptr($091B93D1);
-          ADDR_VSTRECH_STATUS:=ptr($08FE7C70); ADDR_SETTINGS_INI_POINTER:=ptr($007E79A0); ADDR_ORDINATA:= ptr($007E79A8);
-          ADDR_ED4M_KONTROLLER:=ptr($091B92AC);ADDR_OUTSIDE_LOCO_STATUS:=ptr($0072CA62);
-          ADDR_ED9M_KONTROLLER:=ptr($091B92BD);ADDR_CHS8_VENT_VOLUME:=ptr($091B8114);ADDR_CHS8_VENT_VOLUME_INCREMENTER:=ptr($091B8124);
-          ADDR_2ES5K_BV :=ptr($091B8124); ADDR_CHS8_UNIPULS_AVARIA:= ptr($091B8818);ADDR_PNEVM_SIGNAL:=   ptr($0537114C);
-          ADDR_TEP70_TED:=ptr($091B9384);      ADDR_VL82_COMPRESSOR:=ptr($091B8110);    ADDR_VL82_VENT := ptr($091B8114);
-          ADDR_CAMERA_LAST_WAGON_OFFSET:=ptr($090F06C0);ADDR_WAGS_NUM:=ptr($0072CB80); ADDR_CHS8_GV_1  :=   ptr($08FEB82C);
+          ADDR_Speed :=   Pointer($0072CB38);       ADDR_Track    :=     Pointer($0072CBFC); ADDR_KM_POS     :=   Pointer($090F3F9C);
+          ADDR_KM_POS_2 :=Pointer($091B9251);
+          ADDR_OP_POS:=   Pointer($090F408C);             ADDR_REVERSOR:=Pointer($0536FA2E);ADDR_KLUB_OPEN   :=   Pointer($0537118D);
+          ADDR_395  :=    Pointer($08FE7C18);              ADDR_254  :=  Pointer($0072CBD4); ADDR_Svetofor   :=   Pointer($08FEB744);
+          ADDR_VSTR_NW := Pointer($08FE9858);           ADDR_VSTR_TRACK:=Pointer($08FE985C); ADDR_ACCLRT     :=   Pointer($0072CAAC);
+          ADDR_TP_ED4M := Pointer($091B92AF);       ADDR_SPEED_VSTRECHA:=Pointer($007759C0); ADDR_BV_ED4M    :=   Pointer($091B92AE);
+          ADDR_BV_ED9M := Pointer($091B92BE);ADDR_VSTRECHA_WAG_ORDINATA:=Pointer($08FE985C); ADDR_KME_ED4M   :=   Pointer($091B92AD);
+          ADDR_KME_ED9M:= Pointer($091B92AD);      ADDR_VIGILANCE_CHECK:=Pointer($0072CBC0);  ADDR_TP_ED9M   :=   Pointer($091B92BF);
+          ADDR_CAMERA_X:= Pointer($0072CBDE);         ADDR_EDT_AMPERAGE:=Pointer($0536FA3C);ADDR_AMPERAGE1   :=   Pointer($0536FA34);
+          ADDR_AMPERAGE2:=Pointer($0536FA54);      ADDR_CHS7_COMPRESSOR:=Pointer($091B8120);ADDR_BRAKE_CYLINDERS:=Pointer($0536FD18);
+          ADDR_CHS7_VENT:=Pointer($091B934C);      ADDR_CHS8_COMPRESSOR:=Pointer($091B8134);ADDR_CHS4T_VENT  :=   Pointer($091B8113);
+          ADDR_NM   :=    Pointer($0072CA6C);     ADDR_CHS4T_COMPRESSOR:=Pointer($091B9208);ADDR_ED4M_COMPRESSOR:=Pointer($091B92AC);
+          ADDR_KVR_VENTS:=Pointer($091B8115);     ADDR_CHS2K_COMPRESSOR:=Pointer($091B8120);ADDR_ED9M_COMPRESSOR:=Pointer($091B811F);
+          ADDR_CHS7_BV := Pointer($08FEB779);         ADDR_CHS7_VOLTAGE:=Pointer($090F3F30);ADDR_2TE10U_DIESEL1:= Pointer($091B9254);
+          ADDR_TEP70_RPM:=Pointer($091B9388);		   ADDR_EPT:=Pointer($08FEB4D1);ADDR_2TE10U_DIESEL2:= Pointer($091B9258);
+          ADDR_VL80TVent1  :=   Pointer($091B8860);
+          ADDR_VL80TVent2:=Pointer($091B8868);          ADDR_VL80TVent4:=Pointer($091B8870);ADDR_VL80TVent3  :=   Pointer($091B8878);
+          ADDR_VL80TComp:=Pointer($091B8110);            ADDR_M62_RPM_1:= Pointer($091B91E4);ADDR_STOCHIST    :=   Pointer($0072C9C8);
+          ADDR_STCHSTDGR:=Pointer($0072C9C0);      ADDR_EP1M_COMPRESSOR:=Pointer($091B8110);ADDR_CHS7_REVERSOR:=  Pointer($0536FA2E);
+          ADDR_CAMERA   :=Pointer($08FEB89C);      ADDR_ED4M_REVERSOR := Pointer($0536FA2E); ADDR_RB         :=   Pointer($0072CB08);
+          ADDR_RBS      :=Pointer($0072CB04);    ADDR_SVETOFOR_DISTANCE:=Pointer($08FEB730);ADDR_OGRANICH    :=   Pointer($0072CA78);
+          ADDR_CHS7_FTP :=Pointer($091B935B);             ADDR_CHS7_BTP:=Pointer($091B935F);ADDR_CHS8_FTP    :=   Pointer($090F3F77);
+          ADDR_CHS8_BTP :=Pointer($090F411F);         ADDR_CHS8_REOSTAT:=Pointer($0536FA30);ADDR_CHS4KVR_FTP :=   Pointer($090F3F77);
+          ADDR_VL80TFazan:=Pointer($091B812A);         ADDR_CHS4KVR_BTP:=Pointer($090F3F7F);ADDR_CHS4KVR_REVERSOR:=Pointer($0536FA2F);
+          ADDR_ED9M_REVERS:=Pointer($0536FA2E);          ADDR_CHS2K_FTP:=Pointer($091B939F);ADDR_CHS2K_BTP   :=   Pointer($091B939B);
+          ADDR_CHS4T_FTP:=Pointer($090F3F77);            ADDR_CHS4T_BTP:=Pointer($090F3F7F);ADDR_EP1M_FTP    :=   Pointer($091B93C3);
+          ADDR_EP1M_BTP :=Pointer($091B93C7);                 ADDR_RAIN:=Pointer($007E77AC);ADDR_2ES5K_BTP   :=   Pointer($091B930B);
+          ADDR_2ES5K_FTP:=Pointer($091B9307); ADDR_VSTRECHA_WAGON_DLINA:=Pointer($08FE7C48);ADDR_VL11M_FTP   :=   Pointer($091B93D7);
+          ADDR_VL11M_BTP:=Pointer($091B93DB);             ADDR_VL85_FTP:=Pointer($091B93F3);ADDR_VL85_BTP    :=   Pointer($091B93F7);
+          ADDR_AB_ZB_1  :=Pointer($090F3F4F);           ADDR_BOKSOVANIE:=Pointer($0536FDF8);ADDR_AB_ZB_2     :=   Pointer($090F40F7);
+          ADDR_LDOORED4M  := Pointer($08FE7C28);      ADDR_RDOORED4M  := Pointer($08FE7C29);ADDR_M62_RPM_2   :=   Pointer($00000000);
+          ADDR_COUPLE_STATUS:=Pointer($0072C984);     ADDR_CHS7_ZHALUZI:=Pointer($091B9353); ADDR_CHS2K_VENT :=   Pointer($091B938F);
+          ADDR_CHS2K_BV :=Pointer($091B938E);           ADDR_HIGHLIGHTS:=Pointer($08FEB4F2);ADDR_TRACK_TAIL  :=   Pointer($08FEB8CC);
+          ADDR_SVISTOK  :=Pointer($0072CBC8);                ADDR_TIFON:=Pointer($0072CBCC);ADDR_VL11m_VENT  :=   Pointer($091B93D1);
+          ADDR_VSTRECH_STATUS:=Pointer($08FE7C70); ADDR_SETTINGS_INI_POINTER:=Pointer($007E79A0); ADDR_ORDINATA:= Pointer($007E79A8);
+          ADDR_ED4M_KONTROLLER:=Pointer($091B92AC);ADDR_OUTSIDE_LOCO_STATUS:=Pointer($0072CA62);
+          ADDR_ED9M_KONTROLLER:=Pointer($091B92BD);ADDR_CHS8_VENT_VOLUME:=Pointer($091B8114);ADDR_CHS8_VENT_VOLUME_INCREMENTER:=Pointer($091B8124);
+          ADDR_2ES5K_BV :=Pointer($091B8124); ADDR_CHS8_UNIPULS_AVARIA:= Pointer($091B8818);ADDR_PNEVM_SIGNAL:=   Pointer($0537114C);
+          ADDR_TEP70_TED:=Pointer($091B9384);      ADDR_VL82_COMPRESSOR:=Pointer($091B8110);    ADDR_VL82_VENT := Pointer($091B8114);
+          ADDR_CAMERA_LAST_WAGON_OFFSET:=Pointer($090F06C0);ADDR_WAGS_NUM:=Pointer($0072CB80); ADDR_CHS8_GV_1  :=   Pointer($08FEB82C);
        end;
 
        // Версия 5.6
@@ -1051,22 +1051,22 @@ begin
           Ini:=TiniFile.Create(extractfilepath(ParamStr(0))+'tws.ini');
 
           // Данные settings.ini из ОЗУ ZDSimulator
-          ADDR_LOCOMOTIVE_TYPE    := ptr(strToInt('$' + Ini.ReadString('global', 'LocomotiveType', '0')));   // OK
-          ADDR_ROUTE              := ptr(strToInt('$' + Ini.ReadString('global', 'Route', '0')));            // OK
-          ADDR_ROUTE_PATH_POINTER := ptr(strToInt('$' + Ini.ReadString('global', 'RoutePath', '0')));        // OK [POINTER]
-          ADDR_WAGONS_AMOUNT      := ptr(strToInt('$' + Ini.ReadString('global', 'NumberOfWags', '0')));     // OK
-          ADDR_LOC_NUMBER_POINTER := ptr(strToInt('$' + Ini.ReadString('global', 'LocNum', '0')));           // OK [POINTER]
-          ADDR_FREIGHT            := ptr(strToInt('$' + Ini.ReadString('global', 'FreightConsist', '0')));   // OK
+          ADDR_LOCOMOTIVE_TYPE    := Pointer(strToInt('$' + Ini.ReadString('global', 'LocomotiveType', '0')));   // OK
+          ADDR_ROUTE              := Pointer(strToInt('$' + Ini.ReadString('global', 'Route', '0')));            // OK
+          ADDR_ROUTE_PATH_POINTER := Pointer(strToInt('$' + Ini.ReadString('global', 'RoutePath', '0')));        // OK [POINTER]
+          ADDR_WAGONS_AMOUNT      := Pointer(strToInt('$' + Ini.ReadString('global', 'NumberOfWags', '0')));     // OK
+          ADDR_LOC_NUMBER_POINTER := Pointer(strToInt('$' + Ini.ReadString('global', 'LocNum', '0')));           // OK [POINTER]
+          ADDR_FREIGHT            := Pointer(strToInt('$' + Ini.ReadString('global', 'FreightConsist', '0')));   // OK
 
-          ADDR_Track              := ptr(strToInt('$' + Ini.ReadString('global', 'MyTrack', '0')));          // OK
-          ADDR_SVISTOK            := ptr(strToInt('$' + Ini.ReadString('global', 'Svistok', '0')));          // OK
-          ADDR_TIFON              := ptr(strToInt('$' + Ini.ReadString('global', 'Tifon', '0')));            // OK
-          ADDR_Speed              := ptr(strToInt('$' + Ini.ReadString('global', 'SpeedKpH', '0')));         // OK
-          ADDR_AMPERAGE1          := ptr(strToInt('$' + Ini.ReadString('chs7', 'tok1', '0')));               // NOT OK
-          ADDR_CAMERA             := ptr(strToInt('$' + Ini.ReadString('global', 'CameraMode', '0')));       // OK
-          ADDR_CAMERA_X           := ptr(strToInt('$' + Ini.ReadString('global', 'MoveInCab', '0')));        // OK
-          ADDR_ACCLRT             := ptr(strToInt('$' + Ini.ReadString('global', 'Acceleration', '0')));     // OK
-          ADDR_COUPLE_STATUS      := ptr(strToInt('$' + Ini.ReadString('global', 'IsCoupled', '0')));        // OK
+          ADDR_Track              := Pointer(strToInt('$' + Ini.ReadString('global', 'MyTrack', '0')));          // OK
+          ADDR_SVISTOK            := Pointer(strToInt('$' + Ini.ReadString('global', 'Svistok', '0')));          // OK
+          ADDR_TIFON              := Pointer(strToInt('$' + Ini.ReadString('global', 'Tifon', '0')));            // OK
+          ADDR_Speed              := Pointer(strToInt('$' + Ini.ReadString('global', 'SpeedKpH', '0')));         // OK
+          ADDR_AMPERAGE1          := Pointer(strToInt('$' + Ini.ReadString('chs7', 'tok1', '0')));               // NOT OK
+          ADDR_CAMERA             := Pointer(strToInt('$' + Ini.ReadString('global', 'CameraMode', '0')));       // OK
+          ADDR_CAMERA_X           := Pointer(strToInt('$' + Ini.ReadString('global', 'MoveInCab', '0')));        // OK
+          ADDR_ACCLRT             := Pointer(strToInt('$' + Ini.ReadString('global', 'Acceleration', '0')));     // OK
+          ADDR_COUPLE_STATUS      := Pointer(strToInt('$' + Ini.ReadString('global', 'IsCoupled', '0')));        // OK
           
 
           Ini.Free;

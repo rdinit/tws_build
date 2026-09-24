@@ -19,11 +19,13 @@ IDENTIFIER_RENAMES = (
     (re.compile(r"(:=\s*)(\w+\.OnTimer)(\s*;)"), r"\1@\2\3"),
     (re.compile(r"(\.OnTimer\s*:=\s*)(\w+)(\s*;)"), r"\1@\2\3"),
     (re.compile(r"Result := ptr\((StrToInt\(.*\))\);"), r"Result := PByte(\1);"),
+    (re.compile(r"\bptr\("), "Pointer("),
     (re.compile(r"Result := \$0;"), "Result := PByte(0);"),
 )
 CAMERA_MODE_RENAMES = (
     (re.compile(r"\bCamera\s*<>\s*2\b"), "UnitMain.CameraMode<>2"),
     (re.compile(r"\bCamera\s*=\s*([012])\b"), r"UnitMain.CameraMode=\1"),
+    (re.compile(r"@Camera\b"), "@UnitMain.CameraMode"),
 )
 
 
