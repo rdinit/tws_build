@@ -16,10 +16,7 @@ type vr242_ = class (TObject)
     public
 
       procedure step();
-
-    published
-
-    constructor Create(CabinPlay: Boolean);
+         constructor Create(CabinPlay: Boolean);
 
    end;
 
