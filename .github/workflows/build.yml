@@ -17,6 +17,27 @@ jobs:
         shell: pwsh
         run: choco install lazarus --no-progress --yes
 
+      - name: Configure FPC paths
+        shell: pwsh
+        run: |
+          $paths = @(
+            'C:\lazarus',
+            'C:\lazarus\fpc\3.2.2\bin\x86_64-win64',
+            'C:\lazarus\fpc\3.2.2\bin\i386-win32'
+          )
+          $env:Path = (($paths -join ';') + ';' + $env:Path)
+          $paths | Add-Content -Path $env:GITHUB_PATH
+          if (-not (Test-Path 'C:\lazarus\fpc\3.2.2\bin\x86_64-win64\fpc.exe')) {
+            throw '64-bit FPC executable was not installed'
+          }
+          if (-not (Test-Path 'C:\lazarus\fpc\3.2.2\bin\i386-win32\ppc386.exe')) {
+            throw '32-bit FPC executable was not installed'
+          }
+          Get-Command fpc
+          Get-Command ppc386
+          & fpc.exe -iV
+          & ppc386.exe -iV
+
       - name: Validate converted project
         shell: pwsh
         run: |
