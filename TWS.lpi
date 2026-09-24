@@ -29,8 +29,8 @@
   <CompilerOptions>
     <Version Value="11"/>
     <SearchPaths>
-      <IncludeFiles Value="src;src/main;src/bass;src/camera;src/debug;src/extra;src/fileManager;src/kr21;src/kvt254;src/loc/2ES5K;src/loc/2TE10U;src/loc/CHS2K;src/loc/CHS4;src/loc/CHS4KVR;src/loc/CHS4T;src/loc/CHS7;src/loc/CHS8;src/loc/ED4M;src/loc/ED9M;src/loc/EP1M;src/loc/M62;src/loc/TEM18dm;src/loc/TEP70;src/loc/TEP70bs;src/loc/VL11M;src/loc/VL80T;src/loc/VL82m;src/loc/VL85;src/ramMemoryModule;src/rrs;src/savp;src/settings;src/SL2m;src/soundManager;src/vr242"/>
-      <OtherUnitFiles Value="src;src/main;src/bass;src/camera;src/debug;src/extra;src/fileManager;src/kr21;src/kvt254;src/loc/2ES5K;src/loc/2TE10U;src/loc/CHS2K;src/loc/CHS4;src/loc/CHS4KVR;src/loc/CHS4T;src/loc/CHS7;src/loc/CHS8;src/loc/ED4M;src/loc/ED9M;src/loc/EP1M;src/loc/M62;src/loc/TEM18dm;src/loc/TEP70;src/loc/TEP70bs;src/loc/VL11M;src/loc/VL80T;src/loc/VL82m;src/loc/VL85;src/ramMemoryModule;src/rrs;src/savp;src/settings;src/SL2m;src/soundManager;src/vr242"/>
+      <IncludeFiles Value="src;src/compat;src/main;src/bass;src/camera;src/debug;src/extra;src/fileManager;src/kr21;src/kvt254;src/loc/2ES5K;src/loc/2TE10U;src/loc/CHS2K;src/loc/CHS4;src/loc/CHS4KVR;src/loc/CHS4T;src/loc/CHS7;src/loc/CHS8;src/loc/ED4M;src/loc/ED9M;src/loc/EP1M;src/loc/M62;src/loc/TEM18dm;src/loc/TEP70;src/loc/TEP70bs;src/loc/VL11M;src/loc/VL80T;src/loc/VL82m;src/loc/VL85;src/ramMemoryModule;src/rrs;src/savp;src/settings;src/SL2m;src/soundManager;src/vr242"/>
+      <OtherUnitFiles Value="src;src/compat;src/main;src/bass;src/camera;src/debug;src/extra;src/fileManager;src/kr21;src/kvt254;src/loc/2ES5K;src/loc/2TE10U;src/loc/CHS2K;src/loc/CHS4;src/loc/CHS4KVR;src/loc/CHS4T;src/loc/CHS7;src/loc/CHS8;src/loc/ED4M;src/loc/ED9M;src/loc/EP1M;src/loc/M62;src/loc/TEM18dm;src/loc/TEP70;src/loc/TEP70bs;src/loc/VL11M;src/loc/VL80T;src/loc/VL82m;src/loc/VL85;src/ramMemoryModule;src/rrs;src/savp;src/settings;src/SL2m;src/soundManager;src/vr242"/>
       <UnitOutputDirectory Value="lib/units"/>
     </SearchPaths>
     <Parsing>
