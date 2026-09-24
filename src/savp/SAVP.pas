@@ -1,6 +1,6 @@
 //------------------------------------------------------------------------------//
 //                                                                              //
-//      Модуль речевых информаторов (САВП)                                      //
+//      пїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ (пїЅпїЅпїЅпїЅ)                                      //
 //      (c) DimaGVRH, Dnepr city, 2019                                          //
 //                                                                              //
 //------------------------------------------------------------------------------//
@@ -20,42 +20,42 @@ interface
    procedure SAVPE_DoorCloseTimerTick();
 
 var
-     isUPU:                       Boolean;	     // Флаг для определения САВПЭ, или УПУ(перекраска > 400)
-     SAVPEEnabled:                Boolean;      // Статус САВПЭ
-     SAVPName:                    String;	   // Имя системы автоведения поезда (имя папки где звуки САВП)
+     isUPU:                       Boolean;	     // пїЅпїЅпїЅпїЅ пїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅ, пїЅпїЅпїЅ пїЅпїЅпїЅ(пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ > 400)
+     SAVPEEnabled:                Boolean;      // пїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅ
+     SAVPName:                    String;	   // пїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅ (пїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅ)
      scSAVPOverrideRouteEK:       Boolean;
 
 implementation
 
-uses UnitMain, SysUtils, Math, Windows, Bass, inifiles, UnitDebug, ExtraUtils, SoundManager, Dialogs, Debug, bass_fx, SoundRes;
+uses UnitMain, SysUtils, Math, Windows, Bass, inifiles, UnitDebug, ExtraUtils, SoundManager, Dialogs, Debug, bass_fx, SoundRes, LConvEncoding;
 
 var
-     AutoInformIndx:              Byte;	     // Текущая дорожка авто-информатора
-     InformIndx:                  Integer;      // Текущая дорожка программы информатора
-     TotalInfoFiles:              Integer;      // Всего дорожек программы информатора
+     AutoInformIndx:              Byte;	     // пїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅ-пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ
+     InformIndx:                  Integer;      // пїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ
+     TotalInfoFiles:              Integer;      // пїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ
      TotalAutoInfoFiles:          Integer;
      TotalServiceFiles:           Integer;
-     AutoInformDoorFlag:          Boolean;      // Флаг который переключает на закрытеи дверей при V=0
+     AutoInformDoorFlag:          Boolean;      // пїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅ V=0
      SAVPBaseObjectsCount:        Integer;
      BaseInfoTrack:               Array[0..500] of Integer;
-     SAVPBaseInfoName1:           Array[0..500] of String; // Первый столбец файла ЭК [САУТ, УСАВПП, САВПЭ]
-     SAVPBaseInfoName2:           Array[0..500] of String; // Второй столбец файла ЭК [САУТ, УСАВПП, САВПЭ]
-     SAVPBaseInfoName3:           Array[0..500] of String; // Третий столбец файла ЭК [САВПЭ]
+     SAVPBaseInfoName1:           Array[0..500] of String; // пїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅ пїЅпїЅ [пїЅпїЅпїЅпїЅ, пїЅпїЅпїЅпїЅпїЅпїЅ, пїЅпїЅпїЅпїЅпїЅ]
+     SAVPBaseInfoName2:           Array[0..500] of String; // пїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅ пїЅпїЅ [пїЅпїЅпїЅпїЅ, пїЅпїЅпїЅпїЅпїЅпїЅ, пїЅпїЅпїЅпїЅпїЅ]
+     SAVPBaseInfoName3:           Array[0..500] of String; // пїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅ пїЅпїЅ [пїЅпїЅпїЅпїЅпїЅ]
      ThirdColumnAval:             Boolean;
      scBaseInfoCount:             Integer;
      scBaseInfoTrack:             Array[0..500] of Integer;
      scSAVPBaseInfoName:          Array[0..500] of String;
-     SAVP_EK_NewSystem:           Boolean;      // Переменная для определения, новая-ли система ЭК маршрута (*.TWS, *.txt)
+     SAVP_EK_NewSystem:           Boolean;      // пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ, пїЅпїЅпїЅпїЅпїЅ-пїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ (*.TWS, *.txt)
      BaseAutoInfoTrack:           Array[0..500] of Integer;
      BaseAutoInfoName:            Array[0..500] of String;
      BaseServiceInfoTrack:        Array[0..500] of Integer;
      BaseServiceInfoName:         Array[0..500] of String;
      SAVPEInformatorMessages:     TStringList;
      SAVPEMessageIndex:           Byte;
-     SAVPEFilePrefiks:            String;       // Префикс для имён файлов ("SAVPE_", "UPU_")
+     SAVPEFilePrefiks:            String;       // пїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅ пїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅ ("SAVPE_", "UPU_")
      isOn150mOnSvetofor:          Integer;
      isOn250mOnSvetofor:          Integer;
-     LocomotiveBreaked:           Boolean = True; // Для УСАВПП, локомотива заторможен
+     LocomotiveBreaked:           Boolean = True; // пїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅ, пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ
      ZvonOrdinats:                Array[0..500] of Integer;
      ZvonTracks:                  Array[0..500] of Integer;
      ZvonBaseName:                Array[0..500] of String;
@@ -72,7 +72,7 @@ var
      NaturePitch:                 Single;
 
 //------------------------------------------------------------------------------//
-//    Подпрограмма срабатывания таймера САВПЭ на стоянке для закрытия дверей    //
+//    пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅ пїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅ    //
 //------------------------------------------------------------------------------//
 procedure SAVPE_DoorCloseTimerTick();
 begin
@@ -89,7 +89,7 @@ begin
 end;
 
 //------------------------------------------------------------------------------//
-//                  Подпрограмма для очистки базы данных САВП                   //
+//                  пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅ                   //
 //------------------------------------------------------------------------------//
 procedure clearSAVPBaseData();
 var
@@ -104,7 +104,7 @@ begin
 end;
 
 //------------------------------------------------------------------------------//
-//       Подпрограмма для очистки базы данных САВП локальной из сценария        //
+//       пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ        //
 //------------------------------------------------------------------------------//
 procedure clearscSAVPBaseData();
 var
@@ -119,7 +119,7 @@ begin
 end;
 
 //------------------------------------------------------------------------------//
-//           Подпрограмма для очистки базы данных звонков на переездах          //
+//           пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ          //
 //------------------------------------------------------------------------------//
 procedure clearZvonBaseData();
 var
@@ -134,7 +134,7 @@ begin
 end;
 
 //------------------------------------------------------------------------------//
-//            Подпрограмма для очистки базы данных звуков окружения             //
+//            пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ             //
 //------------------------------------------------------------------------------//
 procedure clearNatureBaseData();
 var
@@ -150,7 +150,7 @@ begin
 end;
 
 //------------------------------------------------------------------------------//
-//               Подпрограмма для показа БД САВП в окне отладки                 //
+//               пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅ пїЅпїЅпїЅпїЅ пїЅ пїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅ                 //
 //------------------------------------------------------------------------------//
 procedure displaySAVPBaseDataToDebugWindow();
 var
@@ -166,7 +166,7 @@ begin
 end;
 
 //------------------------------------------------------------------------------//
-//         Подпрограмма для показа БД САВП из сценария в окне отладки           //
+//         пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅ пїЅпїЅпїЅпїЅ пїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅ пїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅ           //
 //------------------------------------------------------------------------------//
 procedure displayscSAVPBaseDataToDebugWindow();
 var
@@ -179,7 +179,7 @@ begin
 end;
 
 //------------------------------------------------------------------------------//
-//                       Подпрограмма для загрузки ЭК СОВИ                      //
+//                       пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅ пїЅпїЅпїЅпїЅ                      //
 //------------------------------------------------------------------------------//
 procedure LoadSOVI_EK(fileDir: String);
 var
@@ -193,15 +193,15 @@ begin
    //try
       With FormMain do begin
          wIni := TIniFile.Create(fileDir);
-         Memo4.Text := wIni.ReadString('DESCRIPTION', 'Text', 'У данной ЭК описание отсутствует! Обратитесь к автору!');
+              Memo4.Text := CP1251ToUTF8(wIni.ReadString('DESCRIPTION', 'Text', 'пїЅ пїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ! пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅ пїЅпїЅпїЅпїЅпїЅпїЅ!'));
          wIni.Free;
 
-         // Очищаем базу ЭК САВП
+         // пїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅ пїЅпїЅ пїЅпїЅпїЅпїЅ
          clearSAVPBaseData();
          TotalInfoFiles := 0;
          InformIndx     := 0;
 
-         // Загружаем ЭК
+         // пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅ
          FS := TFileStream.Create(fileDir, fmShareDenyNone);
          FileText := GetStringFromFileStream(FS);
          FS.Free();
@@ -219,7 +219,7 @@ begin
 end;
 
 //------------------------------------------------------------------------------//
-//                      Подпрограмма для загрузки ЭК САВПЭ                      //
+//                      пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅ пїЅпїЅпїЅпїЅпїЅ                      //
 //------------------------------------------------------------------------------//
 procedure LoadSAVPE_EK(fileDir: String);
 var
@@ -234,17 +234,17 @@ var
 begin
      if FileExists(fileDir) then begin
         With FormMain do begin
-           // Задаем расположение файла ЭК
+           // пїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅ пїЅпїЅ
            wIni := TIniFile.Create(fileDir);
 	   Memo7.Lines.Clear;
            if ComboBox2.ItemIndex<>0 then
-              Memo7.Text := wIni.ReadString('DESCRIPTION', 'Text', 'У данной ЭК описание отсутствует! Обратитесь к автору!')
-           else Memo7.Text := 'Рэжим - без ЭК';
+              Memo7.Text := CP1251ToUTF8(wIni.ReadString('DESCRIPTION', 'Text', 'пїЅ пїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ! пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅ пїЅпїЅпїЅпїЅпїЅпїЅ!'))
+           else Memo7.Text := 'пїЅпїЅпїЅпїЅпїЅ - пїЅпїЅпїЅ пїЅпїЅ';
            wIni.Free;
-           // Очищаем базу ЭК САВП
+           // пїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅ пїЅпїЅ пїЅпїЅпїЅпїЅ
            clearSAVPBaseData();
 
-           // Загружаем ЭК
+           // пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅ
            FS := TFileStream.Create(fileDir, fmShareDenyNone);
            FileText := GetStringFromFileStream(FS);
            FS.Free();
@@ -304,19 +304,19 @@ begin
 end;
 
 //------------------------------------------------------------------------------//
-//           Подпрограмма для инициализации начальных переменных САВП           //
+//           пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅ           //
 //------------------------------------------------------------------------------//
 procedure InitializeSAVP;
 begin
   SAVPEInformatorMessages := TStringList.Create();
   SAVPEMessageIndex       := 0;
-  isUPU                   := False;	  // Стандарт - САВПЭ при запуске
+  isUPU                   := False;	  // пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ - пїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅ
   AutoInformIndx          := RandomRange(0, 15);
   InformIndx              := 0;
 end;
 
 //------------------------------------------------------------------------------//
-//     Подпрограмма для определения типа САВП на эл-поезде (САВПЭ или УПУ)      //
+//     пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅ пїЅпїЅ пїЅпїЅ-пїЅпїЅпїЅпїЅпїЅпїЅ (пїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅ пїЅпїЅпїЅ)      //
 //------------------------------------------------------------------------------//
 procedure RefreshMVPSType();
 begin
@@ -331,7 +331,7 @@ begin
 end;
 
 //------------------------------------------------------------------------------//
-//      Подпрограмма для парсигна файла сценария для прогрузки локальной ЭК     //
+//      пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅ     //
 //------------------------------------------------------------------------------//
 procedure GetLocalEKFromScenery(sceneryDir: String);
 var
@@ -382,7 +382,7 @@ begin
 end;
 
 //------------------------------------------------------------------------------//
-// Подпрограмма для конвертирования старого имя сэмпла УСАВПП новое(закодиров.) //
+// пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅ(пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ.) //
 //------------------------------------------------------------------------------//
 function ConvertOldUSAVPNameToNewResName(Str: String) : String;
 begin
@@ -412,7 +412,7 @@ begin
 end;
 
 //------------------------------------------------------------------------------//
-//       Подпрограмма для парсигна файла ЭК (Получение ординат переездов)       //
+//       пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅ пїЅпїЅ (пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ)       //
 //------------------------------------------------------------------------------//
 procedure GetSAVPPereezdOrdinats(filename: String);
 var
@@ -445,7 +445,7 @@ begin
 end;
 
 //------------------------------------------------------------------------------//
-//    Подпрограмма для парсигна файла ЭК (Получение ординат звуков окружения)   //
+//    пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅ пїЅпїЅ (пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ)   //
 //------------------------------------------------------------------------------//
 procedure GetSAVPNatureObjectsOrdinats(filename: String);
 var
@@ -480,7 +480,7 @@ begin
 end;
 
 //------------------------------------------------------------------------------//
-//                      Подпрограмма для парсигна файла ЭК                      //
+//                      пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅ пїЅпїЅ                      //
 //------------------------------------------------------------------------------//
 procedure GetSAVPObjectsBaseFromFile(filename: String; newSystem: Boolean);
 var
@@ -521,7 +521,7 @@ begin
 end;
 
 //------------------------------------------------------------------------------//
-//                     Подпрограмма цикла САВП (Для переездов)                  //
+//                     пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅ (пїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ)                  //
 //------------------------------------------------------------------------------//
 procedure PereezdCycle();
 var
@@ -567,7 +567,7 @@ begin
 end;
 
 //------------------------------------------------------------------------------//
-//                    Подпрограмма цикла звуков окружения                       //
+//                    пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ                       //
 //------------------------------------------------------------------------------//
 procedure NatureCycle();
 var
@@ -616,7 +616,7 @@ begin
 end;
 
 //------------------------------------------------------------------------------//
-//                            Подпрограмма цикла САВП                           //
+//                            пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅ                           //
 //------------------------------------------------------------------------------//
 procedure SAVPCycle();
 var
@@ -625,10 +625,10 @@ var
 begin
      With FormMain do begin
         //------------------------------------------------------------------------------//
-        //  Воспроизведение речевого информатора о сигнале светофора при смене сигнала  //
+        //  пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅ  //
         //------------------------------------------------------------------------------//
         if Svetofor<>PrevSvetofor then begin
-           // ------- САУТ -------- //
+           // ------- пїЅпїЅпїЅпїЅ -------- //
            if cbSAUTSounds.Checked=True then begin
               if Svetofor=1 then begin
                  SAUTF := 'TWS/SAVP/SAUT/White.mp3';
@@ -652,7 +652,7 @@ begin
               end;
               PlayRESFlag := False;
            end;
-           // ------- УСАВП ------- //
+           // ------- пїЅпїЅпїЅпїЅпїЅ ------- //
            if cbUSAVPSounds.Checked = True then begin
               if Svetofor=1 then
                  DecodeResAndPlay(PChar('TWS/SAVP/USAVP/560.res'), isPlaySAUTObjects, SAUTF, SAUTChannelObjects, ResPotok, PlayRESFlag);
@@ -665,7 +665,7 @@ begin
               if Svetofor=5 then
                  DecodeResAndPlay(PChar('TWS/SAVP/USAVP/582.res'), isPlaySAUTObjects, SAUTF, SAUTChannelObjects, ResPotok, PlayRESFlag);
            end;
-           // --- Грузовой САУТ --- //
+           // --- пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅ --- //
            if cbGSAUTSounds.Checked=True then begin
               if Svetofor=1 then begin
                  SAUTF:='TWS/SAVP/SAUT_G/White.mp3';
@@ -688,7 +688,7 @@ begin
                  isPlaySAUTObjects:=False;
               end;
            end;
-           // ---- САВПЭ(УПУ) ----- //
+           // ---- пїЅпїЅпїЅпїЅпїЅ(пїЅпїЅпїЅ) ----- //
            if cbSAVPESounds.Checked = True then begin
               if (Svetofor=1) and (Speed<>0) then
                  DecodeResAndPlay(PChar('TWS/SAVP/' + SAVPEFilePrefiks + '/nk.res'), isPlaySAUTObjects,
@@ -706,7 +706,7 @@ begin
         end;
 
         //------------------------------------------------------------------------------//
-        //                  Обработка и воспроизведение дорожек из ЭК                   //
+        //                  пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅ пїЅпїЅ                   //
         //------------------------------------------------------------------------------//
         if (SAVPBaseObjectsCount > 0) AND (scSAVPOverrideRouteEK = False) then begin
            if (cbSAUTSounds.Checked = True) Or (cbUSAVPSounds.Checked = True) Or
@@ -742,7 +742,7 @@ begin
         end;
 
         //------------------------------------------------------------------------------//
-        //  Обработка и воспроизведение дорожек из локальной ЭК написанной в сценарии   //
+        //  пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ   //
         //------------------------------------------------------------------------------//
         if scBaseInfoCount > 0 then begin
            if Track <> PrevTrack then begin
@@ -787,10 +787,10 @@ begin
         end;*)
 
         //------------------------------------------------------------------------------//
-        //                           Речевые оповещения САУТ                            //
+        //                           пїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅ                            //
         //------------------------------------------------------------------------------//
         if cbSAUTSounds.Checked=True then begin
-           // --- Прекрещение зарядки АБ на ВЛ80т и ВЛ82м --- //
+           // --- пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅ пїЅпїЅ пїЅпїЅ80пїЅ пїЅ пїЅпїЅ82пїЅ --- //
            if ((LocoGlobal='VL80t') or (LocoGlobal='VL82m')) and ((FrontTP<>0) or (BackTP<>0)) then begin
               if AB_ZB_1<>PrevAB_ZB_1 then
                  if AB_ZB_1 = 192 then begin
@@ -803,7 +803,7 @@ begin
            end;
 
            if Speed<>0 then begin
-           // ----------------- Боксование ------------------ //
+           // ----------------- пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ ------------------ //
               if PrevBoks_Stat<>Boks_Stat then
                  if Boks_Stat<>0 then begin
                     Randomize; Randomize;
@@ -813,21 +813,21 @@ begin
                  end;
            end;
 
-           // ---------------- Перегрузка ТЭД --------------- //
+           // ---------------- пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅ --------------- //
            if (TEDAmperage>UltimateTEDAmperage) and (PrevTEDAmperage<=UltimateTEDAmperage) then begin
               SAUTF := PChar('TWS\SAVP\SAUT\overloadTED_1.mp3');
               isPlaySAUTObjects := False;
            end;
 
            if (Speed > 0) and (PrevSpeed_Fakt = 0) then begin
-           // --------------- Начало движения --------------- //
+           // --------------- пїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ --------------- //
               if (Floor(TEDAmperage) = 0) and (Acceleretion > 0) then begin
                  SAUTF := PChar('TWS\SAVP\SAUT\nac_dvj.mp3');
                  PlayRESFlag := False;
                  isPlaySAUTObjects := False;
               end;
 
-              // --------------- Движение назад ---------------- //
+              // --------------- пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅ ---------------- //
               if Acceleretion < 0 then begin
                  SAUTF := PChar('TWS\SAVP\SAUT\backwardMove.mp3');
                  PlayRESFlag := False;
@@ -837,16 +837,16 @@ begin
         end;
 
         //------------------------------------------------------------------------------//
-        //                          Речевые оповещения УСАВП                            //
+        //                          пїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅ                            //
         //------------------------------------------------------------------------------//
         if cbUSAVPSounds.Checked = True then begin
            if Speed > 0 then begin
-              // --------- Начало движения --------- //
+              // --------- пїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ --------- //
               if ((Floor(TEDAmperage) = 0) and (PrevSpeed_Fakt = 0)) Or
                  ((Loco = 'ED4M') and (KM_Pos_1 = 0) and (PrevSpeed_Fakt = 0)) then
                  DecodeResAndPlay('TWS/SAVP/USAVP/581.res', isPlaySAUTObjects, SAUTF, SAUTChannelObjects, ResPotok, PlayRESFlag);
 
-              // --- Система переходит на ЭПТ/ПТ --- //
+              // --- пїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅ пїЅпїЅпїЅ/пїЅпїЅ --- //
               if EPT <> PrevEPT then begin
                  if EPT <> 0 then
                     DecodeResAndPlay('TWS/SAVP/USAVP/621.res', isPlaySAUTObjects, SAUTF, SAUTChannelObjects, ResPotok, PlayRESFlag);
@@ -861,7 +861,7 @@ begin
                  DecodeResAndPlay('TWS/SAVP/USAVP/663.res', isPlaySAUTObjects, SAUTF, SAUTChannelObjects, ResPotok, PlayRESFlag);
            end;
 
-           // ----- Локомотив заторможен ----- //
+           // ----- пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ ----- //
            if (Speed > 0) and (LocomotiveBreaked = True) then
               LocomotiveBreaked := False;
 
@@ -874,17 +874,17 @@ begin
               end;
            end;
 
-           // ---- Превышение макс. тока ----- //
+           // ---- пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅ. пїЅпїЅпїЅпїЅ ----- //
            if (TEDAmperage>UltimateTEDAmperage) and (PrevTEDAmperage<=UltimateTEDAmperage) then
               DecodeResAndPlay('TWS\SAVP\USAVP\599.res', isPlaySAUTObjects, SAUTF, SAUTChannelObjects, ResPotok, PlayRESFlag);
 
-           // --- Подтвердите бдительность --- //
+           // --- пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ --- //
            if (VCheck <> 0) and (PrevVCheck = 0) then
               TimerVigilanceUSAVPDelay.Enabled := True;
         end;
 
         //------------------------------------------------------------------------------//
-        //   Сообщение "Отключи тягу", при подъезде к запр. сигналу светофора (<150м.)  //
+        //   пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ "пїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅ", пїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅ пїЅпїЅпїЅпїЅ. пїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ (<150пїЅ.)  //
         //------------------------------------------------------------------------------//
         if (SvetoforDist < 150) and (Svetofor = 3) and (isOn150mOnSvetofor = 0) then
            isOn150mOnSvetofor := 1;
@@ -899,14 +899,14 @@ begin
            isOn250mOnSvetofor := 0;
 
         if (isOn150mOnSvetofor = 1) and (Speed > 0) then begin
-           // ------- САУТ -------- //
+           // ------- пїЅпїЅпїЅпїЅ -------- //
            if cbSAUTSounds.Checked=True then begin
               SAUTF := PChar('TWS/SAVP/SAUT/tjaga_off.mp3');
               isPlaySAUTObjects:=False;
               PlayRESFlag := False;
            end;
 
-           // ------- УСАВП ------- //
+           // ------- пїЅпїЅпїЅпїЅпїЅ ------- //
            if cbUSAVPSounds.Checked = True then
               DecodeResAndPlay('TWS/SAVP/USAVP/608.res', isPlaySAUTObjects, SAUTF, SAUTChannelObjects, ResPotok, PlayRESFlag);
 
@@ -922,42 +922,42 @@ begin
 
         if cbEPL2TBlock.Checked = True then begin
            if GetAsyncKeyState(17) = 0 then begin
-              // --- NUM0 --- [ОСТОРОЖНО ДВЕРИ ЗАКРЫВАЮТСЯ] //
+              // --- NUM0 --- [пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ] //
               if (GetAsyncKeyState(96) = 0) and (PrevKeyNum0 <> 0) then begin
                  isPlaySAVPEPeek:=False;
                  DecodeResAndPlay('TWS/SOVI_INFORMATOR/Num0.res2', isPlaySAVPEInfo, SAVPEInfoF, SAVPE_INFO_Channel, ResPotok, PlayRESFlag);
               end;
-              // --- NUM. --- [УСКОРИТЬ ПОСАДКУ ПАССАЖИРОВ] //
+              // --- NUM. --- [пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ] //
               if (GetAsyncKeyState(110) = 0) and (PrevKeyNumPoint <> 0) then begin
                  isPlaySAVPEPeek:=False;
                  DecodeResAndPlay('TWS/SOVI_INFORMATOR/Num_point.res2', isPlaySAVPEInfo, SAVPEInfoF, SAVPE_INFO_Channel, ResPotok, PlayRESFlag);
               end;
-              // --- NUM1 --- [ПОЕЗД ПО СОСЕДНЕМУ ПУТИ] //
+              // --- NUM1 --- [пїЅпїЅпїЅпїЅпїЅ пїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅ] //
               if (GetAsyncKeyState(97) = 0) and (PrevKeyNum1 <> 0) then begin
                  isPlaySAVPEPeek:=False;
                  DecodeResAndPlay('TWS/SOVI_INFORMATOR/Num1.res2', isPlaySAVPEInfo, SAVPEInfoF, SAVPE_INFO_Channel, ResPotok, PlayRESFlag);
               end;
-              // --- NUM2 --- [ЗАПРЕЩАЕТСЯ В ЭЛЕКТРОПОЕЗДАХ] //
+              // --- NUM2 --- [пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ] //
               if (GetAsyncKeyState(98) = 0) and (PrevKeyNum2 <> 0) then begin
                  isPlaySAVPEPeek:=False;
                  DecodeResAndPlay('TWS/SOVI_INFORMATOR/Num2.res2', isPlaySAVPEInfo, SAVPEInfoF, SAVPE_INFO_Channel, ResPotok, PlayRESFlag);
               end;
-              // --- NUM3 --- [ЖД - ОПАСНАЯ ЗОНА] //
+              // --- NUM3 --- [пїЅпїЅ - пїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅ] //
               if (GetAsyncKeyState(99) = 0) and (PrevKeyNum3 <> 0) then begin
                  isPlaySAVPEPeek:=False;
                  DecodeResAndPlay('TWS/SOVI_INFORMATOR/Num3.res2', isPlaySAVPEInfo, SAVPEInfoF, SAVPE_INFO_Channel, ResPotok, PlayRESFlag);
               end;
-              // --- NUM7 --- [ТРЕБОВАНИЯ К ПАССАЖИРАМ] //
+              // --- NUM7 --- [пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ] //
               if (GetAsyncKeyState(103) = 0) and (PrevKeyNum7 <> 0) then begin
                  isPlaySAVPEPeek:=False;
                  DecodeResAndPlay('TWS/SOVI_INFORMATOR/Num7.res2', isPlaySAVPEInfo, SAVPEInfoF, SAVPE_INFO_Channel, ResPotok, PlayRESFlag);
               end;
-              // --- NUM8 --- [САНИТАРНАЯ ЗОНА] //
+              // --- NUM8 --- [пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅ] //
               if (GetAsyncKeyState(104) = 0) and (PrevKeyNum8 <> 0) then begin
                  isPlaySAVPEPeek:=False;
                  DecodeResAndPlay('TWS/SOVI_INFORMATOR/Num8.res2', isPlaySAVPEInfo, SAVPEInfoF, SAVPE_INFO_Channel, ResPotok, PlayRESFlag);
               end;
-              // --- NUM9 --- [ПРО БИЛЕТЫ] //
+              // --- NUM9 --- [пїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅ] //
               if (GetAsyncKeyState(105) = 0) and (PrevKeyNum9 <> 0) then begin
                  isPlaySAVPEPeek:=False;
                  DecodeResAndPlay('TWS/SOVI_INFORMATOR/Num9.res2', isPlaySAVPEInfo, SAVPEInfoF, SAVPE_INFO_Channel, ResPotok, PlayRESFlag);
@@ -981,7 +981,7 @@ begin
                     isPlaySAVPEInfo, SAVPEInfoF, SAVPE_INFO_Channel, ResPotok, PlayRESFlag);
                  Inc(InformIndx);
               end;
-              // --- NUM* --- [ПРЕКРАТИТЬ ВОСПРОИЗВЕДЕНИЕ В САЛОН] //
+              // --- NUM* --- [пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅ пїЅпїЅпїЅпїЅпїЅ] //
               if (GetAsyncKeyState(106) = 0) and (PrevKeyNumZvezda <> 0) then begin
                  isPlaySAVPEPeek:=False;
                  if BASS_ChannelIsActive(SAVPE_INFO_Channel) <> 0 then begin
@@ -1008,10 +1008,10 @@ begin
         end;
 
         //------------------------------------------------------------------------------//
-        //                  Речевой информатор САВПЕ на электропоездах                  //
+        //                  пїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅ пїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ                  //
         //------------------------------------------------------------------------------//
         if cbSAVPESounds.Checked = True then begin
-           // --- СООБЩЕНИЕ О ОТКРЫТЫХ ДВЕРЯХ ПРИ НАЧАЛЕ ДВИЖЕНИЯ (ТОЛЬКО САВПЭ) ---
+           // --- пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ (пїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅ) ---
            if (LDOOR = 0) OR (RDOOR = 0) then begin
               if (Speed > 0) and (PrevSpeed_Fakt = 0) then
                  DecodeResAndPlay('TWS/SAVP/' + SAVPEFilePrefiks + '/doors.res',
@@ -1019,7 +1019,7 @@ begin
            end;
            // --- SHIFT + N --- //
            if (GetAsyncKeyState(16)+GetAsyncKeyState(78)=0) then
-              PrevKeyEPKS:=0; // Обнуляем состояние клавиш "Shift" и "N"
+              PrevKeyEPKS:=0; // пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅ "Shift" пїЅ "N"
            // ------ NUM1 ----- //
            if (GetAsyncKeyState(97) = 0) and (PrevKeyNum1 <> 0) and (GetAsyncKeyState(17)=0) then begin
               isPlaySAVPEPeek:=False;
@@ -1059,7 +1059,7 @@ begin
            if (GetAsyncKeyState(96) <> 0) and (PrevKeyNum0 = 0) and (GetAsyncKeyState(17)=0) then
               isPlaySAVPEZvonok:=False;
 
-           // --- ПРОИГРЫВАНИЕ ЗВОНКА ПОМОЩНИКА МАШИНИСТА ЧЕРЕЗ 5сек. ПОСЛЕ ЗАКРЫТЫЯ ДВЕРЕЙ --- //
+           // --- пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅ 5пїЅпїЅпїЅ. пїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅ --- //
            if MVPS5secZvonok = True then begin
               if ((LDOOR<>0) and (PrevLDOOR=0)) or
                  ((RDOOR<>0) and (PrevRDOOR=0)) then begin
@@ -1098,7 +1098,7 @@ begin
               end;
               // --- NUM5 --- //
               if (SAVPEEnabled = True) And (GetAsyncKeyState(101) = 0) and (PrevKeyNum5 <> 0) then begin
-                 // --- РУЧНОЙ РЕЖИМ --- //
+                 // --- пїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅ --- //
                  if ComboBox2.ItemIndex <> 0 then begin
                     isPlaySAVPEPeek:=False;
                     if RB_HandEKMode.Checked=True then begin
@@ -1120,7 +1120,7 @@ begin
                        end;
                        if InformIndx+1>TotalInfoFiles then InformIndx:=0;
                     end else begin
-                       // --- АВТОМАТИЧЕСКИЙ РЕЖИМ --- //
+                       // --- пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅ --- //
                        if timerDoorCloseDelay.Enabled=True then begin
                           if Speed=0 then timerDoorCloseDelay.Enabled := False;
                        end else begin
@@ -1195,7 +1195,7 @@ begin
            end;
 
            if RB_AutoEKMode.Checked=True then begin
-              // Читаем и если нужно воспроизводим объявление станции по треку
+              // пїЅпїЅпїЅпїЅпїЅпїЅ пїЅ пїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅ пїЅпїЅпїЅпїЅпїЅ
               if Track<>PrevTrack then begin
                  for I:=0 to TotalInfoFiles do begin
                     if (BaseInfoTrack[I]<>0) and (BaseInfoTrack[I+1]<>0) then begin
@@ -1214,7 +1214,7 @@ begin
                        AutoInformDoorFlag := True;
                     end;
                  end;
-                 // САВПЭ маркетинг, воспроизведение по карте
+                 // пїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ, пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅ пїЅпїЅпїЅпїЅпїЅ
                  if cbSAVPE_Marketing.Checked=True then begin
                     for I:=0 to TotalAutoInfoFiles do begin
                        if BaseAutoInfoTrack[I]=Track then begin
@@ -1229,7 +1229,7 @@ begin
                  end;
               end;
 
-              // Воспроизводим служебные объявления из карты САВПЭ
+              // пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅ пїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅ
               for I:=0 to TotalServiceFiles do begin
                  if (BaseServiceInfoTrack[I]=Track) and (Track <> PrevTrack) then begin
                     BASS_ChannelStop(SAVPE_INFO_Channel); BASS_StreamFree(SAVPE_INFO_Channel);
@@ -1245,7 +1245,7 @@ begin
                     end;
                  end;
               end;
-              // Запуск таймера на воспроизведения объявления следующей остановки, при условии что скорость=0
+              // пїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ, пїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ=0
               if (AutoInformDoorFlag=True) and (Speed<>PrevSpeed_Fakt) then begin
                  if Speed=0 then begin
                     if timerDoorCloseDelay.Enabled=False then begin
@@ -1280,7 +1280,7 @@ begin
 end;
 
 //------------------------------------------------------------------------------//
-//                     Подпрограмма для "прохода" цикла САВП                    //
+//                     пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅ "пїЅпїЅпїЅпїЅпїЅпїЅпїЅ" пїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅ                    //
 //------------------------------------------------------------------------------//
 procedure SAVPTick();
 begin
@@ -1301,7 +1301,7 @@ begin
 end;
 
 //------------------------------------------------------------------------------//
-//                   Подпрограмма для загрузки ЭК TWS формата                   //
+//                   пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅ TWS пїЅпїЅпїЅпїЅпїЅпїЅпїЅ                   //
 //------------------------------------------------------------------------------//
 procedure Load_TWS_SAVP_EK();
 begin
