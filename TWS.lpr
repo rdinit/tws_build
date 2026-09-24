@@ -3,6 +3,7 @@ program TWS;
 uses
   Forms,
   Interfaces,
+  SysUtils,
   UnitMain in 'src/main/UnitMain.pas' {FormMain},
   UnitAuthors in 'src/main/UnitAuthors.pas' {FormAuthors},
   UnitSAVPEHelp in 'src/savp/UnitSAVPEHelp.pas' {FormSAVPEHelp},
@@ -48,6 +49,7 @@ uses
 {$R *.res}
 
 begin
+  SetCurrentDir(ExtractFilePath(ParamStr(0)));
   Application.Initialize;
   //Application.MainFormOnTaskbar := True;
   Application.CreateForm(TFormMain, FormMain);

@@ -478,18 +478,18 @@ object FormMain: TFormMain
     end
     object btnSAVPEHelp: TButton
       Left = 8
-      Top = 432
+      Top = 440
       Width = 185
-      Height = 25
+      Height = 24
       Caption = #1055#1086#1084#1086#1097#1100
       TabOrder = 1
       OnClick = btnSAVPEHelpClick
     end
     object groupBoxSAVPE_HandMode: TGroupBox
       Left = 8
-      Top = 344
+      Top = 350
       Width = 185
-      Height = 41
+      Height = 46
       Caption = #1056#1077#1078#1080#1084' '#1091#1087#1088#1072#1074#1083#1077#1085#1080#1103' '#1057#1040#1042#1055#1069
       TabOrder = 2
       object RB_HandEKMode: TRadioButton
@@ -513,9 +513,9 @@ object FormMain: TFormMain
     end
     object cbSAVPE_Marketing: TCheckBox
       Left = 8
-      Top = 389
+      Top = 401
       Width = 185
-      Height = 37
+      Height = 35
       Caption = #1058#1088#1072#1085#1089#1083#1080#1088#1086#1074#1072#1090#1100' '#1084#1072#1088#1082#1077#1090#1080#1085#1075#1086#1074#1099#1077' '#1086#1073#1098#1103#1074#1083#1077#1085#1080#1103
       TabOrder = 3
       WordWrap = True
