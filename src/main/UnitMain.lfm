@@ -186,7 +186,7 @@ object FormMain: TFormMain
     Left = 0
     Top = 1
     Width = 201
-    Height = 473
+    Height = 500
     Caption = #1057#1040#1042#1055#1069
     Color = 15267814
     Font.Charset = DEFAULT_CHARSET
@@ -895,7 +895,7 @@ object FormMain: TFormMain
       TabOrder = 14
       object cb3SL2mSounds: TCheckBox
         Left = 5
-        Top = 32
+        Top = 17
         Width = 142
         Height = 17
         Caption = #1047#1074#1091#1082#1080' 3'#1057#1051'2'#1084' ('#1084#1077#1093#1072#1085#1080#1082#1072')'
@@ -904,7 +904,7 @@ object FormMain: TFormMain
       end
       object cbKLUBSounds: TCheckBox
         Left = 5
-        Top = 16
+        Top = 0
         Width = 150
         Height = 17
         Caption = #1047#1074#1091#1082#1080' '#1050#1051#1059#1041' -'#1059
