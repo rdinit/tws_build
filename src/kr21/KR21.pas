@@ -16,10 +16,7 @@ type kr21_ = class (TObject)
 
     public
       procedure step();
-
-    published
-
-    constructor Create(soundDir_: String);
+         constructor Create(soundDir_: String);
 
    end;
 
