@@ -294,8 +294,10 @@ begin
    isConnectedMemory := FindSimulatorWindow(wHandle, GameWindowName);
    if isConnectedMemory = True then begin
       isGameOnPause := Pos('[PAUSED]', UpperCase(GameWindowName)) > 0;
-      FormMain.lblSimulatorLaunchStatus.Caption :=
-         StringReplace(GameWindowName, ' [Paused]', '', [rfIgnoreCase]);
+      FormMain.lblSimulatorLaunchStatus.Caption := 'ZDSimulator';
+      if Pos('ZDSIMULATOR V', UpperCase(GameWindowName)) > 0 then
+         FormMain.lblSimulatorLaunchStatus.Caption :=
+            Copy(StringReplace(GameWindowName, ' [Paused]', '', [rfIgnoreCase]), 1, 30);
       if Pos('ZDSIMULATOR V', UpperCase(GameWindowName)) > 0 then
          I := 3
       else if Pos('ZDSIMULATOR55.008', UpperCase(GameWindowName)) > 0 then

@@ -275,14 +275,37 @@ var
   SimulatorWindowHandle: HWND;
   SimulatorWindowTitle: String;
 
+function IsSimulatorProcess(ProcessID: DWORD): Boolean;
+var
+  SnapshotHandle: THandle;
+  ProcessEntry: TProcessEntry32;
+begin
+  Result := False;
+  SnapshotHandle := CreateToolhelp32Snapshot(TH32CS_SNAPPROCESS, 0);
+  ProcessEntry.dwSize := SizeOf(ProcessEntry);
+  if Process32First(SnapshotHandle, ProcessEntry) then
+    repeat
+      if ProcessEntry.th32ProcessID = ProcessID then begin
+        Result := SameText(ExtractFileName(ProcessEntry.szExeFile), 'ZDSimulator.exe') or
+          SameText(ExtractFileName(ProcessEntry.szExeFile), 'ZLauncher.exe') or
+          SameText(ExtractFileName(ProcessEntry.szExeFile), 'Launcher.exe');
+        Break;
+      end;
+    until not Process32Next(SnapshotHandle, ProcessEntry);
+  CloseHandle(SnapshotHandle);
+end;
+
 function EnumSimulatorWindowsProc(WindowHandle: HWND; Parameter: LPARAM): BOOL; stdcall;
 var
   WindowText: array[0..255] of Char;
+  ProcessID: DWORD;
 begin
   Result := True;
   if IsWindowVisible(WindowHandle) and
-     (GetWindowText(WindowHandle, WindowText, Length(WindowText)) > 0) then begin
-    if Pos('ZDSIMULATOR', UpperCase(WindowText)) > 0 then begin
+     (GetWindowText(WindowHandle, WindowText, Length(WindowText)) > 0) and
+     (Pos('ZDSIMULATOR', UpperCase(WindowText)) > 0) then begin
+    if (GetWindowThreadProcessId(WindowHandle, @ProcessID) <> 0) and
+       IsSimulatorProcess(ProcessID) then begin
       SimulatorWindowHandle := WindowHandle;
       SimulatorWindowTitle := WindowText;
       Result := False;
