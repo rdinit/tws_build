@@ -667,7 +667,8 @@ end;
 //------------------------------------------------------------------------------//
 procedure TFormMain.FormClose(Sender: TObject; var CloseAction: TCloseAction);
 begin
-  Log_.DebugFreeLog();
+   if Assigned(Log_) then
+      Log_.DebugFreeLog();
   try SaveTWSParams('TWS\settings_TWS.ini');  except end;   // �������������� ���� ����������
   try Bass_Stop();               // ������������� ������������
      Bass_Free;                  // ����������� ������� ������������ Bass
@@ -686,6 +687,7 @@ begin
 
   if not OneInstance then begin
       Application.Terminate;
+     Exit;
   end;
 
    Log_ := log.Create;
