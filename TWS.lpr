@@ -2,6 +2,7 @@ program TWS;
 
 uses
   Forms,
+  Interfaces,
   UnitMain in 'src/main/UnitMain.pas' {FormMain},
   UnitAuthors in 'src/main/UnitAuthors.pas' {FormAuthors},
   UnitSAVPEHelp in 'src/savp/UnitSAVPEHelp.pas' {FormSAVPEHelp},
