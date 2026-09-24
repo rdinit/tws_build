@@ -21,6 +21,7 @@ IDENTIFIER_RENAMES = (
     (re.compile(r"Result := ptr\((StrToInt\(.*\))\);"), r"Result := PByte(\1);"),
     (re.compile(r"\bptr\("), "Pointer("),
     (re.compile(r"@ProcReadDataMemoryAddr\s*:="), "ProcReadDataMemoryAddr :="),
+    (re.compile(r"procedure\(\) of object"), "procedure()"),
     (re.compile(r"Result := \$0;"), "Result := PByte(0);"),
 )
 CAMERA_MODE_RENAMES = (
