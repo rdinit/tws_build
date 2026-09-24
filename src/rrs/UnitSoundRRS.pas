@@ -103,7 +103,7 @@ begin
    for I := FileLinesList.Count-1 downto 0 do begin
       if Pos('Created Model object at address:', FileLinesList[I])>0 then begin
          LineList := ExtractWordList(FileLinesList[I], ' ');
-         Result := ptr(StrToInt('$' + StringReplace(LineList[LineList.Count-1], '0x', '', [rfReplaceAll])));
+         Result := PByte(StrToInt('$' + StringReplace(LineList[LineList.Count-1], '0x', '', [rfReplaceAll])));
          Break;
       end;
    end;
@@ -129,7 +129,7 @@ begin
       FileLinesList[I] := StringReplace(StringReplace(FileLinesList[I], #13, '', [rfReplaceAll]), #10, ' ', [rfReplaceAll]);
       if Pos('RenderStage::runCameraSetUp(osg::RenderInfo& renderInfo)', FileLinesList[I])>0 then begin
          LineList := ExtractWordList(FileLinesList[I], ' ');
-         Result := ptr(StrToInt('$' + StringReplace(LineList[LineList.Count-1], '0x', '', [rfReplaceAll])));
+         Result := PByte(StrToInt('$' + StringReplace(LineList[LineList.Count-1], '0x', '', [rfReplaceAll])));
          LineList.Destroy;
          Break;
       end;
@@ -268,7 +268,7 @@ begin
       RRS_SOUND_MANAGER_TRIGGER := True;
       mainTimer          := TTimer.Create(Sender);
       mainTimer.Interval := 100;
-      mainTimer.OnTimer  := tick;
+      mainTimer.OnTimer  := @tick;
       mainTimer.Enabled  := True;
    end;
 end;

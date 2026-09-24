@@ -193,7 +193,7 @@ begin
        str := str + IntToHex(b, 2);
        Dec(tempAddr);
     end;
-    Result := ptr(StrToInt('$'+str));
+    Result := PByte(StrToInt('$'+str));
 end;
 
 //------------------------------------------------------------------------------//
