@@ -17,7 +17,7 @@ IDENTIFIER_RENAMES = (
     (re.compile(r"\bExtractWord\b"), "ExtractWordList"),
     (re.compile(r"\bUnitMain\.Camera\b"), "UnitMain.CameraMode"),
     (re.compile(r"(:=\s*)(\w+\.OnTimer)(\s*;)"), r"\1@\2\3"),
-    (re.compile(r"(\.OnTimer\s*:=\s*)(tick)(\s*;)"), r"\1@\2\3"),
+    (re.compile(r"(\.OnTimer\s*:=\s*)(\w+)(\s*;)"), r"\1@\2\3"),
     (re.compile(r"Result := ptr\((StrToInt\(.*\))\);"), r"Result := PByte(\1);"),
     (re.compile(r"Result := \$0;"), "Result := PByte(0);"),
 )

@@ -69,7 +69,7 @@ begin
    DebugCreateFile();
    mainTimer          := TTimer.Create(Sender);
    mainTimer.Interval := 1000;
-   mainTimer.OnTimer  := DebugLogTick;
+   mainTimer.OnTimer  := @DebugLogTick;
    mainTimer.Enabled  := True;
 end;
 
