@@ -11,7 +11,7 @@ type
     Image1: TImage;
     Label1: TLabel;
     Timer1: TTimer;
-    procedure FormClose(Sender: TObject; var Action: TCloseAction);
+    procedure FormClose(Sender: TObject; var CloseAction: TCloseAction);
     procedure Timer1Timer(Sender: TObject);
   private
     { Private declarations }
@@ -29,7 +29,7 @@ uses UnitMain;
 
 {$R *.lfm}
 
-procedure TFormUSAVP.FormClose(Sender: TObject; var Action: TCloseAction);
+procedure TFormUSAVP.FormClose(Sender: TObject; var CloseAction: TCloseAction);
 begin
    FormMain.cbUSAVPSounds.Checked := False;
 end;
